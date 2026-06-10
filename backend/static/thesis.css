@@ -66,8 +66,47 @@ body {
   color: var(--bb-black);
   font-weight: 700;
   padding: 0 0.35rem;
-  line-height: 1.35;
-  letter-spacing: 0.02em;
+}
+
+.bb-ticker-lookup {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-left: 0.5rem;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--bb-border);
+}
+
+.bb-lookup-label {
+  color: var(--bb-gray-light);
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
+.bb-ticker-select {
+  background: var(--bb-panel);
+  color: var(--bb-cyan);
+  border: 1px solid var(--bb-border-light);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 0.1rem 0.25rem;
+  min-width: 4.5rem;
+}
+
+.bb-ticker-go {
+  background: var(--bb-amber);
+  color: var(--bb-black);
+  border: none;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  cursor: pointer;
+}
+
+.bb-ticker-go:hover {
+  background: var(--bb-white);
 }
 
 .bb-fx {

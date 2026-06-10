@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THESIS · MAGIC NUMBERS</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-    <link rel="stylesheet" href="/static/thesis.css?v=11" />
+    <link rel="stylesheet" href="/static/thesis.css?v=12" />
   </head>
   <body>
     <div class="bb-terminal">
@@ -13,6 +13,11 @@
       <div class="bb-quote-row">
         <span class="bb-ticker-badge" id="bb-badge">MSFT</span>
         <span class="bb-fx" id="bb-fx">US $</span>
+        <div class="bb-ticker-lookup">
+          <label class="bb-lookup-label" for="ticker-select">TICKER</label>
+          <select id="ticker-select" class="bb-ticker-select" aria-label="Select ticker"></select>
+          <button type="button" id="ticker-go" class="bb-ticker-go">GO</button>
+        </div>
         <span class="bb-spacer"></span>
         <span class="bb-market-strip" id="bb-market-strip">Market P — / —</span>
       </div>
@@ -35,7 +40,7 @@
           <h1 id="company-name" class="bb-security">Loading…</h1>
           <p id="company-meta" class="meta"></p>
           <nav id="block-nav" class="block-nav"></nav>
-          <p class="sidebar-note">Phase 1 · 1 DATA preload</p>
+          <p class="sidebar-note">Top 10 US · cached fundamentals</p>
         </aside>
 
         <main class="main">
@@ -57,13 +62,13 @@
       </div>
 
       <footer class="bb-statusbar">
-        <span class="bb-status-item">Source: 1 DATA</span>
+        <span id="bb-source-status" class="bb-status-item">Source: —</span>
         <span class="bb-sep">|</span>
-        <span class="bb-status-item">Engine: 2 Magic Numbers</span>
+        <span class="bb-status-item">Engine: Magic Numbers</span>
         <span class="bb-spacer"></span>
         <span id="bb-clock" class="bb-status-item bb-dim"></span>
       </footer>
     </div>
-    <script src="/static/thesis.js?v=14"></script>
+    <script src="/static/thesis.js?v=15"></script>
   </body>
 </html>

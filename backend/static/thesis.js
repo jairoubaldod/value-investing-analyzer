@@ -34,21 +34,29 @@ if (typeof Chart !== "undefined") {
   Chart.defaults.font.size = 10;
 }
 
+const TOP_US_TICKERS = [
+  "MSFT", "AAPL", "NVDA", "GOOGL", "AMZN", "META", "TSLA", "JPM", "V", "UNH",
+];
+
+function sourceForTicker(ticker) {
+  return ticker.toUpperCase() === "MSFT" ? "preload" : "edgar";
+}
+
 function getUrlParams() {
   const p = new URLSearchParams(window.location.search);
   let ticker = (p.get("ticker") || "MSFT").toUpperCase();
   let source = p.get("source");
-  // Non-preloaded tickers: prefer cached EDGAR (free) then FMP.
-  if (!source && ticker !== "MSFT") {
-    source = "edgar";
+  if (!source) {
+    source = sourceForTicker(ticker);
   }
   return { ticker, source };
 }
 
-async function loadThesis(ticker = "MSFT") {
-  const { source } = getUrlParams();
+async function loadThesis(ticker, sourceOverride) {
   const sym = (ticker || getUrlParams().ticker).toUpperCase();
-  const qs = source ? `?source=${encodeURIComponent(source)}` : "";
+  const source = sourceOverride ?? getUrlParams().source ?? sourceForTicker(sym);
+  const qs =
+    source && source !== "preload" ? `?source=${encodeURIComponent(source)}` : "";
   const res = await fetch(`/api/thesis/${sym}${qs}`);
   if (!res.ok) {
     const err = await res.json().catch(() => ({}));
@@ -677,12 +685,48 @@ function renderCharts(data) {
 async function init() {
   const nameEl = document.getElementById("company-name");
   const metaEl = document.getElementById("company-meta");
+  const selectEl = document.getElementById("ticker-select");
+  const goBtn = document.getElementById("ticker-go");
 
   tickClock();
   setInterval(tickClock, 1000);
 
+  const { ticker: urlTicker } = getUrlParams();
+  if (selectEl) {
+    selectEl.innerHTML = TOP_US_TICKERS.map(
+      (t) => `<option value="${t}"${t === urlTicker ? " selected" : ""}>${t}</option>`,
+    ).join("");
+    goBtn?.addEventListener("click", () => navigateTicker(selectEl.value));
+    selectEl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") navigateTicker(selectEl.value);
+    });
+  }
+
+  await loadAndRender(urlTicker);
+}
+
+async function navigateTicker(ticker) {
+  const sym = ticker.toUpperCase();
+  const source = sourceForTicker(sym);
+  const params = new URLSearchParams();
+  if (sym !== "MSFT") params.set("ticker", sym);
+  if (source !== "preload") params.set("source", source);
+  const qs = params.toString();
+  window.history.replaceState({}, "", qs ? `?${qs}` : "/");
+  await loadAndRender(sym);
+}
+
+async function loadAndRender(ticker) {
+  const nameEl = document.getElementById("company-name");
+  const metaEl = document.getElementById("company-meta");
+  const selectEl = document.getElementById("ticker-select");
+  const sourceStatus = document.getElementById("bb-source-status");
+
+  nameEl.textContent = "Loading…";
+  metaEl.textContent = "";
+  if (selectEl) selectEl.value = ticker.toUpperCase();
+
   try {
-    const { ticker } = getUrlParams();
     const data = await loadThesis(ticker);
     renderHeader(data);
     renderNav(data.blocks);
@@ -692,12 +736,17 @@ async function init() {
     document.querySelector('#block-nav a[data-section="0"]')?.classList.add("active");
     const firstToggle = document.querySelector("#block-0 .section-toggle .chevron");
     if (firstToggle) firstToggle.textContent = "−";
+    if (sourceStatus) {
+      const src = data.source || sourceForTicker(ticker);
+      sourceStatus.textContent = `Source: ${src.toUpperCase()} · cached · instant`;
+    }
   } catch (err) {
     console.error(err);
     nameEl.textContent = "Error loading data";
     metaEl.textContent = err.message;
     document.getElementById("blocks-container").innerHTML =
-      `<p class="error-banner">Could not render tables: ${err.message}. Restart start.bat and hard-refresh (Ctrl+F5).</p>`;
+      `<p class="error-banner">Could not load ${ticker}: ${err.message}</p>`;
+    if (sourceStatus) sourceStatus.textContent = "Source: unavailable";
   }
 }
 
