@@ -92,7 +92,14 @@ body {
   font-size: 12px;
   font-weight: 700;
   padding: 0.1rem 0.25rem;
-  min-width: 4.5rem;
+  min-width: 5.5rem;
+  max-width: 6.5rem;
+}
+
+.bb-ticker-select option {
+  background: #1a1a1a;
+  color: #00ffff;
+  font-weight: 700;
 }
 
 .bb-ticker-go {

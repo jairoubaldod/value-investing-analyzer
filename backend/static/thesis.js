@@ -78,6 +78,8 @@ async function fetchWithTimeout(url, options = {}, ms = 120000) {
 
 function populateTickerSelect(selectEl, selected) {
   if (!selectEl) return;
+  /* Keep static HTML options if JS list unavailable */
+  if (!TOP_US_TICKERS.length && selectEl.options.length) return;
   selectEl.innerHTML = TOP_US_TICKERS.map(
     (t) => `<option value="${t}"${t === selected ? " selected" : ""}>${t}</option>`,
   ).join("");
@@ -906,12 +908,24 @@ async function loadAndRender(ticker) {
   const selectEl = document.getElementById("ticker-select");
   const sourceStatus = document.getElementById("bb-source-status");
 
+  if (!nameEl) return;
+
   nameEl.textContent = "Loading…";
-  metaEl.textContent = "";
-  if (selectEl) selectEl.value = ticker.toUpperCase();
+  if (metaEl) metaEl.textContent = "Fetching data…";
+  setTickerStatus(`Loading ${ticker}…`, "warn");
+  if (selectEl) selectEl.value = ticker.toUpperCase().replace(/\./g, "-");
+
+  const slowTimer = setTimeout(() => {
+    if (nameEl.textContent === "Loading…") {
+      nameEl.textContent = "Connecting to server…";
+      if (metaEl) metaEl.textContent = "Render may take 30–60s to wake up. Please wait.";
+      setTickerStatus("Server waking up — please wait…", "warn");
+    }
+  }, 8000);
 
   try {
     const data = await loadThesis(ticker);
+    clearTimeout(slowTimer);
     renderHeader(data);
     renderNav(data.blocks);
     renderCharts(data);
@@ -925,14 +939,25 @@ async function loadAndRender(ticker) {
       const n = data.blocks?.[0]?.years?.length || 0;
       sourceStatus.textContent = `Source: ${src.toUpperCase()} · ${n} years cached`;
     }
+    setTickerStatus(`${ticker} ready.`, "ok");
   } catch (err) {
+    clearTimeout(slowTimer);
     console.error(err);
     nameEl.textContent = "Error loading data";
-    metaEl.textContent = err.message;
-    document.getElementById("blocks-container").innerHTML =
-      `<p class="error-banner">Could not load ${ticker}: ${err.message}</p>`;
+    if (metaEl) metaEl.textContent = err.message;
+    const blocks = document.getElementById("blocks-container");
+    if (blocks) {
+      blocks.innerHTML = `<p class="error-banner">Could not load ${ticker}: ${err.message}</p>`;
+    }
     if (sourceStatus) sourceStatus.textContent = "Source: unavailable";
+    setTickerStatus(err.message, "err");
   }
 }
 
-init();
+try {
+  init();
+} catch (err) {
+  console.error(err);
+  const meta = document.getElementById("company-meta");
+  if (meta) meta.textContent = "UI error: " + err.message + " — hard refresh (Ctrl+F5).";
+}

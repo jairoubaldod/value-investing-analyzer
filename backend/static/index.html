@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THESIS · MAGIC NUMBERS</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-    <link rel="stylesheet" href="/static/thesis.css?v=12" />
+    <link rel="stylesheet" href="/static/thesis.css?v=13" />
   </head>
   <body>
     <div class="bb-terminal">
@@ -15,7 +15,58 @@
         <span class="bb-fx" id="bb-fx">US $</span>
         <div class="bb-ticker-lookup">
           <label class="bb-lookup-label" for="ticker-select">TOP 50</label>
-          <select id="ticker-select" class="bb-ticker-select" aria-label="Select ticker"></select>
+          <select id="ticker-select" class="bb-ticker-select" aria-label="Select ticker">
+            <option value="MSFT" selected>MSFT</option>
+            <option value="AAPL">AAPL</option>
+            <option value="NVDA">NVDA</option>
+            <option value="GOOGL">GOOGL</option>
+            <option value="AMZN">AMZN</option>
+            <option value="META">META</option>
+            <option value="BRK-B">BRK-B</option>
+            <option value="TSLA">TSLA</option>
+            <option value="LLY">LLY</option>
+            <option value="AVGO">AVGO</option>
+            <option value="JPM">JPM</option>
+            <option value="V">V</option>
+            <option value="UNH">UNH</option>
+            <option value="WMT">WMT</option>
+            <option value="XOM">XOM</option>
+            <option value="MA">MA</option>
+            <option value="ORCL">ORCL</option>
+            <option value="COST">COST</option>
+            <option value="PG">PG</option>
+            <option value="JNJ">JNJ</option>
+            <option value="HD">HD</option>
+            <option value="NFLX">NFLX</option>
+            <option value="BAC">BAC</option>
+            <option value="CRM">CRM</option>
+            <option value="MRK">MRK</option>
+            <option value="AMD">AMD</option>
+            <option value="KO">KO</option>
+            <option value="PEP">PEP</option>
+            <option value="TMO">TMO</option>
+            <option value="CSCO">CSCO</option>
+            <option value="WFC">WFC</option>
+            <option value="LIN">LIN</option>
+            <option value="DIS">DIS</option>
+            <option value="MCD">MCD</option>
+            <option value="ACN">ACN</option>
+            <option value="ADBE">ADBE</option>
+            <option value="TXN">TXN</option>
+            <option value="GE">GE</option>
+            <option value="IBM">IBM</option>
+            <option value="QCOM">QCOM</option>
+            <option value="CAT">CAT</option>
+            <option value="INTU">INTU</option>
+            <option value="AMAT">AMAT</option>
+            <option value="DHR">DHR</option>
+            <option value="SPGI">SPGI</option>
+            <option value="LOW">LOW</option>
+            <option value="HON">HON</option>
+            <option value="UPS">UPS</option>
+            <option value="BKNG">BKNG</option>
+            <option value="MS">MS</option>
+          </select>
           <button type="button" id="ticker-go" class="bb-ticker-go">GO</button>
           <span class="bb-lookup-sep">|</span>
           <label class="bb-lookup-label" for="ticker-input">SEARCH</label>
@@ -82,6 +133,17 @@
         <span id="bb-clock" class="bb-status-item bb-dim"></span>
       </footer>
     </div>
-    <script src="/static/thesis.js?v=18"></script>
+    <script src="/static/thesis.js?v=19"></script>
+    <script>
+      /* Fallback if server is slow (Render free tier wake-up) */
+      setTimeout(function () {
+        var name = document.getElementById("company-name");
+        var meta = document.getElementById("company-meta");
+        if (name && name.textContent.indexOf("Loading") >= 0) {
+          name.textContent = "Connecting to server…";
+          if (meta) meta.textContent = "First visit may take 30–60 seconds. Please wait.";
+        }
+      }, 10000);
+    </script>
   </body>
 </html>
