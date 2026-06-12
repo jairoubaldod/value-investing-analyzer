@@ -16,6 +16,9 @@ from services.sp500_priority import build_manifest
 from services.ticker_lookup import normalize_symbol
 from services.top_tickers import TOP_US_TICKERS
 
+# TEMP ANALYTICS — delete temp_analytics/ folder + script tag in index.html to remove
+from temp_analytics.router import analytics_page, router as temp_analytics_router
+
 STATIC_DIR = Path(__file__).parent / "static"
 
 load_dotenv(Path(__file__).parent / ".env")
@@ -28,6 +31,8 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="Financial Thesis Tool", lifespan=lifespan)
+
+app.include_router(temp_analytics_router)
 
 app.add_middleware(
     CORSMiddleware,
@@ -86,6 +91,11 @@ def pipeline_log_api(lines: int = 100):
 @app.get("/pipeline")
 def pipeline_page():
     return FileResponse(STATIC_DIR / "pipeline.html")
+
+
+@app.get("/temp-analytics")
+def temp_analytics_dashboard(key: str = Query("")):
+    return analytics_page(key)
 
 
 @app.get("/api/sp500/status")
