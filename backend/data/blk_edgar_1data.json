@@ -1,0 +1,196 @@
+{
+  "ticker": "BLK",
+  "company": "BlackRock, Inc.",
+  "currency": "USD",
+  "units": "MLN",
+  "years": [
+    {
+      "col": 5,
+      "fy": "FY 2022",
+      "end_date": "12/31/2022"
+    },
+    {
+      "col": 6,
+      "fy": "FY 2023",
+      "end_date": "12/31/2023"
+    },
+    {
+      "col": 7,
+      "fy": "FY 2024",
+      "end_date": "12/31/2024"
+    },
+    {
+      "col": 8,
+      "fy": "FY 2025",
+      "end_date": "12/31/2025"
+    }
+  ],
+  "grid": {
+    "14": {
+      "label": "Revenue",
+      "values": {
+        "5": 17873.0,
+        "6": 17859.0,
+        "7": 20407.0,
+        "8": 24216.0
+      }
+    },
+    "20": {
+      "label": "Operating Expenses",
+      "values": {
+        "5": 11488.0,
+        "6": 11584.0,
+        "7": 12833.0,
+        "8": 17171.0
+      }
+    },
+    "26": {
+      "label": "Operating Income (Loss)",
+      "values": {
+        "5": 6385.0,
+        "6": 6275.0,
+        "7": 7574.0,
+        "8": 7045.0
+      }
+    },
+    "27": {
+      "label": "Non-Operating (Income) Loss",
+      "values": {
+        "5": -95.0,
+        "6": 880.0,
+        "7": 721.0,
+        "8": 574.0
+      }
+    },
+    "50": {
+      "label": "Income (Loss) Incl. MI",
+      "values": {
+        "5": 5178.0,
+        "6": 5502.0,
+        "7": 6369.0,
+        "8": 5553.0
+      }
+    },
+    "62": {
+      "label": "Basic EPS, GAAP",
+      "values": {
+        "5": 34.31,
+        "6": 36.85,
+        "7": 42.45,
+        "8": 35.83
+      }
+    },
+    "172": {
+      "label": "Total Equity",
+      "values": {
+        "5": 37876.0,
+        "6": 39500.0,
+        "7": 47495.0,
+        "8": 55888.0
+      }
+    },
+    "177": {
+      "label": "Shares Outstanding",
+      "values": {
+        "5": 150.921161,
+        "6": 149.327558,
+        "7": 150.042269,
+        "8": 154.984319
+      }
+    },
+    "209": {
+      "label": "Cash from Operating Activities",
+      "values": {
+        "5": 4956.0,
+        "6": 4165.0,
+        "7": 4956.0,
+        "8": 3927.0
+      }
+    },
+    "212": {
+      "label": "Change in Fixed & Intang",
+      "values": {
+        "5": -533.0,
+        "6": -344.0,
+        "7": -255.0,
+        "8": -375.0
+      }
+    },
+    "222": {
+      "label": "Net Cash From Acq & Div",
+      "values": {
+        "5": -0.0,
+        "6": -189.0,
+        "7": -2936.0,
+        "8": -3496.0
+      }
+    },
+    "231": {
+      "label": "Dividends Paid",
+      "values": {
+        "5": -2990.0,
+        "6": -3035.0,
+        "7": -3101.0
+      }
+    },
+    "121": {
+      "label": "Goodwill",
+      "values": {
+        "6": 15524.0,
+        "7": 25949.0,
+        "8": 35283.0
+      }
+    },
+    "99": {
+      "label": "Cash & Cash Equivalents",
+      "values": {
+        "7": 12762.0,
+        "8": 11468.0
+      }
+    },
+    "114": {
+      "label": "Property, Plant & Equip, Net",
+      "values": {
+        "7": 1103.0,
+        "8": 1256.0
+      }
+    },
+    "128": {
+      "label": "Total Assets",
+      "values": {
+        "7": 138615.0,
+        "8": 169998.0
+      }
+    },
+    "147": {
+      "label": "LT Debt",
+      "values": {
+        "7": 12314.0,
+        "8": 12768.0
+      }
+    },
+    "164": {
+      "label": "Share Capital & APIC",
+      "values": {
+        "7": 2.0,
+        "8": 2.0
+      }
+    },
+    "167": {
+      "label": "Treasury Stock",
+      "values": {
+        "7": 386.0,
+        "8": 1216.0
+      }
+    },
+    "11": {
+      "label": "Effective tax rate",
+      "values": {
+        "21": 22.010762567266045
+      }
+    }
+  },
+  "source": "edgar",
+  "source_provider": "SEC EDGAR XBRL",
+  "source_fetched_at": "2026-06-12T06:39:10Z"
+}

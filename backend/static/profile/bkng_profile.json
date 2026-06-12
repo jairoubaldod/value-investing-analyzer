@@ -1,0 +1,16 @@
+{
+  "ticker": "BKNG",
+  "company_profile": {
+    "name": "Booking Holdings Inc.",
+    "ticker": "BKNG",
+    "description": "Booking Holdings Inc. is a leading global provider of online travel and dining reservation services. The company manages a portfolio of well-known digital platforms. Among these, Booking.com specializes in online accommodation bookings, while Rentalcars.com is dedicated to facilitating vehicle rentals. Priceline offers a comprehensive range of online travel booking options, encompassing hotels, flights, rental cars, vacation packages, and cruises, alongside hotel distribution services. Agoda also provides online lodging reservations, further expanding into flights, ground transportation, and activity bookings. For travelers seeking the best deals, KAYAK functions as an online price comparison service, enabling users to search and contrast prices for airline tickets, hotels, and car rentals. Additionally, OpenTable allows for convenient online restaurant reservations. Beyond its core booking services, Booking Holdings Inc. also supplies travel-related insurance products and restaurant management solutions to individual consumers, travel service providers, and restaurants. Established in 1997, the company is headquartered in Norwalk, Connecticut. It officially adopted its current name, Booking Holdings Inc., in February 2018, having previously operated as The Priceline Group Inc.",
+    "sector": "Consumer Cyclical",
+    "industry": "Travel Services",
+    "country": "US",
+    "exchange": "NASDAQ",
+    "market_cap": 126762363345.0,
+    "market_cap_label": null,
+    "segments": [],
+    "source": "fmp"
+  }
+}

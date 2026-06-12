@@ -1,0 +1,201 @@
+{
+  "ticker": "CRM",
+  "one_pager": {
+    "identity": {
+      "name": "Salesforce, Inc.",
+      "ticker": "CRM",
+      "price": null,
+      "price_direction": "",
+      "market_cap": 136322550000.0,
+      "market_cap_label": "$136.3B",
+      "sector": "Technology",
+      "industry": "Software - Application",
+      "country": "US",
+      "currency": "USD",
+      "description": "Salesforce, Inc. is a leading provider of customer relationship management (CRM) solutions, dedicated to connecting businesses and their clientele on a global scale. At its core, the Customer 360 platform empowers organizations to create seamless, integrated experiences for their customers. The company's extensive suite of services encompasses a wide array of functionalities: Sales: Tools designed to manage sales pipelines, track leads, forecast opportunities, extract data-driven insights through analytics, and streamline the creation of quotes, contracts, and invoices. Service: Capabilities enabling companies to deliver highly personalized, trustworthy, and scalable customer support. Platform: A versatile development environment, featuring intuitive drag-and-drop tools, that allows businesses of diverse sizes, locations, and industries to build tailored applications, thereby strengthening customer relationships. Learning: An online educational platform providing accessible training to acquire sought-after Salesforce skills. Slack: A comprehensive system for team collaboration and engagement. Marketing: Solutions for strategizing, personalizing, and optimizing individual customer marketing journeys. Commerce: Offerings that unify customer interactions across various channels, including mobile, web, social media, and physical retail stores. Tableau: A complete analytics solution addressing a broad spectrum of enterprise data analysis needs. MuleSoft: An integration platform designed to unlock and connect data residing across an organization's various systems. Salesforce's offerings cater to numerous sectors, such as financial services, healthcare, life sciences, and manufacturing, among others. Beyond its core products, the company also provides professional services and conducts both in-person and online courses to certify customers and partners in the architecture, administration, deployment, and development of its services. Its solutions are distributed through direct sales channels, as well as a network of consulting firms, systems integrators, and other strategic partners. Established in 1999, Salesforce, Inc. maintains its headquarters in San Francisco, California.",
+      "segments": []
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_10y",
+        "label": "Revenue CAGR",
+        "sublabel": "10Y",
+        "value": 0.20070553205342456,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_10y",
+        "label": "EPS CAGR",
+        "sublabel": "10Y",
+        "value": null,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": 0.09849455577503739,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": 0.20062612883804937,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.35293892005929406,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": false
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": true
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": false
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 2,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": true
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": true
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y > 0",
+            "met": false
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": false
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": true
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": true
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y \u2265 8%",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y \u2265 10%",
+            "met": false
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": true
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": true
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": false
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [
+        {
+          "id": "dcf",
+          "label": "DCF",
+          "price": 234.73
+        }
+      ],
+      "blend_price": 234.73,
+      "method_count": 1
+    }
+  },
+  "market_bar": {
+    "price": null,
+    "ask": null,
+    "prev": null,
+    "pe": null,
+    "pb": null,
+    "direction": "",
+    "fx_label": "US $"
+  }
+}

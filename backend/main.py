@@ -7,11 +7,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
-from services.data_cache import load_cached
+from services.data_cache import is_ticker_ready, list_ready_tickers, list_ticker_catalog, load_cached
 from services.magic_numbers import DataSheet, compute_magic_numbers, enrich_payload_consensus, enrich_payload_multiples
 from services.one_pager import enrich_payload_profile
 from services.ticker_lookup import normalize_symbol
-from services.top_tickers import PRELOADED_TICKERS, TOP_US_TICKERS
+from services.top_tickers import TOP_US_TICKERS
 
 STATIC_DIR = Path(__file__).parent / "static"
 
@@ -36,11 +36,11 @@ def _cached_payload(symbol: str) -> dict | None:
 
 @app.get("/api/health")
 def health():
-    ready = [t for t in TOP_US_TICKERS if _cached_payload(t)]
+    ready = list_ready_tickers()
     return {
         "status": "ok",
-        "mode": "preload_only",
-        "preloaded": sorted(PRELOADED_TICKERS),
+        "mode": "cache_expanded",
+        "ready_count": len(ready),
         "ready": ready,
         "engine": "magic_numbers_v9_valuation_bundle",
         "valuation_bundle": True,
@@ -49,17 +49,20 @@ def health():
 
 @app.get("/api/tickers")
 def tickers():
+    ready = list_ready_tickers()
     return {
-        "top_us": list(TOP_US_TICKERS),
-        "ready": [t for t in TOP_US_TICKERS if _cached_payload(t)],
+        "ready": ready,
+        "count": len(ready),
+        "featured": list(TOP_US_TICKERS),
+        "catalog": list_ticker_catalog(),
     }
 
 
 @app.get("/api/consensus/{ticker}")
 def consensus(ticker: str):
     symbol = normalize_symbol(ticker)
-    if symbol not in PRELOADED_TICKERS:
-        raise HTTPException(status_code=404, detail=f"Only preloaded tickers: {', '.join(PRELOADED_TICKERS)}")
+    if not is_ticker_ready(symbol):
+        raise HTTPException(status_code=404, detail=f"No cache for {symbol}. Run overnight_build.py or pick another ticker.")
     sidecar = Path(__file__).parent / "data" / f"{symbol.lower()}_consensus.json"
     if sidecar.is_file():
         try:
@@ -74,10 +77,10 @@ def consensus(ticker: str):
 @app.get("/api/thesis/{ticker}")
 def thesis(ticker: str):
     symbol = normalize_symbol(ticker)
-    if symbol not in PRELOADED_TICKERS:
+    if not is_ticker_ready(symbol):
         raise HTTPException(
             status_code=404,
-            detail=f"Only preloaded tickers: {', '.join(TOP_US_TICKERS)}",
+            detail=f"No cache for {symbol}. Available: {len(list_ready_tickers())} tickers — see /api/tickers",
         )
     payload = _cached_payload(symbol)
     if not payload:

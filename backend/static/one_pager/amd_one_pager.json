@@ -1,0 +1,232 @@
+{
+  "ticker": "AMD",
+  "one_pager": {
+    "identity": {
+      "name": "Advanced Micro Devices, Inc.",
+      "ticker": "AMD",
+      "price": null,
+      "price_direction": "",
+      "market_cap": 796466570000.0,
+      "market_cap_label": "$796.5B",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "country": "US",
+      "currency": "USD",
+      "description": "Advanced Micro Devices, Inc. (AMD), established in 1969 and headquartered in Santa Clara, California, operates as a global leader in the semiconductor industry. The company organizes its extensive operations into two primary segments: Computing and Graphics, and Enterprise, Embedded and Semi-Custom. In its Computing and Graphics division, AMD develops a range of products including x86 microprocessors (often as accelerated processing units), chipsets, and various graphics processing units (GPUs), encompassing discrete, integrated, data center, and professional variants, alongside providing development services. The Enterprise, Embedded and Semi-Custom segment focuses on server and embedded processors, bespoke System-on-Chip (SoC) products, and foundational technology for popular game consoles, also offering associated development support. AMD's diverse product lineup features processors for desktop and notebook personal computers under well-known brands such as AMD Ryzen, Ryzen PRO, Ryzen Threadripper, Threadripper PRO, AMD Athlon, Athlon PRO, AMD FX, AMD A-Series, and PRO A-Series. Discrete GPUs for these PCs are offered through the AMD Radeon graphics and AMD Embedded Radeon graphics brands, while professional graphics solutions include AMD Radeon Pro and AMD FirePro. Furthermore, the company provides high-performance accelerators for servers, including Radeon Instinct, Radeon PRO V-series, and AMD Instinct, along with AMD EPYC microprocessors designed for server environments. Its embedded processor solutions span multiple brands, such as AMD Athlon, AMD Geode, AMD Ryzen, AMD EPYC, AMD R-Series, and G-Series. AMD also produces chipsets under its own trademark and crafts customer-specific solutions leveraging its CPU, GPU, and multimedia expertise, including specialized semi-custom SoC products. AMD reaches its wide array of clients, which comprise original equipment manufacturers (OEMs), public cloud service providers, original design manufacturers (ODMs), system integrators, independent distributors, online retailers, and add-in-board manufacturers. The company's sales and distribution network includes its direct sales force, independent distributors, and dedicated sales representatives.",
+      "segments": [
+        {
+          "name": "Data Center",
+          "revenue": 16635000000.0,
+          "pct": 0.4315287037277232
+        },
+        {
+          "name": "Client and Gaming",
+          "revenue": 14550000000.0,
+          "pct": 0.37744169757970375
+        },
+        {
+          "name": "Gaming",
+          "revenue": 3910000000.0,
+          "pct": 0.10142934965887572
+        },
+        {
+          "name": "Embedded",
+          "revenue": 3454000000.0,
+          "pct": 0.08960024903369737
+        }
+      ]
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_10y",
+        "label": "Revenue CAGR",
+        "sublabel": "10Y",
+        "value": 0.24121884812875116,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_10y",
+        "label": "EPS CAGR",
+        "sublabel": "10Y",
+        "value": null,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": 0.05936965998406685,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": 0.10664280146655504,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.19812238118265207,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 2,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": false
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": false
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": true
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": false
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 2,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": true
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": true
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y > 0",
+            "met": false
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": false
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": true
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": true
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 4,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y \u2265 8%",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y \u2265 10%",
+            "met": false
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": true
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": true
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": true
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [
+        {
+          "id": "dcf",
+          "label": "DCF",
+          "price": 20.93
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 196.18
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 450.0
+        }
+      ],
+      "blend_price": 222.37,
+      "method_count": 3
+    }
+  },
+  "market_bar": {
+    "price": null,
+    "ask": null,
+    "prev": null,
+    "pe": null,
+    "pb": null,
+    "direction": "",
+    "fx_label": "US $"
+  }
+}

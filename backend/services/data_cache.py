@@ -12,11 +12,46 @@ DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 def list_cached_tickers() -> list[str]:
     tickers: set[str] = set()
     for path in DATA_DIR.glob("*_1data.json"):
-        name = path.stem  # e.g. msft_1data, aapl_edgar_1data, aapl_fmp_1data
+        name = path.stem
         base = name.replace("_edgar_1data", "").replace("_fmp_1data", "").replace("_1data", "")
         if base:
             tickers.add(base.upper())
     return sorted(tickers)
+
+
+def list_ready_tickers() -> list[str]:
+    """Tickers with a 1 DATA JSON on disk (edgar, fmp, or preload)."""
+    return list_cached_tickers()
+
+
+def _catalog_payload(symbol: str) -> dict | None:
+    sym = symbol.upper()
+    if sym == "MSFT":
+        return load_cached("MSFT", "preload") or load_cached("MSFT", "edgar")
+    return load_cached(sym, "edgar") or load_cached(sym, "preload") or load_cached(sym, "fmp")
+
+
+def list_ticker_catalog() -> list[dict[str, str]]:
+    """Ticker + company name for browse/search UI."""
+    rows: list[dict[str, str]] = []
+    for sym in list_ready_tickers():
+        payload = _catalog_payload(sym)
+        company = ""
+        if payload:
+            company = str(payload.get("company") or payload.get("company_name") or "").strip()
+            if not company:
+                profile = payload.get("profile")
+                if isinstance(profile, dict):
+                    company = str(profile.get("companyName") or profile.get("name") or "").strip()
+        rows.append({"ticker": sym, "company": company or sym})
+    return rows
+
+
+def is_ticker_ready(symbol: str) -> bool:
+    sym = symbol.upper()
+    if sym == "MSFT":
+        return bool(load_cached("MSFT", "preload") or load_cached("MSFT", "edgar"))
+    return bool(load_cached(sym, "edgar") or load_cached(sym, "preload") or load_cached(sym, "fmp"))
 
 
 def cache_path(symbol: str, source: str) -> Path | None:

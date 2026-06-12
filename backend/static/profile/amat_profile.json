@@ -1,0 +1,16 @@
+{
+  "ticker": "AMAT",
+  "company_profile": {
+    "name": "Applied Materials, Inc.",
+    "ticker": "AMAT",
+    "description": "Applied Materials, Inc. is a prominent provider of crucial manufacturing equipment, associated services, and software solutions. These offerings primarily cater to the semiconductor, display, and related high-technology industries. The company organizes its activities into three principal business segments: 1. Semiconductor Systems: This division is dedicated to the development, production, and sale of sophisticated manufacturing tools essential for fabricating semiconductor chips, also known as integrated circuits. Its comprehensive suite of technologies includes epitaxy, ion implantation, oxidation/nitridation, rapid thermal processing, physical vapor deposition, chemical vapor deposition, chemical mechanical planarization, electrochemical deposition, atomic layer deposition, etching, and selective deposition and removal processes, in addition to precision metrology and inspection instruments. 2. Applied Global Services: This segment delivers integrated solutions aimed at maximizing the performance and productivity of manufacturing facilities and their equipment. Its services encompass providing spare parts, system upgrades, maintenance support, refurbished older-generation equipment, and advanced factory automation software for semiconductor, display, and other product lines. 3. Display and Adjacent Markets: This unit focuses on supplying products for the creation of various display technologies. This includes manufacturing solutions for liquid crystal displays (LCDs), organic light-emitting diodes (OLEDs), and other display types, which are integral to a broad spectrum of consumer electronics such as televisions, computer monitors, laptops, personal computers, electronic tablets, and smartphones. Founded in 1967, Applied Materials, Inc. maintains its corporate headquarters in Santa Clara, California. The company boasts a significant international presence, conducting operations across the United States, China, Korea, Taiwan, Japan, Southeast Asia, and Europe.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "country": "US",
+    "exchange": "NASDAQ",
+    "market_cap": 438773739395.0,
+    "market_cap_label": null,
+    "segments": [],
+    "source": "fmp"
+  }
+}

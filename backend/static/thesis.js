@@ -94,11 +94,194 @@ if (typeof Chart !== "undefined") {
   Chart.defaults.font.size = 10;
 }
 
-const PRELOADED_TICKERS = ["MSFT", "AAPL", "NVDA", "GOOGL", "AMZN"];
+let READY_TICKERS = ["MSFT", "AAPL", "NVDA", "GOOGL", "AMZN"];
+let TICKER_CATALOG = [];
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function normalizeTickerInput(raw) {
+  return String(raw || "").trim().toUpperCase();
+}
+
+function resolveTicker(ticker) {
+  const sym = normalizeTickerInput(ticker || "MSFT");
+  if (!sym) return READY_TICKERS.includes("MSFT") ? "MSFT" : READY_TICKERS[0] || "MSFT";
+  if (READY_TICKERS.includes(sym)) return sym;
+  const match = TICKER_CATALOG.find((row) => row.ticker === sym);
+  if (match) return match.ticker;
+  if (READY_TICKERS.includes("MSFT")) return "MSFT";
+  return READY_TICKERS[0] || "MSFT";
+}
+
+function setTickerInputValue(ticker) {
+  const input = document.getElementById("ticker-input");
+  if (input) input.value = resolveTicker(ticker);
+}
+
+function populateTickerDatalist(tickers) {
+  const datalist = document.getElementById("ticker-datalist");
+  if (!datalist || !tickers.length) return;
+  const byTicker = new Map(TICKER_CATALOG.map((row) => [row.ticker, row.company]));
+  datalist.innerHTML = tickers
+    .map((t) => {
+      const company = byTicker.get(t) || t;
+      const label = company !== t ? `${t} · ${company}` : t;
+      return `<option value="${escapeHtml(t)}" label="${escapeHtml(label)}"></option>`;
+    })
+    .join("");
+}
+
+async function fetchReadyTickers() {
+  try {
+    const res = await fetch("/api/tickers");
+    if (!res.ok) return READY_TICKERS;
+    const data = await res.json();
+    if (Array.isArray(data.ready) && data.ready.length) {
+      READY_TICKERS = data.ready;
+    }
+    if (Array.isArray(data.catalog) && data.catalog.length) {
+      TICKER_CATALOG = data.catalog
+        .map((row) => ({
+          ticker: String(row.ticker || "").toUpperCase(),
+          company: String(row.company || row.ticker || "").trim(),
+        }))
+        .filter((row) => row.ticker);
+    } else {
+      TICKER_CATALOG = READY_TICKERS.map((t) => ({ ticker: t, company: t }));
+    }
+  } catch {
+    TICKER_CATALOG = READY_TICKERS.map((t) => ({ ticker: t, company: t }));
+  }
+  populateTickerDatalist(READY_TICKERS);
+  const note = document.getElementById("sidebar-ticker-note");
+  if (note) note.textContent = `${READY_TICKERS.length} companies · cached · instant`;
+  const countEl = document.getElementById("ticker-browser-count");
+  if (countEl) countEl.textContent = `${READY_TICKERS.length} ready`;
+  renderTickerBrowserList("");
+  return READY_TICKERS;
+}
+
+function renderTickerBrowserList(query) {
+  const listEl = document.getElementById("ticker-browser-list");
+  if (!listEl) return;
+  const q = String(query || "").trim().toLowerCase();
+  const rows = TICKER_CATALOG.filter((row) => {
+    if (!q) return true;
+    return row.ticker.toLowerCase().includes(q) || row.company.toLowerCase().includes(q);
+  });
+  if (!rows.length) {
+    listEl.innerHTML = `<p class="ticker-browser-empty">No matches for “${escapeHtml(q)}”.</p>`;
+    return;
+  }
+  listEl.innerHTML = rows
+    .map(
+      (row) => `
+        <button type="button" class="ticker-browser-item" data-ticker="${escapeHtml(row.ticker)}" role="option">
+          <span class="ticker-browser-item-sym">${escapeHtml(row.ticker)}</span>
+          <span class="ticker-browser-item-name">${escapeHtml(row.company)}</span>
+        </button>`
+    )
+    .join("");
+}
+
+function openTickerBrowser() {
+  const root = document.getElementById("ticker-browser");
+  const search = document.getElementById("ticker-browser-search");
+  if (!root) return;
+  root.hidden = false;
+  root.setAttribute("aria-hidden", "false");
+  document.body.classList.add("ticker-browser-open");
+  renderTickerBrowserList(search?.value || "");
+  window.setTimeout(() => search?.focus(), 0);
+}
+
+function closeTickerBrowser() {
+  const root = document.getElementById("ticker-browser");
+  if (!root) return;
+  root.hidden = true;
+  root.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("ticker-browser-open");
+}
+
+function bindTickerBrowser() {
+  const root = document.getElementById("ticker-browser");
+  const search = document.getElementById("ticker-browser-search");
+  const listEl = document.getElementById("ticker-browser-list");
+  document.getElementById("ticker-browse")?.addEventListener("click", openTickerBrowser);
+  root?.querySelectorAll("[data-close-ticker-browser]").forEach((el) => {
+    el.addEventListener("click", closeTickerBrowser);
+  });
+  search?.addEventListener("input", () => renderTickerBrowserList(search.value));
+  listEl?.addEventListener("click", (event) => {
+    const btn = event.target.closest("[data-ticker]");
+    if (!btn) return;
+    const sym = btn.getAttribute("data-ticker");
+    closeTickerBrowser();
+    navigateTicker(sym);
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && root && !root.hidden) {
+      event.preventDefault();
+      closeTickerBrowser();
+    }
+  });
+}
+
+function findCachedTicker(raw) {
+  const sym = normalizeTickerInput(raw);
+  if (!sym) return null;
+  return READY_TICKERS.includes(sym) ? sym : null;
+}
+
+function showTickerInputError(message) {
+  const input = document.getElementById("ticker-input");
+  if (!input) return;
+  input.classList.add("bb-ticker-input--error");
+  input.setAttribute("aria-invalid", "true");
+  input.title = message;
+  window.setTimeout(() => {
+    input.classList.remove("bb-ticker-input--error");
+    input.removeAttribute("aria-invalid");
+    input.removeAttribute("title");
+  }, 2200);
+}
+
+function submitTickerFromInput() {
+  const input = document.getElementById("ticker-input");
+  if (!input) return;
+  const sym = findCachedTicker(input.value);
+  if (!sym) {
+    showTickerInputError(`Ticker “${normalizeTickerInput(input.value)}” is not cached. Open ALL or pick from suggestions.`);
+    return;
+  }
+  navigateTicker(sym);
+}
+
+function bindTickerInput() {
+  const input = document.getElementById("ticker-input");
+  const goBtn = document.getElementById("ticker-go");
+  goBtn?.addEventListener("click", submitTickerFromInput);
+  input?.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      submitTickerFromInput();
+    }
+  });
+  input?.addEventListener("blur", () => {
+    const sym = findCachedTicker(input.value);
+    if (sym) input.value = sym;
+  });
+}
 
 function getUrlParams() {
   const p = new URLSearchParams(window.location.search);
-  const ticker = (p.get("ticker") || "MSFT").toUpperCase();
+  const ticker = resolveTicker(p.get("ticker") || "MSFT");
   const hash = window.location.hash.replace("#", "").toLowerCase();
 
   let domain = "one-pager";
@@ -117,7 +300,7 @@ function getUrlParams() {
   }
 
   return {
-    ticker: PRELOADED_TICKERS.includes(ticker) ? ticker : "MSFT",
+    ticker,
     domain,
     valMethod,
     fundSection,
@@ -6018,28 +6201,30 @@ function renderCharts(data) {
 }
 
 async function init() {
-  const selectEl = document.getElementById("ticker-select");
-  const goBtn = document.getElementById("ticker-go");
+  const inputEl = document.getElementById("ticker-input");
 
   tickClock();
   setInterval(tickClock, 1000);
   bindMainNav();
   bindValuationNav();
   bindMobileShell();
+  bindTickerBrowser();
+  bindTickerInput();
+
+  await fetchReadyTickers();
 
   const { ticker: urlTicker, domain, valMethod, fundSection } = getUrlParams();
-  if (selectEl) selectEl.value = urlTicker;
+  setTickerInputValue(urlTicker);
   setDomain(domain, { updateUrl: false });
   if (domain === "valuation") setValuationMethod(valMethod);
   syncMobileChrome();
-  goBtn?.addEventListener("click", () => navigateTicker(selectEl.value));
 
   await loadAndRender(urlTicker);
 }
 
 async function navigateTicker(ticker) {
-  const sym = ticker.toUpperCase();
-  if (!PRELOADED_TICKERS.includes(sym)) return;
+  const sym = resolveTicker(ticker);
+  if (!READY_TICKERS.includes(sym)) return;
   const params = new URLSearchParams();
   if (sym !== "MSFT") params.set("ticker", sym);
   const qs = params.toString();
@@ -6054,9 +6239,7 @@ async function navigateTicker(ticker) {
         ? "#fundamentals"
         : "#one-pager";
   window.history.replaceState({}, "", `${qs ? `?${qs}` : "/"}${hash}`);
-  if (document.getElementById("ticker-select")) {
-    document.getElementById("ticker-select").value = sym;
-  }
+  setTickerInputValue(sym);
   await loadAndRender(sym);
 }
 

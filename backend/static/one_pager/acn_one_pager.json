@@ -1,0 +1,201 @@
+{
+  "ticker": "ACN",
+  "one_pager": {
+    "identity": {
+      "name": "Accenture plc",
+      "ticker": "ACN",
+      "price": null,
+      "price_direction": "",
+      "market_cap": 103097694820.0,
+      "market_cap_label": "$103.1B",
+      "sector": "Technology",
+      "industry": "Information Technology Services",
+      "country": "US",
+      "currency": "USD",
+      "description": "Accenture plc is a global professional services firm that delivers a wide array of strategy, consulting, interactive, technology, and operations services worldwide. Its comprehensive offerings include application services such as agile transformation, DevOps implementation, application modernization, enterprise architecture, software and quality engineering, and data management. It also specializes in intelligent automation, incorporating robotic process automation, natural language processing, and virtual agents, alongside liquid application management and various program, project, and service management solutions. The company provides strategic consulting, focusing on critical data elements, data governance, platform architecture, and enabling product-centric organizations to ensure business adoption and value realization. Accenture supports the digitization of engineering and research & development, designs and develops smart connected products, modernizes product platforms, and facilitates product-as-a-service models. It also offers solutions for production and operations, autonomous robotics systems, digital transformation of capital projects, and digital industrial workforce solutions. Further services encompass data-enabled operating models, technology consulting, and artificial intelligence expertise. Accenture assists with talent and organizational development (human potential), digital commerce, and robust infrastructure services covering hybrid cloud, networking, digital workplace and collaboration, service and experience management, infrastructure as code, and managed edge and IoT devices. Its cybersecurity portfolio includes cyber defense, applied and managed security, operational technology (OT) security, security strategy and risk management, and industry-specific security products. The company also drives technology innovation and intelligent automation initiatives. Additionally, Accenture provides cloud solutions, ecosystem development, marketing strategies, supply chain management, zero-based budgeting, customer experience enhancement, finance consulting, mergers and acquisitions support, and sustainability services. Established in 1951, Accenture plc is headquartered in Dublin, Ireland.",
+      "segments": []
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_10y",
+        "label": "Revenue CAGR",
+        "sublabel": "10Y",
+        "value": 0.0778735399214352,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_10y",
+        "label": "EPS CAGR",
+        "sublabel": "10Y",
+        "value": 0.09698904909337025,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": 0.39551659644876813,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": 0.14676657206710145,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.1585788483802441,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": true
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": false
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": false
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": true
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 2,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": true
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": true
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 5,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": true
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": true
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": true
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y \u2265 8%",
+            "met": false
+          },
+          {
+            "label": "EPS CAGR 10Y \u2265 10%",
+            "met": false
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": true
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": true
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": true
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [
+        {
+          "id": "dcf",
+          "label": "DCF",
+          "price": 339.16
+        }
+      ],
+      "blend_price": 339.16,
+      "method_count": 1
+    }
+  },
+  "market_bar": {
+    "price": null,
+    "ask": null,
+    "prev": null,
+    "pe": null,
+    "pb": null,
+    "direction": "",
+    "fx_label": "US $"
+  }
+}

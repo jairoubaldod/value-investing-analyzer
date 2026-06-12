@@ -9,7 +9,7 @@
     "source": "fmp",
     "horizon": "12_month_forward",
     "horizon_label": "12-month forward analyst price targets (not intrinsic value today)",
-    "as_of": "2026-06-11",
+    "as_of": "2026-06-12",
     "source_note": "Financial Modeling Prep \u00b7 price-target-consensus (aggregated sell-side targets).",
     "summary": {
       "last_month_count": 4,

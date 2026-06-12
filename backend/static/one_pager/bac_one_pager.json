@@ -1,0 +1,222 @@
+{
+  "ticker": "BAC",
+  "one_pager": {
+    "identity": {
+      "name": "Bank of America Corporation",
+      "ticker": "BAC",
+      "price": null,
+      "price_direction": "",
+      "market_cap": 391447940309.0,
+      "market_cap_label": "$391.4B",
+      "sector": "Financial Services",
+      "industry": "Banks - Diversified",
+      "country": "US",
+      "currency": "USD",
+      "description": "Operating globally through its various subsidiaries, Bank of America Corporation offers a comprehensive range of banking and financial products and services. Its extensive clientele includes individual consumers, small and mid-market businesses, institutional investors, large corporations, and government bodies worldwide. The Consumer Banking division provides diverse options such as traditional and money market savings accounts, certificates of deposit, individual retirement accounts (IRAs), and both interest-bearing and non-interest-bearing checking accounts, in addition to investment products. This segment also issues credit and debit cards, originates residential mortgages and home equity loans, and offers direct and indirect financing for needs like automotive purchases, recreational vehicles, and personal loans. Within its Global Wealth & Investment Management segment, the company delivers investment management, brokerage, banking, and trust and retirement solutions. It also crafts tailored wealth management strategies, including specialized asset management services. The Global Banking segment furnishes a broad spectrum of lending products, including commercial loans, leases, commitment facilities, trade finance, and both commercial real estate and asset-based lending. Furthermore, it provides treasury solutions such as cash management, foreign exchange, short-term investment options, and merchant services, alongside working capital management guidance. This segment also engages in debt and equity underwriting, distribution, and advisory services related to mergers and acquisitions. Through its Global Markets segment, Bank of America performs market-making activities, offers financing, and provides securities clearing, settlement, and custody services. It also devises risk management products employing interest rate, equity, credit, currency, and commodity derivatives, as well as foreign exchange, fixed-income, and mortgage-related instruments. As of December 31, 2021, the corporation served approximately 67 million consumer and small business clients. Its widespread infrastructure comprised around 4,200 retail financial centers and approximately 16,000 ATMs, supplemented by digital banking platforms utilized by roughly 41 million active users. Founded in 1784, Bank of America is headquartered in Charlotte, North Carolina.",
+      "segments": [
+        {
+          "name": "Consumer Banking Segment",
+          "revenue": 43673000000.0,
+          "pct": 0.3740407673860911
+        },
+        {
+          "name": "Global Wealth and Investment Management Segment",
+          "revenue": 24883000000.0,
+          "pct": 0.2131123672490579
+        },
+        {
+          "name": "Global Banking Segment",
+          "revenue": 24108000000.0,
+          "pct": 0.20647482014388488
+        },
+        {
+          "name": "Global Markets Segment",
+          "revenue": 24096000000.0,
+          "pct": 0.20637204522096608
+        }
+      ]
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_10y",
+        "label": "Revenue CAGR",
+        "sublabel": "10Y",
+        "value": 0.031467661967425675,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_10y",
+        "label": "EPS CAGR",
+        "sublabel": "10Y",
+        "value": 0.10833442281562133,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.11152373626179297,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 0,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": false
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": false
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": false
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": false
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": false
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 0,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": false
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": false
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 4,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": true
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": true
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": false
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 2,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y \u2265 8%",
+            "met": false
+          },
+          {
+            "label": "EPS CAGR 10Y \u2265 10%",
+            "met": true
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": false
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": true
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": false
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 61.0
+        }
+      ],
+      "blend_price": 61.0,
+      "method_count": 1
+    }
+  },
+  "market_bar": {
+    "price": null,
+    "ask": null,
+    "prev": null,
+    "pe": null,
+    "pb": null,
+    "direction": "",
+    "fx_label": "US $"
+  }
+}

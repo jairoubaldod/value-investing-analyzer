@@ -9,7 +9,7 @@ from typing import Any
 import requests
 from dotenv import load_dotenv
 
-load_dotenv(Path(__file__).resolve().parents[1] / ".env")
+load_dotenv(Path(__file__).resolve().parents[1] / ".env", override=True)
 
 # New accounts (2025+) use /stable/ — legacy /api/v3/ returns 403 for new keys.
 FMP_BASE = "https://financialmodelingprep.com/stable"

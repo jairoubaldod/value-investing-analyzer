@@ -1,32 +1,6 @@
 {
   "ticker": "NVDA",
   "analyst_consensus": {
-    "low": 139.0,
-    "high": 500.0,
-    "median": 294.0,
-    "mean": 309.46,
-    "analyst_count": 87,
-    "source": "fmp",
-    "horizon": "12_month_forward",
-    "horizon_label": "12-month forward analyst price targets (not intrinsic value today)",
-    "as_of": "2026-06-11",
-    "source_note": "Financial Modeling Prep \u00b7 price-target-consensus (aggregated sell-side targets).",
-    "summary": {
-      "last_month_count": 27,
-      "last_month_avg": 310.89,
-      "last_quarter_count": 28,
-      "last_quarter_avg": 310.5,
-      "last_year_count": 87,
-      "last_year_avg": 274.71
-    },
-    "ratings": {
-      "strong_buy": 2,
-      "buy": 58,
-      "hold": 16,
-      "sell": 3,
-      "strong_sell": 0,
-      "total": 79,
-      "consensus_label": "Buy"
-    }
+    "error": "Analyst price targets unavailable. Requires FMP price-target-consensus or Yahoo Finance fallback."
   }
 }

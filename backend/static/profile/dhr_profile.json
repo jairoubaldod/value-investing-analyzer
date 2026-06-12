@@ -1,0 +1,6 @@
+{
+  "ticker": "DHR",
+  "company_profile": {
+    "error": "FMP HTTP 429: {\n  \"Error Message\": \"Limit Reach . Please upgrade your plan or visit our documentation for more details at https://site.financialmodelingprep.com/\"\n}"
+  }
+}

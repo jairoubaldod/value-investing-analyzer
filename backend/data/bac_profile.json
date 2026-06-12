@@ -1,0 +1,37 @@
+{
+  "ticker": "BAC",
+  "company_profile": {
+    "name": "Bank of America Corporation",
+    "ticker": "BAC",
+    "description": "Operating globally through its various subsidiaries, Bank of America Corporation offers a comprehensive range of banking and financial products and services. Its extensive clientele includes individual consumers, small and mid-market businesses, institutional investors, large corporations, and government bodies worldwide. The Consumer Banking division provides diverse options such as traditional and money market savings accounts, certificates of deposit, individual retirement accounts (IRAs), and both interest-bearing and non-interest-bearing checking accounts, in addition to investment products. This segment also issues credit and debit cards, originates residential mortgages and home equity loans, and offers direct and indirect financing for needs like automotive purchases, recreational vehicles, and personal loans. Within its Global Wealth & Investment Management segment, the company delivers investment management, brokerage, banking, and trust and retirement solutions. It also crafts tailored wealth management strategies, including specialized asset management services. The Global Banking segment furnishes a broad spectrum of lending products, including commercial loans, leases, commitment facilities, trade finance, and both commercial real estate and asset-based lending. Furthermore, it provides treasury solutions such as cash management, foreign exchange, short-term investment options, and merchant services, alongside working capital management guidance. This segment also engages in debt and equity underwriting, distribution, and advisory services related to mergers and acquisitions. Through its Global Markets segment, Bank of America performs market-making activities, offers financing, and provides securities clearing, settlement, and custody services. It also devises risk management products employing interest rate, equity, credit, currency, and commodity derivatives, as well as foreign exchange, fixed-income, and mortgage-related instruments. As of December 31, 2021, the corporation served approximately 67 million consumer and small business clients. Its widespread infrastructure comprised around 4,200 retail financial centers and approximately 16,000 ATMs, supplemented by digital banking platforms utilized by roughly 41 million active users. Founded in 1784, Bank of America is headquartered in Charlotte, North Carolina.",
+    "sector": "Financial Services",
+    "industry": "Banks - Diversified",
+    "country": "US",
+    "exchange": "NYSE",
+    "market_cap": 391447940309.0,
+    "market_cap_label": null,
+    "segments": [
+      {
+        "name": "Consumer Banking Segment",
+        "revenue": 43673000000.0,
+        "pct": 0.3740407673860911
+      },
+      {
+        "name": "Global Wealth and Investment Management Segment",
+        "revenue": 24883000000.0,
+        "pct": 0.2131123672490579
+      },
+      {
+        "name": "Global Banking Segment",
+        "revenue": 24108000000.0,
+        "pct": 0.20647482014388488
+      },
+      {
+        "name": "Global Markets Segment",
+        "revenue": 24096000000.0,
+        "pct": 0.20637204522096608
+      }
+    ],
+    "source": "fmp"
+  }
+}

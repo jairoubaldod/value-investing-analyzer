@@ -1,0 +1,32 @@
+{
+  "ticker": "BAC",
+  "analyst_consensus": {
+    "low": 50.0,
+    "high": 71.0,
+    "median": 61.0,
+    "mean": 61.13,
+    "analyst_count": 21,
+    "source": "fmp",
+    "horizon": "12_month_forward",
+    "horizon_label": "12-month forward analyst price targets (not intrinsic value today)",
+    "as_of": "2026-06-12",
+    "source_note": "Financial Modeling Prep \u00b7 price-target-consensus (aggregated sell-side targets).",
+    "summary": {
+      "last_month_count": 0,
+      "last_month_avg": 0,
+      "last_quarter_count": 4,
+      "last_quarter_avg": 59.5,
+      "last_year_count": 21,
+      "last_year_avg": 59.71
+    },
+    "ratings": {
+      "strong_buy": 0,
+      "buy": 36,
+      "hold": 17,
+      "sell": 1,
+      "strong_sell": 0,
+      "total": 54,
+      "consensus_label": "Buy"
+    }
+  }
+}

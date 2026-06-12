@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THESIS · ONE-PAGER</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
-    <link rel="stylesheet" href="/static/thesis.css?v=60" />
+    <link rel="stylesheet" href="/static/thesis.css?v=62" />
   </head>
   <body>
     <div class="bb-terminal">
@@ -13,14 +13,21 @@
         <span class="bb-ticker-badge" id="bb-badge">MSFT</span>
         <span class="bb-fx" id="bb-fx">US $</span>
         <div class="bb-ticker-lookup">
-          <label class="bb-lookup-label" for="ticker-select">TICKER</label>
-          <select id="ticker-select" class="bb-ticker-select" aria-label="Select ticker">
-            <option value="MSFT" selected>MSFT</option>
-            <option value="AAPL">AAPL</option>
-            <option value="NVDA">NVDA</option>
-            <option value="GOOGL">GOOGL</option>
-            <option value="AMZN">AMZN</option>
-          </select>
+          <label class="bb-lookup-label" for="ticker-input">TICKER</label>
+          <input
+            id="ticker-input"
+            class="bb-ticker-input"
+            type="text"
+            value="MSFT"
+            maxlength="12"
+            spellcheck="false"
+            autocapitalize="characters"
+            autocomplete="off"
+            list="ticker-datalist"
+            aria-label="Enter or search ticker"
+          />
+          <datalist id="ticker-datalist"></datalist>
+          <button type="button" id="ticker-browse" class="bb-ticker-browse" aria-haspopup="dialog">ALL</button>
           <button type="button" id="ticker-go" class="bb-ticker-go">GO</button>
         </div>
         <span class="bb-spacer"></span>
@@ -110,7 +117,7 @@
             </div>
           </nav>
 
-          <p class="sidebar-note">5 companies · preloaded · instant</p>
+          <p class="sidebar-note" id="sidebar-ticker-note">Loading tickers…</p>
         </aside>
 
         <div class="workspace-content">
@@ -183,6 +190,36 @@
         <span id="bb-clock" class="bb-status-item bb-dim"></span>
       </footer>
     </div>
-    <script src="/static/thesis.js?v=100"></script>
+
+    <div id="ticker-browser" class="ticker-browser" hidden aria-hidden="true">
+      <div class="ticker-browser-backdrop" data-close-ticker-browser></div>
+      <div
+        class="ticker-browser-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="ticker-browser-title"
+      >
+        <div class="ticker-browser-head">
+          <div class="ticker-browser-head-main">
+            <span class="bb-key">TK</span>
+            <h2 id="ticker-browser-title" class="ticker-browser-title">Companies</h2>
+            <span id="ticker-browser-count" class="ticker-browser-count">—</span>
+          </div>
+          <button type="button" class="ticker-browser-close" data-close-ticker-browser aria-label="Close">×</button>
+        </div>
+        <div class="ticker-browser-search-row">
+          <input
+            id="ticker-browser-search"
+            class="ticker-browser-search"
+            type="search"
+            placeholder="Type ticker or company name…"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+        <div id="ticker-browser-list" class="ticker-browser-list" role="listbox" aria-label="Available companies"></div>
+      </div>
+    </div>
+    <script src="/static/thesis.js?v=103"></script>
   </body>
 </html>

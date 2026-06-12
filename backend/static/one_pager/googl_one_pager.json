@@ -219,15 +219,10 @@
           "id": "pe",
           "label": "P/E median",
           "price": 312.49
-        },
-        {
-          "id": "consensus",
-          "label": "Analyst consensus",
-          "price": 420.0
         }
       ],
-      "blend_price": 339.93,
-      "method_count": 3
+      "blend_price": 299.9,
+      "method_count": 2
     }
   },
   "market_bar": {

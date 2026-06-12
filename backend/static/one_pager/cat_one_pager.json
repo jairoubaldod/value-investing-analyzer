@@ -1,0 +1,201 @@
+{
+  "ticker": "CAT",
+  "one_pager": {
+    "identity": {
+      "name": "Caterpillar Inc.",
+      "ticker": "CAT",
+      "price": null,
+      "price_direction": "",
+      "market_cap": 413481590310.0,
+      "market_cap_label": "$413.5B",
+      "sector": "Industrials",
+      "industry": "Agricultural - Machinery",
+      "country": "US",
+      "currency": "USD",
+      "description": "Caterpillar Inc., a global enterprise founded in 1925 and headquartered in Deerfield, Illinois (having previously operated as Caterpillar Tractor Co. until its rebranding in 1986), is a premier manufacturer and vendor of heavy construction and mining equipment, diesel and natural gas power units, and industrial gas turbines across the world. The company's extensive offerings are organized into several operational divisions: Construction Industries: This segment delivers a broad spectrum of machinery for construction projects, including asphalt pavers, versatile backhoe and skid steer loaders, various sizes of excavators (from compact to heavy-duty), compactors, road-building equipment like cold planers and motorgraders, pipelayers, site preparation tractors, telehandlers, and utility vehicles, alongside a range of wheel loaders and track-type equipment. Resource Industries: Dedicated to the mining sector, this division supplies powerful equipment such as electric rope and hydraulic shovels, draglines, rotary drills, specialized hard rock vehicles, and a diverse fleet of mining, off-highway, and articulated trucks. It also offers longwall miners, wheel dozers, fleet management systems, autonomous vehicle solutions, crucial machinery components, selected work tools, and comprehensive safety and performance solutions for mining operations. Energy & Transportation: This segment focuses on power generation and propulsion systems. It provides reciprocating engines, generator sets, integrated power solutions, industrial turbines and associated services, remanufactured engines and parts, centrifugal gas compressors, and diesel-electric locomotives with related components and services. These products serve critical sectors including marine, oil and gas, industrial applications, and electric power generation. Financial Products: This segment supports customers with a variety of financial services, such as operating and finance leases, installment sale agreements, working capital loans, and wholesale financing schemes. It also offers insurance and risk management products tailored for vehicles, power generation facilities, and marine vessels. All Other: This encompassing segment is responsible for manufacturing essential consumables and components like filters, fluids, undercarriage parts, and ground engaging tools.",
+      "segments": []
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_10y",
+        "label": "Revenue CAGR",
+        "sublabel": "10Y",
+        "value": 0.03697348824771152,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_10y",
+        "label": "EPS CAGR",
+        "sublabel": "10Y",
+        "value": 0.16148109055343562,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": 0.7769703651437644,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": 0.16498246756128956,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.13194454718963144,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": true
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": false
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": false
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": true
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 0,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": false
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": false
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": false
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": true
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": false
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y \u2265 8%",
+            "met": false
+          },
+          {
+            "label": "EPS CAGR 10Y \u2265 10%",
+            "met": true
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": true
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": false
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": true
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [
+        {
+          "id": "dcf",
+          "label": "DCF",
+          "price": 346.95
+        }
+      ],
+      "blend_price": 346.95,
+      "method_count": 1
+    }
+  },
+  "market_bar": {
+    "price": null,
+    "ask": null,
+    "prev": null,
+    "pe": null,
+    "pb": null,
+    "direction": "",
+    "fx_label": "US $"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "ticker": "BRK-B",
+  "company_profile": {
+    "name": "Berkshire Hathaway Inc.",
+    "ticker": "BRK-B",
+    "description": "Berkshire Hathaway Inc., established in 1998 and headquartered in Omaha, Nebraska, operates as a vast global conglomerate with diverse business interests. Its core operations primarily encompass insurance, freight rail transportation, and utility services. The company provides a comprehensive suite of insurance and reinsurance products, including coverage for property, casualty, life, accident, and health. Across North America, it manages extensive railway networks dedicated to freight transport. Its utility division is responsible for generating, transmitting, storing, and distributing electricity sourced from various origins such as natural gas, coal, wind, solar, hydroelectric, nuclear, and geothermal energy. This segment also oversees natural gas infrastructure, including distribution networks, storage facilities, interstate pipelines, and liquefied natural gas (LNG) operations, alongside its interests in coal mining. Beyond these foundational sectors, Berkshire Hathaway boasts a significant manufacturing footprint. It produces a wide array of goods ranging from confectionery and specialty chemicals to metal cutting tools and components for both aerospace and power generation applications. Its manufacturing portfolio also extends to flooring products, insulation, roofing materials, engineered building components, paints, coatings, and bricks. The company is also involved in residential construction, offering both manufactured and site-built homes, supplemented by related lending and financial services. Its product offerings further include recreational vehicles, apparel, footwear, jewelry, custom picture framing, and alkaline batteries. On the industrial side, it manufactures specialized components like castings, forgings, fasteners, aerostructures, and precision parts, often utilizing advanced alloys such as cobalt, nickel, and titanium. Additionally, Berkshire Hathaway provides a variety of services, which include distributing electronic components, franchising and servicing quick-service restaurants, offering logistics, grocery, and foodservice distribution, as well as professional aviation training and shared aircraft ownership programs. Finally, the company maintains a substantial retail presence, selling an extensive selection of products such as automobiles, furniture, home appliances, electronics, computers, jewelry, and kitchenware, in addition to motorcycle clothing and equipment.",
+    "sector": "Financial Services",
+    "industry": "Insurance - Diversified",
+    "country": "US",
+    "exchange": "NYSE",
+    "market_cap": 1047777978355.0,
+    "market_cap_label": null,
+    "segments": [],
+    "source": "fmp"
+  }
+}

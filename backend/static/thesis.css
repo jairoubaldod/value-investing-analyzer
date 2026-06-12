@@ -134,14 +134,202 @@ body {
 
 .bb-ticker-input {
   background: var(--bb-panel);
-  color: var(--bb-white);
+  color: var(--bb-cyan);
   border: 1px solid var(--bb-border-light);
   font-family: inherit;
   font-size: 12px;
   font-weight: 700;
   padding: 0.1rem 0.35rem;
-  width: 5.5rem;
+  width: 5.75rem;
+  min-width: 5.75rem;
+  max-width: 7rem;
   text-transform: uppercase;
+}
+
+.bb-ticker-input:focus {
+  outline: none;
+  border-color: var(--bb-cyan);
+}
+
+.bb-ticker-input.bb-ticker-input--error {
+  border-color: var(--bb-red);
+  color: var(--bb-red);
+}
+
+.bb-ticker-browse {
+  background: var(--bb-panel-2);
+  color: var(--bb-cyan);
+  border: 1px solid var(--bb-cyan);
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0.15rem 0.4rem;
+  cursor: pointer;
+}
+
+.bb-ticker-browse:hover:not(:disabled) {
+  background: var(--bb-cyan);
+  color: var(--bb-black);
+}
+
+body.ticker-browser-open {
+  overflow: hidden;
+}
+
+.ticker-browser {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 0;
+}
+
+.ticker-browser[hidden] {
+  display: none !important;
+}
+
+.ticker-browser-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+}
+
+.ticker-browser-panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(960px, 100%);
+  max-height: min(88vh, 900px);
+  margin: auto;
+  background: var(--bb-black);
+  border: 1px solid var(--bb-border-light);
+  box-shadow: 0 0 0 1px #111, 0 18px 48px rgba(0, 0, 0, 0.65);
+}
+
+.ticker-browser-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--bb-border);
+  background: #111;
+}
+
+.ticker-browser-head-main {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.ticker-browser-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--bb-white);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ticker-browser-count {
+  color: var(--bb-gray-light);
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.ticker-browser-close {
+  background: transparent;
+  border: 1px solid var(--bb-border-light);
+  color: var(--bb-white);
+  font-size: 18px;
+  line-height: 1;
+  width: 1.75rem;
+  height: 1.75rem;
+  cursor: pointer;
+}
+
+.ticker-browser-close:hover {
+  border-color: var(--bb-amber);
+  color: var(--bb-amber);
+}
+
+.ticker-browser-search-row {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid var(--bb-border);
+}
+
+.ticker-browser-search {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--bb-panel);
+  color: var(--bb-white);
+  border: 1px solid var(--bb-border-light);
+  font-family: inherit;
+  font-size: 13px;
+  padding: 0.45rem 0.55rem;
+}
+
+.ticker-browser-search:focus {
+  outline: none;
+  border-color: var(--bb-cyan);
+}
+
+.ticker-browser-list {
+  overflow: auto;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0;
+  align-content: start;
+  padding: 0.25rem;
+}
+
+.ticker-browser-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--bb-white);
+  font-family: inherit;
+  padding: 0.55rem 0.65rem;
+  cursor: pointer;
+}
+
+.ticker-browser-item:hover,
+.ticker-browser-item:focus-visible {
+  background: #151515;
+  border-color: var(--bb-border-light);
+  outline: none;
+}
+
+.ticker-browser-item-sym {
+  color: var(--bb-cyan);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.ticker-browser-item-name {
+  color: var(--bb-gray-light);
+  font-size: 11px;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.ticker-browser-empty {
+  grid-column: 1 / -1;
+  margin: 1rem 0.75rem;
+  color: var(--bb-gray-light);
+  font-size: 12px;
 }
 
 .bb-ticker-search {
@@ -3524,6 +3712,44 @@ tbody tr:hover td:first-child {
   .op-metrics-grid,
   .op-scorecards,
   .op-val-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bb-quote-row {
+    gap: 0.25rem;
+  }
+
+  .bb-ticker-lookup {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-left: 0.25rem;
+    padding-left: 0.35rem;
+  }
+
+  .bb-ticker-input {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 4.5rem;
+    max-width: none;
+  }
+
+  .bb-market-strip {
+    display: none;
+  }
+
+  .ticker-browser {
+    padding: 0;
+  }
+
+  .ticker-browser-panel {
+    width: 100%;
+    max-height: 100vh;
+    margin: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .ticker-browser-list {
     grid-template-columns: 1fr;
   }
 }

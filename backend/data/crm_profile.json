@@ -1,0 +1,16 @@
+{
+  "ticker": "CRM",
+  "company_profile": {
+    "name": "Salesforce, Inc.",
+    "ticker": "CRM",
+    "description": "Salesforce, Inc. is a leading provider of customer relationship management (CRM) solutions, dedicated to connecting businesses and their clientele on a global scale. At its core, the Customer 360 platform empowers organizations to create seamless, integrated experiences for their customers. The company's extensive suite of services encompasses a wide array of functionalities: Sales: Tools designed to manage sales pipelines, track leads, forecast opportunities, extract data-driven insights through analytics, and streamline the creation of quotes, contracts, and invoices. Service: Capabilities enabling companies to deliver highly personalized, trustworthy, and scalable customer support. Platform: A versatile development environment, featuring intuitive drag-and-drop tools, that allows businesses of diverse sizes, locations, and industries to build tailored applications, thereby strengthening customer relationships. Learning: An online educational platform providing accessible training to acquire sought-after Salesforce skills. Slack: A comprehensive system for team collaboration and engagement. Marketing: Solutions for strategizing, personalizing, and optimizing individual customer marketing journeys. Commerce: Offerings that unify customer interactions across various channels, including mobile, web, social media, and physical retail stores. Tableau: A complete analytics solution addressing a broad spectrum of enterprise data analysis needs. MuleSoft: An integration platform designed to unlock and connect data residing across an organization's various systems. Salesforce's offerings cater to numerous sectors, such as financial services, healthcare, life sciences, and manufacturing, among others. Beyond its core products, the company also provides professional services and conducts both in-person and online courses to certify customers and partners in the architecture, administration, deployment, and development of its services. Its solutions are distributed through direct sales channels, as well as a network of consulting firms, systems integrators, and other strategic partners. Established in 1999, Salesforce, Inc. maintains its headquarters in San Francisco, California.",
+    "sector": "Technology",
+    "industry": "Software - Application",
+    "country": "US",
+    "exchange": "NYSE",
+    "market_cap": 136322550000.0,
+    "market_cap_label": null,
+    "segments": [],
+    "source": "fmp"
+  }
+}

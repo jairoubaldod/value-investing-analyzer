@@ -1,0 +1,195 @@
+{
+  "ticker": "BRK-B",
+  "one_pager": {
+    "identity": {
+      "name": "Berkshire Hathaway Inc.",
+      "ticker": "BRK-B",
+      "price": null,
+      "price_direction": "",
+      "market_cap": 1047777978355.0,
+      "market_cap_label": "$1.05T",
+      "sector": "Financial Services",
+      "industry": "Insurance - Diversified",
+      "country": "US",
+      "currency": "USD",
+      "description": "Berkshire Hathaway Inc., established in 1998 and headquartered in Omaha, Nebraska, operates as a vast global conglomerate with diverse business interests. Its core operations primarily encompass insurance, freight rail transportation, and utility services. The company provides a comprehensive suite of insurance and reinsurance products, including coverage for property, casualty, life, accident, and health. Across North America, it manages extensive railway networks dedicated to freight transport. Its utility division is responsible for generating, transmitting, storing, and distributing electricity sourced from various origins such as natural gas, coal, wind, solar, hydroelectric, nuclear, and geothermal energy. This segment also oversees natural gas infrastructure, including distribution networks, storage facilities, interstate pipelines, and liquefied natural gas (LNG) operations, alongside its interests in coal mining. Beyond these foundational sectors, Berkshire Hathaway boasts a significant manufacturing footprint. It produces a wide array of goods ranging from confectionery and specialty chemicals to metal cutting tools and components for both aerospace and power generation applications. Its manufacturing portfolio also extends to flooring products, insulation, roofing materials, engineered building components, paints, coatings, and bricks. The company is also involved in residential construction, offering both manufactured and site-built homes, supplemented by related lending and financial services. Its product offerings further include recreational vehicles, apparel, footwear, jewelry, custom picture framing, and alkaline batteries. On the industrial side, it manufactures specialized components like castings, forgings, fasteners, aerostructures, and precision parts, often utilizing advanced alloys such as cobalt, nickel, and titanium. Additionally, Berkshire Hathaway provides a variety of services, which include distributing electronic components, franchising and servicing quick-service restaurants, offering logistics, grocery, and foodservice distribution, as well as professional aviation training and shared aircraft ownership programs. Finally, the company maintains a substantial retail presence, selling an extensive selection of products such as automobiles, furniture, home appliances, electronics, computers, jewelry, and kitchenware, in addition to motorcycle clothing and equipment.",
+      "segments": []
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_10y",
+        "label": "Revenue CAGR",
+        "sublabel": "10Y",
+        "value": 0.016005512516825027,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_10y",
+        "label": "EPS CAGR",
+        "sublabel": "10Y",
+        "value": null,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": 0.11644094032089213,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": 0.12359121769264386,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.11800760488168066,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 0,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": false
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": false
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": false
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": false
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": false
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 1,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": false
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": true
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 1,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y > 0",
+            "met": false
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": false
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": false
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": false
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 1,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y \u2265 8%",
+            "met": false
+          },
+          {
+            "label": "EPS CAGR 10Y \u2265 10%",
+            "met": false
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": false
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": false
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": true
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [],
+      "blend_price": null,
+      "method_count": 0
+    }
+  },
+  "market_bar": {
+    "price": null,
+    "ask": null,
+    "prev": null,
+    "pe": null,
+    "pb": null,
+    "direction": "",
+    "fx_label": "US $"
+  }
+}

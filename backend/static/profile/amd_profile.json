@@ -1,0 +1,37 @@
+{
+  "ticker": "AMD",
+  "company_profile": {
+    "name": "Advanced Micro Devices, Inc.",
+    "ticker": "AMD",
+    "description": "Advanced Micro Devices, Inc. (AMD), established in 1969 and headquartered in Santa Clara, California, operates as a global leader in the semiconductor industry. The company organizes its extensive operations into two primary segments: Computing and Graphics, and Enterprise, Embedded and Semi-Custom. In its Computing and Graphics division, AMD develops a range of products including x86 microprocessors (often as accelerated processing units), chipsets, and various graphics processing units (GPUs), encompassing discrete, integrated, data center, and professional variants, alongside providing development services. The Enterprise, Embedded and Semi-Custom segment focuses on server and embedded processors, bespoke System-on-Chip (SoC) products, and foundational technology for popular game consoles, also offering associated development support. AMD's diverse product lineup features processors for desktop and notebook personal computers under well-known brands such as AMD Ryzen, Ryzen PRO, Ryzen Threadripper, Threadripper PRO, AMD Athlon, Athlon PRO, AMD FX, AMD A-Series, and PRO A-Series. Discrete GPUs for these PCs are offered through the AMD Radeon graphics and AMD Embedded Radeon graphics brands, while professional graphics solutions include AMD Radeon Pro and AMD FirePro. Furthermore, the company provides high-performance accelerators for servers, including Radeon Instinct, Radeon PRO V-series, and AMD Instinct, along with AMD EPYC microprocessors designed for server environments. Its embedded processor solutions span multiple brands, such as AMD Athlon, AMD Geode, AMD Ryzen, AMD EPYC, AMD R-Series, and G-Series. AMD also produces chipsets under its own trademark and crafts customer-specific solutions leveraging its CPU, GPU, and multimedia expertise, including specialized semi-custom SoC products. AMD reaches its wide array of clients, which comprise original equipment manufacturers (OEMs), public cloud service providers, original design manufacturers (ODMs), system integrators, independent distributors, online retailers, and add-in-board manufacturers. The company's sales and distribution network includes its direct sales force, independent distributors, and dedicated sales representatives.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "country": "US",
+    "exchange": "NASDAQ",
+    "market_cap": 796466570000.0,
+    "market_cap_label": null,
+    "segments": [
+      {
+        "name": "Data Center",
+        "revenue": 16635000000.0,
+        "pct": 0.4315287037277232
+      },
+      {
+        "name": "Client and Gaming",
+        "revenue": 14550000000.0,
+        "pct": 0.37744169757970375
+      },
+      {
+        "name": "Gaming",
+        "revenue": 3910000000.0,
+        "pct": 0.10142934965887572
+      },
+      {
+        "name": "Embedded",
+        "revenue": 3454000000.0,
+        "pct": 0.08960024903369737
+      }
+    ],
+    "source": "fmp"
+  }
+}

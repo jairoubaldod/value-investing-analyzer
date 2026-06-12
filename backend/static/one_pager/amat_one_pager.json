@@ -1,0 +1,201 @@
+{
+  "ticker": "AMAT",
+  "one_pager": {
+    "identity": {
+      "name": "Applied Materials, Inc.",
+      "ticker": "AMAT",
+      "price": null,
+      "price_direction": "",
+      "market_cap": 438773739395.0,
+      "market_cap_label": "$438.8B",
+      "sector": "Technology",
+      "industry": "Semiconductors",
+      "country": "US",
+      "currency": "USD",
+      "description": "Applied Materials, Inc. is a prominent provider of crucial manufacturing equipment, associated services, and software solutions. These offerings primarily cater to the semiconductor, display, and related high-technology industries. The company organizes its activities into three principal business segments: 1. Semiconductor Systems: This division is dedicated to the development, production, and sale of sophisticated manufacturing tools essential for fabricating semiconductor chips, also known as integrated circuits. Its comprehensive suite of technologies includes epitaxy, ion implantation, oxidation/nitridation, rapid thermal processing, physical vapor deposition, chemical vapor deposition, chemical mechanical planarization, electrochemical deposition, atomic layer deposition, etching, and selective deposition and removal processes, in addition to precision metrology and inspection instruments. 2. Applied Global Services: This segment delivers integrated solutions aimed at maximizing the performance and productivity of manufacturing facilities and their equipment. Its services encompass providing spare parts, system upgrades, maintenance support, refurbished older-generation equipment, and advanced factory automation software for semiconductor, display, and other product lines. 3. Display and Adjacent Markets: This unit focuses on supplying products for the creation of various display technologies. This includes manufacturing solutions for liquid crystal displays (LCDs), organic light-emitting diodes (OLEDs), and other display types, which are integral to a broad spectrum of consumer electronics such as televisions, computer monitors, laptops, personal computers, electronic tablets, and smartphones. Founded in 1967, Applied Materials, Inc. maintains its corporate headquarters in Santa Clara, California. The company boasts a significant international presence, conducting operations across the United States, China, Korea, Taiwan, Japan, Southeast Asia, and Europe.",
+      "segments": []
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_10y",
+        "label": "Revenue CAGR",
+        "sublabel": "10Y",
+        "value": 0.11375497046638272,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_10y",
+        "label": "EPS CAGR",
+        "sublabel": "10Y",
+        "value": 0.22657461161054782,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": 0.31713518193089,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": 0.2921954314720812,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.20086012408347434,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 5,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": true
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": true
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": true
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 2,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": true
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": true
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 5,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": true
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": true
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": true
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 4,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y \u2265 8%",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y \u2265 10%",
+            "met": true
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": true
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": false
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": true
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [
+        {
+          "id": "dcf",
+          "label": "DCF",
+          "price": 172.43
+        }
+      ],
+      "blend_price": 172.43,
+      "method_count": 1
+    }
+  },
+  "market_bar": {
+    "price": null,
+    "ask": null,
+    "prev": null,
+    "pe": null,
+    "pb": null,
+    "direction": "",
+    "fx_label": "US $"
+  }
+}

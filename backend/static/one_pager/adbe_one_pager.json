@@ -1,0 +1,227 @@
+{
+  "ticker": "ADBE",
+  "one_pager": {
+    "identity": {
+      "name": "Adobe Inc.",
+      "ticker": "ADBE",
+      "price": null,
+      "price_direction": "",
+      "market_cap": 88438960000.0,
+      "market_cap_label": "$88.4B",
+      "sector": "Technology",
+      "industry": "Software - Application",
+      "country": "US",
+      "currency": "USD",
+      "description": "Adobe Inc. stands as a prominent global software provider, delivering a diverse range of solutions. Its operations are structured into three primary business divisions: Digital Media, Digital Experience, and Publishing and Advertising. The Digital Media segment empowers individuals, teams, and enterprises to generate, disseminate, and amplify various forms of content through its array of products and services, including the cloud-native Document Cloud platform. Central to this segment is Creative Cloud, its subscription-based flagship, granting access to a comprehensive suite of creative tools. This division caters to a diverse range of users, from professional content creators and marketers to educators, communicators, and general consumers. Adobe's Digital Experience division offers an integrated suite of applications and services designed to empower brands and businesses to craft, orchestrate, assess, and enhance customer journeys, from initial analytical insights to final commercial transactions. It serves a broad professional base including marketing teams, advertisers, agencies, data scientists, and senior executives. The Publishing and Advertising segment provides specialized offerings such as e-learning tools, technical documentation services, web conferencing solutions, advanced printing technologies, and its Advertising Cloud suite. Adobe engages directly with enterprise clients through its dedicated sales teams and regional offices. Individual end-users can access its offerings via app stores or its official website, adobe.com. Additionally, an extensive indirect channel supports distribution, encompassing partners such as distributors, value-added resellers, system integrators, software vendors, retailers, and original equipment manufacturers. Established in 1982, the company, initially named Adobe Systems Incorporated, rebranded as Adobe Inc. in October 2018. Its corporate headquarters are situated in San Jose, California.",
+      "segments": [
+        {
+          "name": "Digital Media",
+          "revenue": 17649000000.0,
+          "pct": 0.7425217720560394
+        },
+        {
+          "name": "Digital Experience",
+          "revenue": 5864000000.0,
+          "pct": 0.2467078968404224
+        },
+        {
+          "name": "Print And Publishing",
+          "revenue": 256000000.0,
+          "pct": 0.010770331103538222
+        }
+      ]
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_10y",
+        "label": "Revenue CAGR",
+        "sublabel": "10Y",
+        "value": 0.17359324714668167,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_10y",
+        "label": "EPS CAGR",
+        "sublabel": "10Y",
+        "value": 0.2951275433867879,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": 0.5730641995553359,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": 0.36627540073204595,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.41448946106272877,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 5,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": true
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": true
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": true
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 1,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": true
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": false
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 5,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": true
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": true
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": true
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 4,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y \u2265 8%",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y \u2265 10%",
+            "met": true
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": true
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": true
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": false
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [
+        {
+          "id": "dcf",
+          "label": "DCF",
+          "price": 607.86
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 823.04
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 287.5
+        }
+      ],
+      "blend_price": 572.8,
+      "method_count": 3
+    }
+  },
+  "market_bar": {
+    "price": null,
+    "ask": null,
+    "prev": null,
+    "pe": null,
+    "pb": null,
+    "direction": "",
+    "fx_label": "US $"
+  }
+}

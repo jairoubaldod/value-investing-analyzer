@@ -1,0 +1,237 @@
+{
+  "ticker": "COST",
+  "one_pager": {
+    "identity": {
+      "name": "Costco Wholesale Corporation",
+      "ticker": "COST",
+      "price": null,
+      "price_direction": "",
+      "market_cap": 432698025510.0,
+      "market_cap_label": "$432.7B",
+      "sector": "Consumer Defensive",
+      "industry": "Discount Stores",
+      "country": "US",
+      "currency": "USD",
+      "description": "Costco Wholesale Corporation, alongside its group entities, operates membership-based retail warehouses across a broad international scope, spanning the United States, Puerto Rico, Canada, the United Kingdom, Mexico, Japan, South Korea, Australia, Spain, France, Iceland, China, and Taiwan. These outlets provide customers with an extensive array of both well-known branded and proprietary private-label products. Their vast inventory includes household staples, shelf-stable groceries, confectionery, chilled and frozen items, alcoholic beverages, tobacco, and deli selections. Furthermore, the stores stock major appliances, consumer electronics, health and beauty aids, hardware, garden and patio furniture, sporting goods, vehicle tires, toys, seasonal merchandise, office supplies, automotive maintenance products, postage services, event tickets, apparel, small kitchen appliances, home furnishings, domestic textiles, kitchenware, custom-order kiosks, and fine jewelry. Fresh departments offer meat, produce, a service deli, and bakery items. Beyond retail goods, Costco provides in-store amenities such as pharmacies, optical clinics, food courts, hearing aid centers, and tire installation facilities, in addition to managing 636 gas stations. The company also extends its offerings online through business delivery, travel booking, and same-day grocery fulfillment in various countries. As of August 29, 2021, Costco maintained a global network of 815 membership warehouses, with 564 located in the United States and Puerto Rico, 105 in Canada, 39 in Mexico, 30 in Japan, 29 in the United Kingdom, 16 in South Korea, 14 in Taiwan, 12 in Australia, 3 in Spain, and one each in Iceland, France, and China. Digital storefronts facilitate e-commerce operations in the United States, Canada, the United Kingdom, Mexico, South Korea, Taiwan, Japan, and Australia. Founded in 1976, the enterprise was originally known as Costco Companies, Inc. before officially adopting the name Costco Wholesale Corporation in August 1999. Its corporate headquarters are situated in Issaquah, Washington.",
+      "segments": [
+        {
+          "name": "Food and Sundries",
+          "revenue": 109564000000.0,
+          "pct": 0.39807437280869074
+        },
+        {
+          "name": "Non-Foods",
+          "revenue": 71190000000.0,
+          "pct": 0.25865169764019835
+        },
+        {
+          "name": "Other",
+          "revenue": 51170000000.0,
+          "pct": 0.1859138554326303
+        },
+        {
+          "name": "Fresh Food",
+          "revenue": 37988000000.0,
+          "pct": 0.138020237251803
+        },
+        {
+          "name": "Membership",
+          "revenue": 5323000000.0,
+          "pct": 0.019339836866677566
+        }
+      ]
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_10y",
+        "label": "Revenue CAGR",
+        "sublabel": "10Y",
+        "value": 0.0900593060353001,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_10y",
+        "label": "EPS CAGR",
+        "sublabel": "10Y",
+        "value": 0.12923090863877307,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": 0.3738797102601004,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": 0.03772412665540356,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.028892741056791942,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 2,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": true
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": false
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": false
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": false
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": true
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 1,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": true
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": false
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 5,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y > 0",
+            "met": true
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": true
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": true
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": true
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 5,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 10Y \u2265 8%",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 10Y \u2265 10%",
+            "met": true
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": true
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": true
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": true
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [
+        {
+          "id": "dcf",
+          "label": "DCF",
+          "price": 336.91
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 733.51
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 1100.0
+        }
+      ],
+      "blend_price": 723.47,
+      "method_count": 3
+    }
+  },
+  "market_bar": {
+    "price": null,
+    "ask": null,
+    "prev": null,
+    "pe": null,
+    "pb": null,
+    "direction": "",
+    "fx_label": "US $"
+  }
+}

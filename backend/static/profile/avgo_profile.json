@@ -1,0 +1,16 @@
+{
+  "ticker": "AVGO",
+  "company_profile": {
+    "name": "Broadcom Inc.",
+    "ticker": "AVGO",
+    "description": "Broadcom Inc. is a prominent global technology enterprise focused on the innovation, development, and supply of advanced semiconductor solutions and critical infrastructure software. The company's headquarters are situated in San Jose, California, and it maintains a significant team of 19,000 full-time staff. Its operations are segmented into four primary divisions: Wired Infrastructure, Wireless Communications, Enterprise Storage, and Industrial & Other. Broadcom\u2019s diverse product range is integrated into numerous end-user technologies, including enterprise and data center networking, residential internet solutions, digital television receivers, telecommunications apparatus, mobile phones, data center servers and storage architectures, industrial automation, alternative and power generation systems, and electronic display technologies. The company's product offerings extend from fundamental discrete components to intricate sub-systems incorporating various device categories. This also encompasses specialized firmware designed to facilitate interaction between analog and digital systems, alongside mechanical hardware engineered to connect with optoelectronic or capacitive sensing technologies.",
+    "sector": "Technology",
+    "industry": "Semiconductors",
+    "country": "US",
+    "exchange": "NASDAQ",
+    "market_cap": 1834380120600.0,
+    "market_cap_label": null,
+    "segments": [],
+    "source": "fmp"
+  }
+}
