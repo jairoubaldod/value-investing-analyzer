@@ -1,0 +1,149 @@
+{
+  "ticker": "Q",
+  "company": "QNITY ELECTRONICS, INC.",
+  "currency": "USD",
+  "units": "MLN",
+  "years": [
+    {
+      "col": 5,
+      "fy": "FY 2023",
+      "end_date": "12/31/2023"
+    },
+    {
+      "col": 6,
+      "fy": "FY 2024",
+      "end_date": "12/31/2024"
+    },
+    {
+      "col": 7,
+      "fy": "FY 2025",
+      "end_date": "12/31/2025"
+    }
+  ],
+  "grid": {
+    "14": {
+      "label": "Revenue",
+      "values": {
+        "5": 4035.0,
+        "6": 4335.0,
+        "7": 4754.0
+      }
+    },
+    "16": {
+      "label": "Cost of Revenue",
+      "values": {
+        "5": 2280.0,
+        "6": 2339.0,
+        "7": 2559.0
+      }
+    },
+    "27": {
+      "label": "Non-Operating (Income) Loss",
+      "values": {
+        "5": 11.0,
+        "6": 25.0,
+        "7": 11.0
+      }
+    },
+    "62": {
+      "label": "Basic EPS, GAAP",
+      "values": {
+        "5": 2.42,
+        "6": 3.31,
+        "7": 3.3
+      }
+    },
+    "177": {
+      "label": "Shares Outstanding",
+      "values": {
+        "5": 209.4,
+        "6": 209.4,
+        "7": 209.6
+      }
+    },
+    "209": {
+      "label": "Cash from Operating Activities",
+      "values": {
+        "5": 882.0,
+        "6": 1061.0,
+        "7": 1273.0
+      }
+    },
+    "172": {
+      "label": "Total Equity",
+      "values": {
+        "6": 10896.0,
+        "7": 7095.0
+      }
+    },
+    "99": {
+      "label": "Cash & Cash Equivalents",
+      "values": {
+        "7": 915.0
+      }
+    },
+    "113": {
+      "label": "Total Current Assets",
+      "values": {
+        "7": 2638.0
+      }
+    },
+    "121": {
+      "label": "Goodwill",
+      "values": {
+        "7": 7522.0
+      }
+    },
+    "128": {
+      "label": "Total Assets",
+      "values": {
+        "7": 14070.0
+      }
+    },
+    "131": {
+      "label": "Payables & Accruals",
+      "values": {
+        "7": 680.0
+      }
+    },
+    "146": {
+      "label": "Total Current Liabilities",
+      "values": {
+        "7": 1356.0
+      }
+    },
+    "152": {
+      "label": "Other LT Liabilities",
+      "values": {
+        "7": 992.0
+      }
+    },
+    "164": {
+      "label": "Share Capital & APIC",
+      "values": {
+        "7": 2.0
+      }
+    },
+    "168": {
+      "label": "Retained Earnings",
+      "values": {
+        "7": 18.0
+      }
+    },
+    "231": {
+      "label": "Dividends Paid",
+      "values": {
+        "7": -13.0
+      }
+    },
+    "11": {
+      "label": "Effective tax rate",
+      "values": {
+        "21": 24.22037422037422
+      }
+    }
+  },
+  "source": "edgar",
+  "source_provider": "SEC EDGAR XBRL",
+  "source_fetched_at": "2026-06-12T15:16:28Z"
+}

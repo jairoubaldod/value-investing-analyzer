@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THESIS · Pipeline</title>
+    <link rel="stylesheet" href="/static/thesis.css?v=64" />
+    <style>
+      body { margin: 0; background: #000; color: #fff; font-family: Consolas, "Courier New", monospace; }
+      .pipe-wrap { max-width: 1100px; margin: 0 auto; padding: 1rem; }
+      .pipe-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+      .pipe-title { font-size: 14px; font-weight: 700; color: #ff9900; letter-spacing: 0.06em; text-transform: uppercase; }
+      .pipe-badge { padding: 0.15rem 0.45rem; font-size: 11px; font-weight: 700; border: 1px solid #333; }
+      .pipe-badge.running { color: #33cc33; border-color: #33cc33; }
+      .pipe-badge.idle { color: #999; }
+      .pipe-badge.done { color: #00ffff; border-color: #00ffff; }
+      .pipe-badge.enrich { color: #ff9900; border-color: #ff9900; }
+      .pipe-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+      .pipe-card { border: 1px solid #333; background: #0a0a0a; padding: 0.75rem; }
+      .pipe-card-k { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+      .pipe-current { font-size: 28px; font-weight: 700; color: #00ffff; }
+      .pipe-sub { font-size: 12px; color: #aaa; margin-top: 0.25rem; line-height: 1.4; }
+      .pipe-next-list { margin: 0; padding: 0; list-style: none; }
+      .pipe-next-list li { font-size: 12px; padding: 0.15rem 0; color: #ccc; }
+      .pipe-next-list .sym { color: #00ffff; font-weight: 700; display: inline-block; min-width: 3.5rem; }
+      .pipe-table-wrap { border: 1px solid #333; max-height: 42vh; overflow: auto; margin-bottom: 0.75rem; }
+      table.pipe-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+      .pipe-table th, .pipe-table td { padding: 0.35rem 0.5rem; border-bottom: 1px solid #222; text-align: left; vertical-align: top; }
+      .pipe-table th { position: sticky; top: 0; background: #111; color: #ff9900; z-index: 1; }
+      .st-pending { color: #888; }
+      .st-running { color: #33cc33; font-weight: 700; }
+      .st-done { color: #666; }
+      .st-failed { color: #ff3333; }
+      .pipe-log { border: 1px solid #333; background: #050505; max-height: 28vh; overflow: auto; padding: 0.5rem; font-size: 10px; line-height: 1.45; color: #aaa; white-space: pre-wrap; }
+      .pipe-log .ok { color: #33cc33; }
+      .pipe-log .fail { color: #ff3333; }
+      .pipe-foot { margin-top: 0.5rem; font-size: 10px; color: #666; }
+      @media (max-width: 720px) { .pipe-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <div class="pipe-wrap">
+      <div class="pipe-head">
+        <span class="pipe-title">S&amp;P 500 Pipeline</span>
+        <span id="pipe-state" class="pipe-badge idle">IDLE</span>
+        <span id="pipe-progress" class="pipe-sub"></span>
+        <span style="flex:1"></span>
+        <a href="/" style="color:#00ffff;font-size:11px">← App</a>
+      </div>
+
+      <div class="pipe-grid">
+        <div class="pipe-card">
+          <div class="pipe-card-k">Active now</div>
+          <div id="pipe-current" class="pipe-current">—</div>
+          <div id="pipe-current-sub" class="pipe-sub">—</div>
+        </div>
+        <div class="pipe-card">
+          <div class="pipe-card-k">Next up</div>
+          <ul id="pipe-next" class="pipe-next-list"></ul>
+        </div>
+      </div>
+
+      <div class="pipe-card-k" id="pipe-queue-title">Queue</div>
+      <div class="pipe-table-wrap">
+        <table class="pipe-table">
+          <thead>
+            <tr><th>#</th><th>Ticker</th><th>~Mkt cap</th><th>Company</th><th>Status</th></tr>
+          </thead>
+          <tbody id="pipe-queue"></tbody>
+        </table>
+      </div>
+
+      <div class="pipe-card-k">Live log · backend/data/overnight_build.log</div>
+      <div id="pipe-log" class="pipe-log">Loading log…</div>
+      <p id="pipe-foot" class="pipe-foot"></p>
+    </div>
+    <script>
+      function esc(s) {
+        return String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      }
+
+      function colorLogLine(line) {
+        let cls = "";
+        if (/ OK |WARN/.test(line)) cls = "ok";
+        if (/ FAIL|FATAL|STOP/.test(line)) cls = "fail";
+        return `<div class="${cls}">${esc(line)}</div>`;
+      }
+
+      function render(data) {
+        const running = !!data.running;
+        const phase = (data.phase || "idle").toLowerCase();
+        const state = document.getElementById("pipe-state");
+        state.textContent = running ? phase.toUpperCase() : phase.toUpperCase();
+        state.className = "pipe-badge " + (running ? (phase === "enrich" ? "enrich running" : "running") : phase === "done" ? "done" : "idle");
+
+        const cov = data.coverage || {};
+        const prog = data.progress || {};
+        document.getElementById("pipe-progress").textContent =
+          `S&P cached ${cov.cached_count ?? "—"} / ${cov.sp500_total ?? 503}` +
+          (cov.coverage_pct != null ? ` (${cov.coverage_pct}%)` : "") +
+          (prog.total && phase === "enrich" ? ` · enrich ${prog.done}/${prog.total}` : "") +
+          (prog.total && phase === "edgar" ? ` · edgar queue ${prog.done}/${prog.total}` : "");
+
+        const cur = data.current;
+        document.getElementById("pipe-current").textContent = cur ? cur.ticker : running ? "…" : "—";
+        document.getElementById("pipe-current-sub").textContent = cur
+          ? `${cur.name || ""} · ${cur.market_cap_label || ""} · step: ${cur.step || phase}`
+          : data.message || (running ? `Phase: ${phase} — check log below` : "Idle. Run overnight_build.py to continue.");
+
+        document.getElementById("pipe-queue-title").textContent =
+          phase === "enrich" ? "Enrich queue (consensus + one-pager)" : "Missing EDGAR queue (market cap order)";
+
+        const next = data.next || [];
+        document.getElementById("pipe-next").innerHTML = next.length
+          ? next.map((row) => `<li><span class="sym">${esc(row.ticker)}</span> ${esc(row.market_cap_label || "")} · ${esc(row.name || "")}</li>`).join("")
+          : "<li>No pending items in current queue.</li>";
+
+        const rows = data.queue || data.queue_preview || [];
+        document.getElementById("pipe-queue").innerHTML = rows.map((row) => {
+          const st = row.status || "pending";
+          return `<tr>
+            <td>${row.rank ?? ""}</td>
+            <td>${esc(row.ticker)}</td>
+            <td>${esc(row.market_cap_label || "")}</td>
+            <td>${esc(row.name || "")}</td>
+            <td class="st-${esc(st)}">${esc(st)}${row.error ? " · " + esc(row.error) : ""}${row.detail ? " · " + esc(row.detail) : ""}</td>
+          </tr>`;
+        }).join("");
+
+        const logLines = data.log_tail || [];
+        document.getElementById("pipe-log").innerHTML = logLines.length
+          ? logLines.map(colorLogLine).join("")
+          : "No log lines yet.";
+        const logEl = document.getElementById("pipe-log");
+        logEl.scrollTop = logEl.scrollHeight;
+
+        document.getElementById("pipe-foot").textContent =
+          `Updated ${data.updated_at || "—"} · queue rows ${rows.length} · ${data.log_path || "overnight_build.log"}`;
+      }
+
+      async function tick() {
+        try {
+          const res = await fetch("/api/pipeline/status?limit=503");
+          if (res.ok) render(await res.json());
+        } catch { /* ignore */ }
+      }
+
+      tick();
+      setInterval(tick, 2000);
+    </script>
+  </body>
+</html>

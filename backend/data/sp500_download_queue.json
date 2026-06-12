@@ -1,0 +1,17 @@
+{
+  "order": "market_cap_priority",
+  "tickers": [
+    "CRWD",
+    "APA",
+    "ARE",
+    "FITB",
+    "GS",
+    "KHC",
+    "ODFL",
+    "RF",
+    "SJM",
+    "SYF",
+    "TFC",
+    "VLO"
+  ]
+}

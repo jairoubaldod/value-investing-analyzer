@@ -1,32 +1,6 @@
 {
   "ticker": "AMD",
   "analyst_consensus": {
-    "low": 260.0,
-    "high": 665.0,
-    "median": 450.0,
-    "mean": 449.64,
-    "analyst_count": 81,
-    "source": "fmp",
-    "horizon": "12_month_forward",
-    "horizon_label": "12-month forward analyst price targets (not intrinsic value today)",
-    "as_of": "2026-06-12",
-    "source_note": "Financial Modeling Prep \u00b7 price-target-consensus (aggregated sell-side targets).",
-    "summary": {
-      "last_month_count": 6,
-      "last_month_avg": 569,
-      "last_quarter_count": 24,
-      "last_quarter_avg": 455.71,
-      "last_year_count": 81,
-      "last_year_avg": 327.54
-    },
-    "ratings": {
-      "strong_buy": 0,
-      "buy": 49,
-      "hold": 21,
-      "sell": 0,
-      "strong_sell": 0,
-      "total": 70,
-      "consensus_label": "Buy"
-    }
+    "error": "Analyst price targets unavailable. Requires FMP price-target-consensus or Yahoo Finance fallback."
   }
 }

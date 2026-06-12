@@ -1,0 +1,193 @@
+{
+  "ticker": "GEV",
+  "company": "GE Vernova Inc.",
+  "currency": "USD",
+  "units": "MLN",
+  "years": [
+    {
+      "col": 5,
+      "fy": "FY 2022",
+      "end_date": "12/31/2022"
+    },
+    {
+      "col": 6,
+      "fy": "FY 2023",
+      "end_date": "12/31/2023"
+    },
+    {
+      "col": 7,
+      "fy": "FY 2024",
+      "end_date": "12/31/2024"
+    },
+    {
+      "col": 8,
+      "fy": "FY 2025",
+      "end_date": "12/31/2025"
+    }
+  ],
+  "grid": {
+    "14": {
+      "label": "Revenue",
+      "values": {
+        "5": 29654.0,
+        "6": 33239.0,
+        "7": 34935.0,
+        "8": 38068.0
+      }
+    },
+    "16": {
+      "label": "Cost of Revenue",
+      "values": {
+        "5": 26196.0,
+        "6": 28421.0,
+        "7": 28850.0,
+        "8": 30533.0
+      }
+    },
+    "18": {
+      "label": "Gross Profit",
+      "values": {
+        "5": 3458.0,
+        "6": 4818.0,
+        "7": 6085.0,
+        "8": 7535.0
+      }
+    },
+    "26": {
+      "label": "Operating Income (Loss)",
+      "values": {
+        "5": -2881.0,
+        "6": -923.0,
+        "7": 471.0,
+        "8": 1388.0
+      }
+    },
+    "27": {
+      "label": "Non-Operating (Income) Loss",
+      "values": {
+        "5": 370.0,
+        "6": 324.0,
+        "7": 1372.0,
+        "8": 795.0
+      }
+    },
+    "50": {
+      "label": "Income (Loss) Incl. MI",
+      "values": {
+        "5": -2736.0,
+        "6": -438.0,
+        "7": 1552.0,
+        "8": 4884.0
+      }
+    },
+    "62": {
+      "label": "Basic EPS, GAAP",
+      "values": {
+        "5": -10.0,
+        "6": -1.6,
+        "7": 5.65,
+        "8": 17.92
+      }
+    },
+    "172": {
+      "label": "Total Equity",
+      "values": {
+        "5": 11607.0,
+        "6": 8380.0,
+        "7": 9546.0,
+        "8": 11178.0
+      }
+    },
+    "177": {
+      "label": "Shares Outstanding",
+      "values": {
+        "5": 274.0,
+        "6": 274.0,
+        "7": 275.0,
+        "8": 272.0
+      }
+    },
+    "209": {
+      "label": "Cash from Operating Activities",
+      "values": {
+        "5": -114.0,
+        "6": 1186.0,
+        "7": 2583.0,
+        "8": 4987.0
+      }
+    },
+    "121": {
+      "label": "Goodwill",
+      "values": {
+        "6": 4437.0,
+        "7": 4263.0,
+        "8": 4439.0
+      }
+    },
+    "231": {
+      "label": "Dividends Paid",
+      "values": {
+        "6": -0.0,
+        "7": -0.0,
+        "8": -275.0
+      }
+    },
+    "113": {
+      "label": "Total Current Assets",
+      "values": {
+        "7": 34153.0,
+        "8": 40216.0
+      }
+    },
+    "128": {
+      "label": "Total Assets",
+      "values": {
+        "7": 51485.0,
+        "8": 63016.0
+      }
+    },
+    "136": {
+      "label": "ST Debt",
+      "values": {
+        "7": 60.0
+      }
+    },
+    "146": {
+      "label": "Total Current Liabilities",
+      "values": {
+        "7": 31685.0,
+        "8": 40972.0
+      }
+    },
+    "152": {
+      "label": "Other LT Liabilities",
+      "values": {
+        "7": 5116.0,
+        "8": 5416.0
+      }
+    },
+    "164": {
+      "label": "Share Capital & APIC",
+      "values": {
+        "7": 3.0,
+        "8": 3.0
+      }
+    },
+    "168": {
+      "label": "Retained Earnings",
+      "values": {
+        "7": 1611.0,
+        "8": 6154.0
+      }
+    },
+    "11": {
+      "label": "Effective tax rate",
+      "values": {
+        "21": 72.52475247524752
+      }
+    }
+  },
+  "source": "edgar",
+  "source_provider": "SEC EDGAR XBRL",
+  "source_fetched_at": "2026-06-12T15:09:03Z"
+}

@@ -1,0 +1,203 @@
+{
+  "ticker": "SNDK",
+  "company": "Sandisk Corporation",
+  "currency": "USD",
+  "units": "MLN",
+  "years": [
+    {
+      "col": 5,
+      "fy": "FY 2023",
+      "end_date": "06/30/2023"
+    },
+    {
+      "col": 6,
+      "fy": "FY 2024",
+      "end_date": "06/28/2024"
+    },
+    {
+      "col": 7,
+      "fy": "FY 2025",
+      "end_date": "06/27/2025"
+    }
+  ],
+  "grid": {
+    "14": {
+      "label": "Revenue",
+      "values": {
+        "5": 6086.0,
+        "6": 6663.0,
+        "7": 7355.0
+      }
+    },
+    "16": {
+      "label": "Cost of Revenue",
+      "values": {
+        "5": 5656.0,
+        "6": 5591.0,
+        "7": 5143.0
+      }
+    },
+    "18": {
+      "label": "Gross Profit",
+      "values": {
+        "5": 430.0,
+        "6": 1072.0,
+        "7": 2212.0
+      }
+    },
+    "20": {
+      "label": "Operating Expenses",
+      "values": {
+        "5": 2465.0,
+        "6": 1540.0,
+        "7": 3589.0
+      }
+    },
+    "26": {
+      "label": "Operating Income (Loss)",
+      "values": {
+        "5": -2035.0,
+        "6": -468.0,
+        "7": -1377.0
+      }
+    },
+    "27": {
+      "label": "Non-Operating (Income) Loss",
+      "values": {
+        "5": 33.0,
+        "6": -35.0,
+        "7": -102.0
+      }
+    },
+    "50": {
+      "label": "Income (Loss) Incl. MI",
+      "values": {
+        "5": -2143.0,
+        "6": -672.0,
+        "7": -1641.0
+      }
+    },
+    "62": {
+      "label": "Basic EPS, GAAP",
+      "values": {
+        "5": -14.78,
+        "6": -4.63,
+        "7": -11.32
+      }
+    },
+    "177": {
+      "label": "Shares Outstanding",
+      "values": {
+        "5": 145.0,
+        "6": 145.0,
+        "7": 145.0
+      }
+    },
+    "209": {
+      "label": "Cash from Operating Activities",
+      "values": {
+        "5": -713.0,
+        "6": -309.0,
+        "7": 84.0
+      }
+    },
+    "212": {
+      "label": "Change in Fixed & Intang",
+      "values": {
+        "5": -219.0,
+        "6": -166.0,
+        "7": -204.0
+      }
+    },
+    "232": {
+      "label": "Cash From (Repayment) Debt",
+      "values": {
+        "5": 0.0,
+        "6": 0.0,
+        "7": 100.0
+      }
+    },
+    "172": {
+      "label": "Total Equity",
+      "values": {
+        "6": 11082.0,
+        "7": 9216.0
+      }
+    },
+    "99": {
+      "label": "Cash & Cash Equivalents",
+      "values": {
+        "7": 1481.0
+      }
+    },
+    "113": {
+      "label": "Total Current Assets",
+      "values": {
+        "7": 5086.0
+      }
+    },
+    "114": {
+      "label": "Property, Plant & Equip, Net",
+      "values": {
+        "7": 619.0
+      }
+    },
+    "121": {
+      "label": "Goodwill",
+      "values": {
+        "7": 4999.0
+      }
+    },
+    "128": {
+      "label": "Total Assets",
+      "values": {
+        "7": 12985.0
+      }
+    },
+    "136": {
+      "label": "ST Debt",
+      "values": {
+        "7": 20.0
+      }
+    },
+    "146": {
+      "label": "Total Current Liabilities",
+      "values": {
+        "7": 1427.0
+      }
+    },
+    "147": {
+      "label": "LT Debt",
+      "values": {
+        "7": 1829.0
+      }
+    },
+    "152": {
+      "label": "Other LT Liabilities",
+      "values": {
+        "7": 496.0
+      }
+    },
+    "164": {
+      "label": "Share Capital & APIC",
+      "values": {
+        "7": 1.0
+      }
+    },
+    "168": {
+      "label": "Retained Earnings",
+      "values": {
+        "7": -1784.0
+      }
+    },
+    "11": {
+      "label": "Effective tax rate",
+      "values": {
+        "21": 10.953346855983773
+      }
+    }
+  },
+  "source": "edgar",
+  "source_provider": "SEC EDGAR XBRL",
+  "source_fetched_at": "2026-06-12T15:17:53Z"
+}

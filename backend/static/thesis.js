@@ -151,7 +151,7 @@ function renderTickerPickerList(query) {
       (row) => `
         <button type="button" class="ticker-picker-item" data-ticker="${escapeHtml(row.ticker)}" role="option">
           <span class="ticker-picker-item-sym">${escapeHtml(row.ticker)}</span>
-          <span class="ticker-picker-item-name">${escapeHtml(row.company)}</span>
+          <span class="ticker-picker-item-name">${escapeHtml(row.market_cap_label ? `${row.market_cap_label} · ${row.company}` : row.company)}</span>
         </button>`
     )
     .join("");
@@ -207,6 +207,7 @@ async function fetchReadyTickers() {
         .map((row) => ({
           ticker: String(row.ticker || "").toUpperCase(),
           company: String(row.company || row.ticker || "").trim(),
+          market_cap_label: String(row.market_cap_label || "").trim(),
         }))
         .filter((row) => row.ticker);
     } else {

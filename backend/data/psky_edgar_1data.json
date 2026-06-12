@@ -1,0 +1,112 @@
+{
+  "ticker": "PSKY",
+  "company": "Paramount Skydance Corporation",
+  "currency": "USD",
+  "units": "MLN",
+  "years": [
+    {
+      "col": 5,
+      "fy": "FY 2023",
+      "end_date": "12/31/2023"
+    },
+    {
+      "col": 6,
+      "fy": "FY 2024",
+      "end_date": "12/31/2024"
+    }
+  ],
+  "grid": {
+    "14": {
+      "label": "Revenue",
+      "values": {
+        "5": 29652.0,
+        "6": 29213.0
+      }
+    },
+    "20": {
+      "label": "Operating Expenses",
+      "values": {
+        "5": 30103.0,
+        "6": 34482.0
+      }
+    },
+    "26": {
+      "label": "Operating Income (Loss)",
+      "values": {
+        "5": -451.0,
+        "6": -5269.0
+      }
+    },
+    "27": {
+      "label": "Non-Operating (Income) Loss",
+      "values": {
+        "5": -216.0,
+        "6": -182.0
+      }
+    },
+    "50": {
+      "label": "Income (Loss) Incl. MI",
+      "values": {
+        "5": -608.0,
+        "6": -6190.0
+      }
+    },
+    "62": {
+      "label": "Basic EPS, GAAP",
+      "values": {
+        "5": -1.02,
+        "6": -9.34
+      }
+    },
+    "177": {
+      "label": "Shares Outstanding",
+      "values": {
+        "5": 652.0,
+        "6": 664.0
+      }
+    },
+    "209": {
+      "label": "Cash from Operating Activities",
+      "values": {
+        "5": 475.0,
+        "6": 752.0
+      }
+    },
+    "212": {
+      "label": "Change in Fixed & Intang",
+      "values": {
+        "5": -328.0,
+        "6": -263.0
+      }
+    },
+    "222": {
+      "label": "Net Cash From Acq & Div",
+      "values": {
+        "5": -0.0,
+        "6": -0.0
+      }
+    },
+    "232": {
+      "label": "Cash From (Repayment) Debt",
+      "values": {
+        "5": 1277.0,
+        "6": 126.0
+      }
+    },
+    "172": {
+      "label": "Total Equity",
+      "values": {
+        "6": 16782.0
+      }
+    },
+    "11": {
+      "label": "Effective tax rate",
+      "values": {
+        "21": 4.92730210016155
+      }
+    }
+  },
+  "source": "edgar",
+  "source_provider": "SEC EDGAR XBRL",
+  "source_fetched_at": "2026-06-12T15:16:15Z"
+}

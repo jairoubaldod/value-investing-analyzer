@@ -199,15 +199,9 @@
       }
     ],
     "valuation_snapshot": {
-      "methods": [
-        {
-          "id": "consensus",
-          "label": "Analyst consensus",
-          "price": 61.0
-        }
-      ],
-      "blend_price": 61.0,
-      "method_count": 1
+      "methods": [],
+      "blend_price": null,
+      "method_count": 0
     }
   },
   "market_bar": {

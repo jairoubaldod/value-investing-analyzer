@@ -1,0 +1,30 @@
+{
+  "comment": "Optional tickers outside S&P 500 and symbols to fetch first (priority_boost).",
+  "extra": [],
+  "priority_boost": [
+    "MU",
+    "PLTR",
+    "GEV",
+    "PM",
+    "RTX",
+    "COP",
+    "NOW",
+    "UBER",
+    "WDAY",
+    "TMUS",
+    "SCHW",
+    "PFE",
+    "CVX",
+    "NEE",
+    "CMCSA",
+    "NKE",
+    "PANW",
+    "CRWD",
+    "VRTX",
+    "ISRG",
+    "KLAC",
+    "LRCX",
+    "SNPS",
+    "CDNS"
+  ]
+}

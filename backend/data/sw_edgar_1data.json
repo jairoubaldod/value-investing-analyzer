@@ -1,0 +1,220 @@
+{
+  "ticker": "SW",
+  "company": "Smurfit Westrock plc",
+  "currency": "USD",
+  "units": "MLN",
+  "years": [
+    {
+      "col": 5,
+      "fy": "FY 2022",
+      "end_date": "12/31/2022"
+    },
+    {
+      "col": 6,
+      "fy": "FY 2023",
+      "end_date": "12/31/2023"
+    },
+    {
+      "col": 7,
+      "fy": "FY 2024",
+      "end_date": "12/31/2024"
+    },
+    {
+      "col": 8,
+      "fy": "FY 2025",
+      "end_date": "12/31/2025"
+    }
+  ],
+  "grid": {
+    "14": {
+      "label": "Revenue",
+      "values": {
+        "5": 13509.0,
+        "6": 12093.0,
+        "7": 21109.0,
+        "8": 31179.0
+      }
+    },
+    "16": {
+      "label": "Cost of Revenue",
+      "values": {
+        "5": 10237.0,
+        "6": 9039.0,
+        "7": 16914.0,
+        "8": 25136.0
+      }
+    },
+    "18": {
+      "label": "Gross Profit",
+      "values": {
+        "5": 3272.0,
+        "6": 3054.0,
+        "7": 4195.0,
+        "8": 6043.0
+      }
+    },
+    "26": {
+      "label": "Operating Income (Loss)",
+      "values": {
+        "5": 1558.0,
+        "6": 1372.0,
+        "7": 1007.0,
+        "8": 1719.0
+      }
+    },
+    "27": {
+      "label": "Non-Operating (Income) Loss",
+      "values": {
+        "5": 15.0,
+        "6": -46.0,
+        "7": -25.0,
+        "8": -61.0
+      }
+    },
+    "50": {
+      "label": "Income (Loss) Incl. MI",
+      "values": {
+        "5": 1034.0,
+        "6": 825.0,
+        "7": 319.0,
+        "8": 699.0
+      }
+    },
+    "62": {
+      "label": "Basic EPS, GAAP",
+      "values": {
+        "5": 4.0,
+        "6": 3.19,
+        "7": 0.83,
+        "8": 1.34
+      }
+    },
+    "172": {
+      "label": "Total Equity",
+      "values": {
+        "5": 5343.0,
+        "6": 6174.0,
+        "7": 17360.0,
+        "8": 18327.0
+      }
+    },
+    "177": {
+      "label": "Shares Outstanding",
+      "values": {
+        "5": 258.0,
+        "6": 258.0,
+        "7": 386.0,
+        "8": 522.0
+      }
+    },
+    "209": {
+      "label": "Cash from Operating Activities",
+      "values": {
+        "5": 1433.0,
+        "6": 1559.0,
+        "7": 1483.0,
+        "8": 3392.0
+      }
+    },
+    "222": {
+      "label": "Net Cash From Acq & Div",
+      "values": {
+        "5": -93.0,
+        "6": -29.0,
+        "7": -719.0,
+        "8": -6.0
+      }
+    },
+    "231": {
+      "label": "Dividends Paid",
+      "values": {
+        "5": -349.0,
+        "6": -391.0,
+        "7": -650.0,
+        "8": -900.0
+      }
+    },
+    "232": {
+      "label": "Cash From (Repayment) Debt",
+      "values": {
+        "5": 56.0,
+        "6": 136.0,
+        "7": 4321.0,
+        "8": 1841.0
+      }
+    },
+    "121": {
+      "label": "Goodwill",
+      "values": {
+        "6": 2842.0,
+        "7": 6822.0,
+        "8": 7218.0
+      }
+    },
+    "99": {
+      "label": "Cash & Cash Equivalents",
+      "values": {
+        "7": 855.0,
+        "8": 892.0
+      }
+    },
+    "113": {
+      "label": "Total Current Assets",
+      "values": {
+        "7": 10055.0,
+        "8": 10439.0
+      }
+    },
+    "128": {
+      "label": "Total Assets",
+      "values": {
+        "7": 43759.0,
+        "8": 45157.0
+      }
+    },
+    "131": {
+      "label": "Payables & Accruals",
+      "values": {
+        "7": 3290.0,
+        "8": 3597.0
+      }
+    },
+    "146": {
+      "label": "Total Current Liabilities",
+      "values": {
+        "7": 7333.0,
+        "8": 7064.0
+      }
+    },
+    "152": {
+      "label": "Other LT Liabilities",
+      "values": {
+        "7": 2191.0,
+        "8": 2318.0
+      }
+    },
+    "164": {
+      "label": "Share Capital & APIC",
+      "values": {
+        "7": 1.0,
+        "8": 1.0
+      }
+    },
+    "168": {
+      "label": "Retained Earnings",
+      "values": {
+        "7": 2950.0,
+        "8": 2655.0
+      }
+    },
+    "11": {
+      "label": "Effective tax rate",
+      "values": {
+        "21": 27.111574556830032
+      }
+    }
+  },
+  "source": "edgar",
+  "source_provider": "SEC EDGAR XBRL",
+  "source_fetched_at": "2026-06-12T15:17:59Z"
+}

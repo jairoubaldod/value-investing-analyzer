@@ -1,32 +1,6 @@
 {
   "ticker": "ADBE",
   "analyst_consensus": {
-    "low": 220.0,
-    "high": 447.0,
-    "median": 287.5,
-    "mean": 301.71,
-    "analyst_count": 43,
-    "source": "fmp",
-    "horizon": "12_month_forward",
-    "horizon_label": "12-month forward analyst price targets (not intrinsic value today)",
-    "as_of": "2026-06-12",
-    "source_note": "Financial Modeling Prep \u00b7 price-target-consensus (aggregated sell-side targets).",
-    "summary": {
-      "last_month_count": 4,
-      "last_month_avg": 316.25,
-      "last_quarter_count": 14,
-      "last_quarter_avg": 302.64,
-      "last_year_count": 43,
-      "last_year_avg": 366.65
-    },
-    "ratings": {
-      "strong_buy": 0,
-      "buy": 33,
-      "hold": 25,
-      "sell": 4,
-      "strong_sell": 0,
-      "total": 62,
-      "consensus_label": "Buy"
-    }
+    "error": "Analyst price targets unavailable. Requires FMP price-target-consensus or Yahoo Finance fallback."
   }
 }

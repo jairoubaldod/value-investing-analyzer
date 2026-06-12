@@ -10,6 +10,8 @@ from fastapi.staticfiles import StaticFiles
 from services.data_cache import is_ticker_ready, list_ready_tickers, list_ticker_catalog, load_cached
 from services.magic_numbers import DataSheet, compute_magic_numbers, enrich_payload_consensus, enrich_payload_multiples
 from services.one_pager import enrich_payload_profile
+from services.pipeline_status import pipeline_status
+from services.sp500_priority import build_manifest
 from services.ticker_lookup import normalize_symbol
 from services.top_tickers import TOP_US_TICKERS
 
@@ -55,6 +57,38 @@ def tickers():
         "count": len(ready),
         "featured": list(TOP_US_TICKERS),
         "catalog": list_ticker_catalog(),
+        "sort": "top_20_market_cap_then_alpha",
+    }
+
+
+@app.get("/api/pipeline/status")
+def pipeline_status_api(limit: int = 503):
+    return pipeline_status(queue_limit=max(10, min(limit, 503)))
+
+
+@app.get("/api/pipeline/log")
+def pipeline_log_api(lines: int = 100):
+    from services.pipeline_status import read_build_log_tail
+
+    return {"lines": read_build_log_tail(max(10, min(lines, 500))), "path": "backend/data/overnight_build.log"}
+
+
+@app.get("/pipeline")
+def pipeline_page():
+    return FileResponse(STATIC_DIR / "pipeline.html")
+
+
+@app.get("/api/sp500/status")
+def sp500_status():
+    manifest = build_manifest()
+    return {
+        "sp500_total": manifest["sp500_total"],
+        "cached_count": manifest["cached_count"],
+        "missing_count": manifest["missing_count"],
+        "coverage_pct": round(100 * manifest["cached_count"] / manifest["sp500_total"], 1),
+        "top_missing": manifest["missing"][:30],
+        "custom_extra": manifest["custom_extra"],
+        "priority_boost": manifest["priority_boost"],
     }
 
 

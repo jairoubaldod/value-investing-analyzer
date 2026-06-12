@@ -1,32 +1,6 @@
 {
   "ticker": "AAPL",
   "analyst_consensus": {
-    "low": 253.0,
-    "high": 400.0,
-    "median": 325.0,
-    "mean": 326.47,
-    "analyst_count": 61,
-    "source": "fmp",
-    "horizon": "12_month_forward",
-    "horizon_label": "12-month forward analyst price targets (not intrinsic value today)",
-    "as_of": "2026-06-12",
-    "source_note": "Financial Modeling Prep \u00b7 price-target-consensus (aggregated sell-side targets).",
-    "summary": {
-      "last_month_count": 5,
-      "last_month_avg": 355,
-      "last_quarter_count": 13,
-      "last_quarter_avg": 327.77,
-      "last_year_count": 61,
-      "last_year_avg": 295.96
-    },
-    "ratings": {
-      "strong_buy": 1,
-      "buy": 69,
-      "hold": 33,
-      "sell": 7,
-      "strong_sell": 0,
-      "total": 110,
-      "consensus_label": "Buy"
-    }
+    "error": "Analyst price targets unavailable. Requires FMP price-target-consensus or Yahoo Finance fallback."
   }
 }

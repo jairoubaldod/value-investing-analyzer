@@ -7,7 +7,10 @@ Run before sleep (PowerShell):
   $env:SEC_USER_AGENT = "YourName your@email.com"
   # optional for multiples/profile:
   # $env:FMP_API_KEY = "your_key"
-  .venv\\Scripts\\python.exe scripts\\overnight_build.py --hours 5.75
+  .venv\\Scripts\\python.exe scripts\\overnight_build.py --edgar-only --hours 5.75 --order market_cap
+
+Optional: edit backend/data/custom_tickers.json to add extra symbols or priority_boost list.
+Manifest: backend/data/sp500_manifest.json
 
 Log: backend/data/overnight_build.log
 Report: backend/data/overnight_report.json
@@ -43,6 +46,8 @@ from services.magic_numbers import DataSheet, compute_magic_numbers, enrich_payl
 from services.multiples_series import fetch_and_build_multiples_series
 from services.normalize_edgar import normalize_edgar_facts
 from services.one_pager import enrich_payload_profile
+from services.pipeline_status import begin_enrich_phase, finish_pipeline, init_pipeline, mark_done, mark_failed, set_current
+from services.sp500_priority import build_manifest, download_queue
 
 DATA_DIR = ROOT / "data"
 STATIC_DIR = ROOT / "static"
@@ -96,7 +101,7 @@ def has_edgar(ticker: str) -> bool:
     return edgar_path(ticker).exists()
 
 
-def fetch_edgar(ticker: str) -> bool:
+def fetch_edgar(ticker: str) -> tuple[bool, str | None]:
     sym = ticker.upper()
     out = edgar_path(sym)
     t0 = time.time()
@@ -104,11 +109,12 @@ def fetch_edgar(ticker: str) -> bool:
         facts = fetch_company_facts(sym)
         payload = normalize_edgar_facts(sym, facts)
         out.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-        log(f"EDGAR OK {sym} ({len(payload.get('years', []))} yrs) {time.time() - t0:.0f}s")
-        return True
+        detail = f"{len(payload.get('years', []))} yrs"
+        log(f"EDGAR OK {sym} ({detail}) {time.time() - t0:.0f}s")
+        return True, detail
     except (EdgarError, ValueError) as exc:
         log(f"EDGAR FAIL {sym}: {exc}")
-        return False
+        return False, str(exc)
 
 
 def save_consensus(ticker: str) -> bool:
@@ -233,6 +239,13 @@ def main() -> None:
     p.add_argument("--hours", type=float, default=5.75, help="Stop EDGAR phase after N hours")
     p.add_argument("--skip-edgar", action="store_true", help="Only enrich existing cache")
     p.add_argument("--edgar-only", action="store_true", help="Skip FMP (free fundamentals night)")
+    p.add_argument(
+        "--order",
+        choices=("market_cap", "alphabetical"),
+        default="market_cap",
+        help="Download missing tickers by market-cap priority (default) or alphabetically",
+    )
+    p.add_argument("--refresh-manifest", action="store_true", help="Rebuild sp500_manifest.json before download")
     args = p.parse_args()
 
     if args.edgar_only:
@@ -264,9 +277,15 @@ def main() -> None:
     }
 
     all_tickers = load_sp500_tickers()
+    if args.refresh_manifest or args.order == "market_cap":
+        build_manifest()
     cached = [t for t in all_tickers if has_edgar(t)]
-    missing = [t for t in all_tickers if not has_edgar(t)]
-    log(f"Cached EDGAR: {len(cached)} · Missing: {len(missing)} · S&P total: {len(all_tickers)}")
+    missing = download_queue(order=args.order)
+    log(f"Cached EDGAR: {len(cached)} · Missing: {len(missing)} · S&P total: {len(all_tickers)} · order={args.order}")
+    if missing[:5]:
+        log(f"Next up: {', '.join(missing[:5])}")
+
+    init_pipeline(queue=missing, phase="edgar", hours_budget=args.hours, order=args.order)
 
     # Priority: enrich existing 50 first if FMP available
     priority_full = sorted(set(cached), key=str)
@@ -287,8 +306,12 @@ def main() -> None:
         for sym in missing:
             if time.time() >= deadline:
                 log("EDGAR deadline reached")
+                finish_pipeline(phase="deadline", message="EDGAR time budget reached")
                 break
-            if fetch_edgar(sym):
+            set_current(sym, step="edgar")
+            ok, detail = fetch_edgar(sym)
+            if ok:
+                mark_done(sym, detail=detail or "edgar")
                 report["edgar_ok"].append(sym)
                 consecutive_403 = 0
                 if has_fmp and fmp_used < FMP_DAILY_BUDGET:
@@ -296,26 +319,32 @@ def main() -> None:
                     if did:
                         report["full_stack"].append(sym)
             else:
+                mark_failed(sym, error=detail or "edgar fetch failed")
                 report["edgar_fail"].append(sym)
                 if len(report["edgar_ok"]) == 0 and len(report["edgar_fail"]) >= 10:
                     log("STOP: 10 EDGAR failures, 0 OK — check SEC_USER_AGENT in backend/.env")
+                    finish_pipeline(phase="error", message="Too many EDGAR failures")
                     break
 
     # Consensus + one-pager for all EDGAR tickers without full stack
     log("Consensus + one-pager for all cached tickers…")
     all_cached = sorted(t for t in all_tickers if has_edgar(t))
-    for sym in all_cached:
-        if sym in report["full_stack"]:
-            continue
+    enrich_list = [sym for sym in all_cached if sym not in report["full_stack"]]
+    begin_enrich_phase(enrich_list)
+    for sym in enrich_list:
+        set_current(sym, step="consensus")
         if save_consensus(sym):
             report["consensus_ok"].append(sym)
+        set_current(sym, step="one_pager")
         if save_one_pager(sym):
             report["one_pager_ok"].append(sym)
+        mark_done(sym, detail="enriched")
 
     report["finished"] = datetime.now(timezone.utc).isoformat()
     report["edgar_total"] = len(all_cached)
     report["fmp_used_estimate"] = fmp_used
     REPORT_PATH.write_text(json.dumps(report, indent=2), encoding="utf-8")
+    finish_pipeline(phase="done", message=f"Added {len(report['edgar_ok'])} EDGAR files tonight")
 
     log("=" * 60)
     log(f"DONE · EDGAR total {len(all_cached)} · new tonight {len(report['edgar_ok'])}")

@@ -1,0 +1,6 @@
+{
+  "ticker": "BMY",
+  "analyst_consensus": {
+    "error": "Analyst price targets unavailable. Requires FMP price-target-consensus or Yahoo Finance fallback."
+  }
+}

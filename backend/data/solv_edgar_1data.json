@@ -1,0 +1,229 @@
+{
+  "ticker": "SOLV",
+  "company": "SOLVENTUM CORPORATION",
+  "currency": "USD",
+  "units": "MLN",
+  "years": [
+    {
+      "col": 5,
+      "fy": "FY 2022",
+      "end_date": "12/31/2022"
+    },
+    {
+      "col": 6,
+      "fy": "FY 2023",
+      "end_date": "12/31/2023"
+    },
+    {
+      "col": 7,
+      "fy": "FY 2024",
+      "end_date": "12/31/2024"
+    },
+    {
+      "col": 8,
+      "fy": "FY 2025",
+      "end_date": "12/31/2025"
+    }
+  ],
+  "grid": {
+    "14": {
+      "label": "Revenue",
+      "values": {
+        "5": 8130.0,
+        "6": 8197.0,
+        "7": 8254.0,
+        "8": 8325.0
+      }
+    },
+    "18": {
+      "label": "Gross Profit",
+      "values": {
+        "5": 4695.0,
+        "6": 4693.0,
+        "7": 4593.0,
+        "8": 4451.0
+      }
+    },
+    "26": {
+      "label": "Operating Income (Loss)",
+      "values": {
+        "5": 1693.0,
+        "6": 1692.0,
+        "7": 1036.0,
+        "8": 2181.0
+      }
+    },
+    "27": {
+      "label": "Non-Operating (Income) Loss",
+      "values": {
+        "5": -1.0,
+        "6": -25.0,
+        "7": -64.0,
+        "8": -39.0
+      }
+    },
+    "50": {
+      "label": "Income (Loss) Incl. MI",
+      "values": {
+        "5": 1343.0,
+        "6": 1346.0,
+        "7": 479.0,
+        "8": 1556.0
+      }
+    },
+    "62": {
+      "label": "Basic EPS, GAAP",
+      "values": {
+        "5": 7.78,
+        "6": 7.79,
+        "7": 2.77,
+        "8": 8.94
+      }
+    },
+    "172": {
+      "label": "Total Equity",
+      "values": {
+        "5": 11742.0,
+        "6": 11666.0,
+        "7": 2959.0,
+        "8": 5049.0
+      }
+    },
+    "177": {
+      "label": "Shares Outstanding",
+      "values": {
+        "5": 172.7,
+        "6": 172.7,
+        "7": 173.2,
+        "8": 174.1
+      }
+    },
+    "209": {
+      "label": "Cash from Operating Activities",
+      "values": {
+        "5": 1679.0,
+        "6": 1915.0,
+        "7": 1185.0,
+        "8": 369.0
+      }
+    },
+    "212": {
+      "label": "Change in Fixed & Intang",
+      "values": {
+        "5": -251.0,
+        "6": -290.0,
+        "7": -380.0,
+        "8": -379.0
+      }
+    },
+    "232": {
+      "label": "Cash From (Repayment) Debt",
+      "values": {
+        "5": 0.0,
+        "6": 0.0,
+        "7": 300.0,
+        "8": 3070.0
+      }
+    },
+    "121": {
+      "label": "Goodwill",
+      "values": {
+        "6": 6535.0,
+        "7": 6377.0,
+        "8": 5704.0
+      }
+    },
+    "222": {
+      "label": "Net Cash From Acq & Div",
+      "values": {
+        "6": -0.0,
+        "7": -0.0,
+        "8": -696.0
+      }
+    },
+    "99": {
+      "label": "Cash & Cash Equivalents",
+      "values": {
+        "7": 762.0,
+        "8": 878.0
+      }
+    },
+    "113": {
+      "label": "Total Current Assets",
+      "values": {
+        "7": 3249.0,
+        "8": 3859.0
+      }
+    },
+    "114": {
+      "label": "Property, Plant & Equip, Net",
+      "values": {
+        "7": 1622.0
+      }
+    },
+    "128": {
+      "label": "Total Assets",
+      "values": {
+        "7": 14457.0,
+        "8": 14294.0
+      }
+    },
+    "131": {
+      "label": "Payables & Accruals",
+      "values": {
+        "7": 618.0,
+        "8": 687.0
+      }
+    },
+    "136": {
+      "label": "ST Debt",
+      "values": {
+        "7": 200.0
+      }
+    },
+    "146": {
+      "label": "Total Current Liabilities",
+      "values": {
+        "7": 2703.0,
+        "8": 3136.0
+      }
+    },
+    "147": {
+      "label": "LT Debt",
+      "values": {
+        "7": 7810.0,
+        "8": 5035.0
+      }
+    },
+    "152": {
+      "label": "Other LT Liabilities",
+      "values": {
+        "7": 410.0,
+        "8": 547.0
+      }
+    },
+    "164": {
+      "label": "Share Capital & APIC",
+      "values": {
+        "7": 2.0,
+        "8": 2.0
+      }
+    },
+    "168": {
+      "label": "Retained Earnings",
+      "values": {
+        "7": 242.0,
+        "8": 1797.0
+      }
+    },
+    "11": {
+      "label": "Effective tax rate",
+      "values": {
+        "21": 9.165207238762404
+      }
+    }
+  },
+  "source": "edgar",
+  "source_provider": "SEC EDGAR XBRL",
+  "source_fetched_at": "2026-06-12T15:17:53Z"
+}
