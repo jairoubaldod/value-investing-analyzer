@@ -337,7 +337,7 @@ body {
 /* ── Layout ── */
 .app {
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 220px 1fr;
   flex: 1;
   min-height: 0;
 }
@@ -750,10 +750,27 @@ body {
   border-right: none;
 }
 
+#charts-grid .charts-grid-inner {
+  display: grid;
+  gap: 0;
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .charts-grid-inner {
   display: grid;
   gap: 0;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.chart-card {
+  background: var(--bb-black);
+  border-right: 1px solid var(--bb-border);
+  border-bottom: 1px solid var(--bb-border);
+  padding: 0.3rem 0.35rem 0.2rem;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .charts-missing-note {
@@ -765,11 +782,8 @@ body {
   background: var(--bb-bg);
 }
 
-.chart-card {
-  background: var(--bb-black);
-  border-right: 1px solid var(--bb-border);
-  border-bottom: 1px solid var(--bb-border);
-  padding: 0.35rem 0.5rem 0.25rem;
+.chart-card:nth-child(4n) {
+  border-right: none;
 }
 
 .chart-card:nth-child(odd) {
@@ -787,6 +801,8 @@ body {
 
 .chart-wrap {
   height: 200px;
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* ── Collapsible sections ── */
@@ -2337,7 +2353,8 @@ tbody tr:hover td:first-child {
     border-bottom: 1px solid var(--bb-border);
   }
 
-  .charts-grid-inner {
+  .charts-grid-inner,
+  #charts-grid .charts-grid-inner {
     grid-template-columns: 1fr;
   }
 }
