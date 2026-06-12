@@ -1599,15 +1599,13 @@ function buildMobileOnePagerHubHtml(data) {
       </div>
 
       <div class="op-mobile-actions">
-        <button type="button" class="op-mobile-btn op-mobile-btn-fd" data-mobile-go="fundamentals">
-          <span class="op-mobile-btn-icon">FD</span>
-          <span class="op-mobile-btn-label">Fundamentals</span>
-          <span class="op-mobile-btn-hint">Graphs &amp; Magic Numbers</span>
+        <button type="button" class="op-mobile-btn op-mobile-btn-fd op-mobile-trade-btn op-mobile-trade-buy" data-mobile-go="fundamentals">
+          <span class="op-mobile-trade-label">FUNDAMENTALS</span>
+          <span class="op-mobile-trade-sub">Graphs · Magic Numbers</span>
         </button>
-        <button type="button" class="op-mobile-btn op-mobile-btn-vl" data-mobile-go="valuation">
-          <span class="op-mobile-btn-icon">VL</span>
-          <span class="op-mobile-btn-label">Valuations</span>
-          <span class="op-mobile-btn-hint">DCF · intrinsic price</span>
+        <button type="button" class="op-mobile-btn op-mobile-btn-vl op-mobile-trade-btn op-mobile-trade-sell" data-mobile-go="valuation">
+          <span class="op-mobile-trade-label">VALUATION</span>
+          <span class="op-mobile-trade-sub">DCF · Multiples · Consensus</span>
         </button>
       </div>
     </div>`;

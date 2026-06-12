@@ -2930,59 +2930,71 @@ tbody tr:hover td:first-child {
   }
 
   .layout-mobile .op-mobile-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: 0.35rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
   }
 
-  .layout-mobile .op-mobile-btn {
+  .layout-mobile .op-mobile-trade-btn {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.35rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
     width: 100%;
-    min-height: 92px;
-    padding: 0.85rem 1rem;
-    border: 2px solid rgba(255, 153, 0, 0.35);
-    border-radius: 8px;
-    background: linear-gradient(145deg, rgba(255, 153, 0, 0.12) 0%, rgba(0, 0, 0, 0.4) 100%);
-    color: #f5f5f5;
-    text-align: left;
+    min-height: 3.35rem;
+    padding: 0.55rem 0.45rem;
+    border-radius: 2px;
+    font-family: Consolas, "Courier New", monospace;
+    text-align: center;
     cursor: pointer;
-    transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
     box-shadow:
-      0 4px 14px rgba(0, 0, 0, 0.5),
-      0 2px 8px rgba(255, 153, 0, 0.12),
-      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      inset 0 1px 0 rgba(255, 255, 255, 0.28),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.35),
+      0 2px 4px rgba(0, 0, 0, 0.55);
+    transition: filter 0.1s, transform 0.08s;
   }
 
-  .layout-mobile .op-mobile-btn:active {
-    border-color: var(--bb-amber);
-    background: rgba(255, 153, 0, 0.18);
+  .layout-mobile .op-mobile-trade-btn:active {
+    transform: translateY(1px);
+    filter: brightness(0.92);
     box-shadow:
-      0 2px 8px rgba(0, 0, 0, 0.45),
-      0 1px 4px rgba(255, 153, 0, 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      inset 0 2px 4px rgba(0, 0, 0, 0.45),
+      0 1px 2px rgba(0, 0, 0, 0.4);
   }
 
-  .layout-mobile .op-mobile-btn-icon {
-    font-size: 12px;
-    font-weight: 700;
-    font-family: Consolas, monospace;
-    color: var(--bb-amber);
-    letter-spacing: 0.08em;
+  .layout-mobile .op-mobile-trade-buy {
+    background: linear-gradient(180deg, #2ecc40 0%, #12a012 48%, #0a7a0a 100%);
+    border: 1px solid #064806;
+    border-top-color: #6ee06e;
+    color: #fff;
   }
 
-  .layout-mobile .op-mobile-btn-label {
-    font-size: 1.35rem;
+  .layout-mobile .op-mobile-trade-sell {
+    background: linear-gradient(180deg, #ff4444 0%, #cc1a1a 48%, #991010 100%);
+    border: 1px solid #660808;
+    border-top-color: #ff7777;
+    color: #fff;
+  }
+
+  .layout-mobile .op-mobile-trade-label {
+    font-size: 0.82rem;
     font-weight: 700;
+    letter-spacing: 0.06em;
     line-height: 1.1;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
   }
 
-  .layout-mobile .op-mobile-btn-hint {
-    font-size: 12px;
-    color: var(--bb-gray);
+  .layout-mobile .op-mobile-trade-sub {
+    font-size: 0.58rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+    color: rgba(255, 255, 255, 0.82);
+    text-shadow: none;
   }
 
   .layout-mobile .charts-panel .bb-panel-sub,
