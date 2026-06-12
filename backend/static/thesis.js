@@ -239,6 +239,248 @@ function setDomain(domain, { updateUrl = true } = {}) {
     ensurePeChartsVisible();
     ensurePbvChartsVisible();
   }
+
+  if (isMobileLayout() && domain === "valuation" && currentValuationMethod !== "dcf1") {
+    setValuationMethod("dcf1");
+  }
+  syncMobileChrome();
+}
+
+function isMobileLayout() {
+  return window.matchMedia("(max-width: 900px)").matches;
+}
+
+function syncMobileChrome() {
+  const mobile = isMobileLayout();
+  document.body.classList.toggle("layout-mobile", mobile);
+  const bar = document.getElementById("mobile-back-bar");
+  const titleEl = document.getElementById("mobile-back-title");
+  const tickerEl = document.getElementById("mobile-back-ticker");
+  if (!bar) return;
+  if (mobile && currentDomain !== "one-pager") {
+    bar.hidden = false;
+    if (titleEl) titleEl.textContent = DOMAIN_LABELS[currentDomain] || "One-Pager";
+    if (tickerEl) tickerEl.textContent = document.getElementById("bb-badge")?.textContent || "";
+  } else {
+    bar.hidden = true;
+  }
+}
+
+function bindMobileShell() {
+  document.getElementById("mobile-back-btn")?.addEventListener("click", () => setDomain("one-pager"));
+  document.getElementById("one-pager-container")?.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-mobile-go]");
+    if (!btn) return;
+    const go = btn.dataset.mobileGo;
+    if (go === "fundamentals") {
+      setDomain("fundamentals");
+      applyMobileFundamentalsDefaults();
+    } else if (go === "valuation") {
+      setValuationMethod("dcf1");
+      setDomain("valuation");
+    }
+  });
+  window.matchMedia("(max-width: 900px)").addEventListener("change", () => {
+    syncMobileChrome();
+    if (currentThesisData) {
+      setupMobileFundamentalsNav(currentThesisData);
+      setupMobileMagicNav(currentThesisData.blocks);
+    }
+    setupMobileChartCarousels();
+    if (isMobileLayout() && currentDomain === "fundamentals") applyMobileFundamentalsDefaults();
+  });
+}
+
+function applyMobileFundamentalsDefaults() {
+  if (!isMobileLayout()) {
+    applyFundamentalsDefaults();
+    return;
+  }
+  expandAllChartSectionsForMobile();
+  collapseAllBlocksExcept(0);
+  syncFundamentalsNavActive({ chart: 0, block: 0 });
+}
+
+function expandAllChartSectionsForMobile() {
+  document.querySelectorAll(".chart-section").forEach((section) => {
+    const toggle = section.querySelector(".section-toggle");
+    const body = section.querySelector(".section-body");
+    if (!toggle || !body) return;
+    openCollapsible(toggle, body, false);
+    ensureChartsInBody(body);
+  });
+}
+
+function teardownMobileChartCarousels() {
+  document.querySelectorAll(".mobile-carousel-wrap").forEach((el) => el.remove());
+  document.querySelectorAll(".charts-grid-inner").forEach((track) => {
+    const slides = [...track.querySelectorAll(".mobile-chart-slide")];
+    if (slides.length) {
+      const cards = [];
+      slides.forEach((slide) => {
+        slide.querySelectorAll(".chart-card").forEach((card) => cards.push(card));
+      });
+      track.replaceChildren(...cards);
+      const body = track.closest(".section-body");
+      if (body) {
+        ensureChartsInBody(body);
+        Object.values(charts).forEach((c) => {
+          try {
+            c.resize();
+          } catch {
+            /* chart may have been destroyed */
+          }
+        });
+      }
+    }
+    track.classList.remove("mobile-carousel-track", "mobile-carousel-single");
+    delete track.dataset.carouselBound;
+  });
+}
+
+function setupMobileChartCarousels() {
+  teardownMobileChartCarousels();
+  if (!isMobileLayout()) return;
+
+  document.querySelectorAll(".charts-grid-inner").forEach((track) => {
+    if (track.dataset.carouselBound) return;
+    const cards = [...track.querySelectorAll(":scope > .chart-card")];
+    if (cards.length <= 2) {
+      track.classList.add("mobile-carousel-track", "mobile-carousel-single");
+      track.dataset.carouselBound = "1";
+      return;
+    }
+
+    track.dataset.carouselBound = "1";
+    track.classList.add("mobile-carousel-track");
+    track.replaceChildren();
+
+    const slideCount = Math.ceil(cards.length / 2);
+    for (let s = 0; s < slideCount; s += 1) {
+      const slide = document.createElement("div");
+      slide.className = "mobile-chart-slide";
+      slide.appendChild(cards[s * 2]);
+      if (cards[s * 2 + 1]) slide.appendChild(cards[s * 2 + 1]);
+      track.appendChild(slide);
+    }
+
+    const body = track.closest(".section-body");
+    if (body) ensureChartsInBody(body);
+
+    const wrap = document.createElement("div");
+    wrap.className = "mobile-carousel-wrap";
+
+    const hint = document.createElement("p");
+    hint.className = "mobile-carousel-hint";
+    hint.textContent = slideCount > 1 ? "Swipe for next pair →" : "";
+
+    const dots = document.createElement("div");
+    dots.className = "mobile-carousel-dots";
+    dots.setAttribute("role", "tablist");
+
+    for (let i = 0; i < slideCount; i += 1) {
+      const dot = document.createElement("button");
+      dot.type = "button";
+      dot.className = "mobile-carousel-dot" + (i === 0 ? " is-active" : "");
+      dot.setAttribute("aria-label", `Chart pair ${i + 1} of ${slideCount}`);
+      dot.addEventListener("click", () => {
+        const w = track.clientWidth || 1;
+        track.scrollTo({ left: w * i, behavior: "smooth" });
+      });
+      dots.appendChild(dot);
+    }
+
+    const onScroll = () => {
+      const w = track.clientWidth || 1;
+      const idx = Math.min(slideCount - 1, Math.max(0, Math.round(track.scrollLeft / w)));
+      dots.querySelectorAll(".mobile-carousel-dot").forEach((d, i) => {
+        d.classList.toggle("is-active", i === idx);
+      });
+      Object.values(charts).forEach((c) => {
+        try {
+          c.resize();
+        } catch {
+          /* ignore */
+        }
+      });
+    };
+
+    track.addEventListener("scroll", onScroll, { passive: true });
+
+    if (slideCount > 1) wrap.appendChild(hint);
+    wrap.appendChild(dots);
+    track.after(wrap);
+  });
+}
+
+function setupMobileFundamentalsNav(data) {
+  const existing = document.getElementById("mobile-fd-nav");
+  if (existing) existing.remove();
+  if (!isMobileLayout()) return;
+
+  const panel = document.getElementById("fundamentals-graphs-panel");
+  const grid = document.getElementById("charts-grid");
+  const sections = normalizeChartSections(data);
+  if (!panel || !grid || !sections.length) return;
+
+  const nav = document.createElement("nav");
+  nav.id = "mobile-fd-nav";
+  nav.className = "mobile-fd-nav";
+  nav.setAttribute("aria-label", "Graph sections");
+  nav.innerHTML = sections
+    .map(
+      (s, i) =>
+        `<button type="button" class="mobile-fd-pill" data-scroll-chart="${i}">${navShortTitle(s.title)}</button>`,
+    )
+    .join("");
+
+  nav.addEventListener("click", (e) => {
+    const pill = e.target.closest("[data-scroll-chart]");
+    if (!pill) return;
+    const idx = Number(pill.dataset.scrollChart);
+    document.getElementById(`chart-block-${idx}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    nav.querySelectorAll(".mobile-fd-pill").forEach((p) => p.classList.remove("is-active"));
+    pill.classList.add("is-active");
+  });
+
+  nav.querySelector(".mobile-fd-pill")?.classList.add("is-active");
+  panel.insertBefore(nav, grid);
+}
+
+function setupMobileMagicNav(blocks) {
+  const existing = document.getElementById("mobile-mn-nav");
+  if (existing) existing.remove();
+  if (!isMobileLayout()) return;
+
+  const panel = document.getElementById("fundamentals-data-panel");
+  const container = document.getElementById("blocks-container");
+  const topBlocks = (blocks || []).filter(
+    (b) => !b.display?.parent_section && !b.name.includes("% of assets"),
+  );
+  if (!panel || !container || !topBlocks.length) return;
+
+  const nav = document.createElement("nav");
+  nav.id = "mobile-mn-nav";
+  nav.className = "mobile-fd-nav mobile-mn-nav";
+  nav.setAttribute("aria-label", "Magic Numbers sections");
+  nav.innerHTML = topBlocks
+    .map(
+      (b, i) =>
+        `<button type="button" class="mobile-fd-pill" data-scroll-block="${i}">${navShortTitle(b.name)}</button>`,
+    )
+    .join("");
+
+  nav.addEventListener("click", (e) => {
+    const pill = e.target.closest("[data-scroll-block]");
+    if (!pill) return;
+    const idx = Number(pill.dataset.scrollBlock);
+    expandSection(idx, { scroll: true });
+    nav.querySelectorAll(".mobile-fd-pill").forEach((p) => p.classList.remove("is-active"));
+    pill.classList.add("is-active");
+  });
+
+  nav.querySelector(".mobile-fd-pill")?.classList.add("is-active");
+  panel.insertBefore(nav, container);
 }
 
 /** @deprecated use setDomain */
@@ -943,6 +1185,116 @@ function renderOnePager(data) {
   });
 }
 
+function buildMobileOnePagerHubHtml(data) {
+  const op = data.one_pager;
+  const id = op?.identity || {};
+  const market = data.market_bar?.price;
+  const rawDesc = id.description || "";
+  const mobileDescMax = 210;
+  const shortDesc = rawDesc
+    ? rawDesc.length > mobileDescMax
+      ? `${rawDesc.slice(0, mobileDescMax - 1).trim()}…`
+      : rawDesc
+    : "Investment thesis overview.";
+  const priceStr =
+    market != null
+      ? fmtPrice(market)
+      : id.price != null
+        ? fmtPrice(id.price)
+        : "";
+
+  const segments = (id.segments || []).slice(0, 5);
+  const segmentsHtml = segments.length
+    ? `<ul class="op-segments op-mobile-segments">${segments
+        .map(
+          (s) =>
+            `<li><span class="op-seg-name">${s.name}</span><span class="op-seg-pct">${(s.pct * 100).toFixed(0)}%</span></li>`,
+        )
+        .join("")}</ul>`
+    : "";
+
+  const metricsHtml = (op.snapshot_metrics || [])
+    .map(
+      (m) => `
+      <div class="op-metric op-mobile-metric">
+        <span class="op-metric-k">${m.label}</span>
+        <span class="op-metric-v">${fmtOpMetric(m)}</span>
+      </div>`,
+    )
+    .join("");
+
+  const scorecardsHtml = (op.scorecards || [])
+    .map(
+      (sc) => `
+      <div class="op-scorecard op-mobile-scorecard" title="${sc.methodology || ""}">
+        <span class="op-scorecard-label">${sc.label}</span>
+        <div class="op-stars op-mobile-stars" aria-label="${sc.stars} of ${sc.max_stars || 5} stars">${renderStars(sc.stars, sc.max_stars || 5)}</div>
+      </div>`,
+    )
+    .join("");
+
+  const val = op.valuation_snapshot || {};
+  const valMethods = val.methods || [];
+  const valCardsHtml = valMethods
+    .map((m) => {
+      const upside =
+        market != null && market > 0 && m.price != null ? m.price / market - 1 : null;
+      const upCls = upside == null ? "" : upside >= 0 ? "val-upside" : "val-downside";
+      const upStr =
+        upside != null ? `${upside >= 0 ? "+" : ""}${(upside * 100).toFixed(0)}%` : "";
+      return `
+      <div class="op-mobile-val-card">
+        <span class="op-mobile-val-k">${m.label}</span>
+        <span class="op-mobile-val-v">${m.price != null ? fmtPrice1(m.price) : "—"}</span>
+        ${upStr ? `<span class="op-mobile-val-up ${upCls}">${upStr}</span>` : ""}
+      </div>`;
+    })
+    .join("");
+
+  return `
+    <div class="op-mobile-hub">
+      <header class="op-mobile-hero">
+        <div class="op-mobile-title-row">
+          <h2 class="op-mobile-title">${id.name || data.ticker}</h2>
+          <span class="op-mobile-ticker">${id.ticker || data.ticker}</span>
+        </div>
+        ${priceStr ? `<p class="op-mobile-price">${priceStr}</p>` : ""}
+        ${segmentsHtml}
+      </header>
+
+      <section class="op-mobile-valuation" aria-labelledby="op-mobile-val-title">
+        <h3 class="op-mobile-section-title" id="op-mobile-val-title">Valuation snapshot</h3>
+        <div class="op-mobile-val-row">${valCardsHtml}</div>
+      </section>
+
+      <p class="op-mobile-desc">${shortDesc}</p>
+
+      <div class="op-mobile-body">
+        <section class="op-mobile-panel op-mobile-metrics" aria-labelledby="op-mobile-metrics-title">
+          <h3 class="op-mobile-section-title" id="op-mobile-metrics-title">Investment snapshot</h3>
+          <div class="op-mobile-metrics-list">${metricsHtml}</div>
+        </section>
+        <section class="op-mobile-panel op-mobile-scores" aria-labelledby="op-mobile-scores-title">
+          <h3 class="op-mobile-section-title" id="op-mobile-scores-title">Quality scorecards</h3>
+          <div class="op-mobile-scorecards">${scorecardsHtml}</div>
+        </section>
+      </div>
+
+      <div class="op-mobile-actions">
+        <button type="button" class="op-mobile-btn op-mobile-btn-fd" data-mobile-go="fundamentals">
+          <span class="op-mobile-btn-icon">FD</span>
+          <span class="op-mobile-btn-label">Fundamentals</span>
+          <span class="op-mobile-btn-hint">Graphs &amp; Magic Numbers</span>
+        </button>
+        <button type="button" class="op-mobile-btn op-mobile-btn-vl" data-mobile-go="valuation">
+          <span class="op-mobile-btn-icon">VL</span>
+          <span class="op-mobile-btn-label">Valuations</span>
+          <span class="op-mobile-btn-hint">DCF · intrinsic price</span>
+        </button>
+      </div>
+    </div>`;
+}
+
 function buildOnePagerHtml(data) {
   const op = data.one_pager;
 
@@ -1025,7 +1377,8 @@ function buildOnePagerHtml(data) {
   const blendCls = blendUp == null ? "" : blendUp >= 0 ? "val-upside" : "val-downside";
 
   return `
-    <div class="op-sheet">
+    ${buildMobileOnePagerHubHtml(data)}
+    <div class="op-sheet op-desktop-sheet">
       <header class="op-hero">
         <div class="op-hero-left">
           <div class="op-hero-title-row">
@@ -5555,7 +5908,9 @@ function renderCharts(data) {
   Object.keys(charts).forEach((k) => delete charts[k]);
 
   bindCollapsibles(grid);
-  if (currentDomain === "fundamentals" && getUrlParams().chartSection == null && getUrlParams().fundSection == null) {
+  if (isMobileLayout()) {
+    expandAllChartSectionsForMobile();
+  } else if (currentDomain === "fundamentals" && getUrlParams().chartSection == null && getUrlParams().fundSection == null) {
     collapseAllChartSectionsExcept(0);
   }
 }
@@ -5568,11 +5923,13 @@ async function init() {
   setInterval(tickClock, 1000);
   bindMainNav();
   bindValuationNav();
+  bindMobileShell();
 
   const { ticker: urlTicker, domain, valMethod, fundSection } = getUrlParams();
   if (selectEl) selectEl.value = urlTicker;
   setDomain(domain, { updateUrl: false });
   if (domain === "valuation") setValuationMethod(valMethod);
+  syncMobileChrome();
   goBtn?.addEventListener("click", () => navigateTicker(selectEl.value));
 
   await loadAndRender(urlTicker);
@@ -5621,7 +5978,9 @@ async function loadAndRender(ticker) {
     setDomain(currentDomain, { updateUrl: false });
     const { fundSection, chartSection } = getUrlParams();
     if (currentDomain === "fundamentals") {
-      if (fundSection != null && !Number.isNaN(fundSection)) {
+      if (isMobileLayout()) {
+        applyMobileFundamentalsDefaults();
+      } else if (fundSection != null && !Number.isNaN(fundSection)) {
         collapseAllBlocksExcept(fundSection);
         syncFundamentalsNavActive({ block: fundSection });
       } else if (chartSection != null && !Number.isNaN(chartSection)) {
@@ -5631,6 +5990,10 @@ async function loadAndRender(ticker) {
         applyFundamentalsDefaults();
       }
     }
+    setupMobileFundamentalsNav(data);
+    setupMobileMagicNav(data.blocks);
+    setupMobileChartCarousels();
+    syncMobileChrome();
     if (sourceStatus) {
       const src = data.source || "preload";
       sourceStatus.textContent = `Source: ${src.toUpperCase()} · cached`;
