@@ -139,6 +139,8 @@ function resolveTicker(ticker) {
   if (READY_TICKERS.includes(sym)) return sym;
   const match = TICKER_CATALOG.find((row) => row.ticker === sym);
   if (match) return match.ticker;
+  // Keep explicit URL tickers (e.g. META) before async /api/tickers hydrates READY_TICKERS
+  if (/^[A-Z][A-Z0-9.-]{0,9}$/.test(sym)) return sym;
   if (READY_TICKERS.includes("MSFT")) return "MSFT";
   return READY_TICKERS[0] || "MSFT";
 }
@@ -357,10 +359,16 @@ function getUrlParams() {
   let fundSection = null;
   let chartSection = null;
 
-  if (hash === "valuation" || hash === "valuation-multiples" || hash === "valuation-consensus") {
+  if (hash.startsWith("valuation")) {
     domain = "valuation";
     valMethod =
-      hash === "valuation-multiples" ? "multiples" : hash === "valuation-consensus" ? "consensus" : "dcf1";
+      hash === "valuation-multiples"
+        ? "multiples"
+        : hash === "valuation-consensus"
+          ? "consensus"
+          : hash === "valuation-dcf-draft"
+            ? "dcf-draft"
+            : "dcf1";
   } else if (hash === "fundamentals" || hash.startsWith("block-") || hash.startsWith("chart-")) {
     domain = "fundamentals";
     if (hash.startsWith("block-")) fundSection = Number(hash.replace("block-", ""));
@@ -394,6 +402,7 @@ function navHashForState(state) {
   if (state.domain === "valuation") {
     if (state.valMethod === "multiples") return "#valuation-multiples";
     if (state.valMethod === "consensus") return "#valuation-consensus";
+    if (state.valMethod === "dcf-draft") return "#valuation-dcf-draft";
     return "#valuation";
   }
   if (state.domain === "fundamentals") {
@@ -455,7 +464,9 @@ function updateDomainUrl(domain) {
         ? "#valuation-multiples"
         : currentValuationMethod === "consensus"
           ? "#valuation-consensus"
-          : "#valuation";
+          : currentValuationMethod === "dcf-draft"
+            ? "#valuation-dcf-draft"
+            : "#valuation";
   } else if (domain === "fundamentals") {
     hash = "#fundamentals";
   } else {
@@ -530,7 +541,9 @@ function setDomain(domain, { updateUrl = true } = {}) {
           ? "Engine: Multiples · P/E & P/BV"
           : currentValuationMethod === "consensus"
             ? "Engine: Analyst consensus"
-            : "Engine: DCF · Method 1";
+            : currentValuationMethod === "dcf-draft"
+              ? "Engine: DCF · Draft"
+              : "Engine: DCF · Method 1";
     } else if (domain === "fundamentals") {
       engineEl.textContent = "Engine: Fundamentals · historical review";
     } else {
@@ -799,6 +812,7 @@ function setupMobileValuationNav() {
     <span class="mobile-val-nav-title">Valuation</span>
     <div class="mobile-val-nav-tabs">
       <button type="button" class="mobile-val-tab" data-val-method="dcf1">DCF</button>
+      <button type="button" class="mobile-val-tab" data-val-method="dcf-draft">Draft</button>
       <button type="button" class="mobile-val-tab" data-val-method="multiples">Multiples</button>
       <button type="button" class="mobile-val-tab" data-val-method="consensus">Consensus</button>
     </div>`;
@@ -1907,6 +1921,7 @@ function ensureHeavySectionsRendered(data) {
       renderCharts(data);
       renderBlocks(data.blocks, data.currency, data.units);
       renderValuation(data);
+      if (typeof renderValuationDraft === "function") renderValuationDraft(data);
       renderMultiplesValuation(data);
       renderConsensusValuation(data);
       if (currentDomain === "valuation") setValuationMethod(currentValuationMethod);
@@ -4564,16 +4579,7 @@ function updateConsensusPanel(data, eng) {
   if (labelEl) {
     labelEl.textContent = ratings?.consensus_label ? `Consensus: ${ratings.consensus_label}` : "";
   }
-  const maxRating = ratings
-    ? Math.max(
-        ratings.strong_buy || 0,
-        ratings.buy || 0,
-        ratings.hold || 0,
-        ratings.sell || 0,
-        ratings.strong_sell || 0,
-        1,
-      )
-    : 1;
+  const ratingTotal = ratings?.total || 0;
 
   CONSENSUS_RATING_ROWS.forEach(({ key, barClass }) => {
     const count = ratings?.[key] ?? 0;
@@ -4582,7 +4588,8 @@ function updateConsensusPanel(data, eng) {
     const rowEl = document.getElementById(`val-consensus-rating-row-${key}`);
     if (countEl) countEl.textContent = String(count);
     if (barEl) {
-      barEl.style.width = `${Math.round((count / maxRating) * 100)}%`;
+      const pct = ratingTotal > 0 ? (count / ratingTotal) * 100 : 0;
+      barEl.style.width = `${Math.round(pct)}%`;
       barEl.className = `val-consensus-rating-bar-fill ${barClass}`;
     }
     if (rowEl) rowEl.classList.toggle("val-consensus-rating-row-empty", !ratings || count === 0);
@@ -4669,7 +4676,7 @@ function consensusMethodBlock(payload) {
             ${ratingRowsHtml}
           </div>
           <p class="val-consensus-ratings-empty" id="val-consensus-ratings-empty" hidden>
-            Rating breakdown unavailable for this ticker (FMP grades-consensus).
+            Rating breakdown unavailable for this ticker (requires FMP or Yahoo analyst ratings).
           </p>
         </section>
       </div>
@@ -4740,11 +4747,18 @@ function renderMultiplesValuation(data) {
 
 function setValuationMethod(method) {
   currentValuationMethod =
-    method === "multiples" ? "multiples" : method === "consensus" ? "consensus" : "dcf1";
+    method === "multiples"
+      ? "multiples"
+      : method === "consensus"
+        ? "consensus"
+        : method === "dcf-draft"
+          ? "dcf-draft"
+          : "dcf1";
   document.querySelectorAll("#valuation-subnav [data-val-method]").forEach((link) => {
     link.classList.toggle("active", link.dataset.valMethod === currentValuationMethod);
   });
   document.getElementById("valuation-panel-dcf")?.classList.toggle("hidden", currentValuationMethod !== "dcf1");
+  document.getElementById("valuation-panel-dcf-draft")?.classList.toggle("hidden", currentValuationMethod !== "dcf-draft");
   document.getElementById("valuation-panel-multiples")?.classList.toggle("hidden", currentValuationMethod !== "multiples");
   document.getElementById("valuation-panel-consensus")?.classList.toggle("hidden", currentValuationMethod !== "consensus");
 
@@ -4755,13 +4769,18 @@ function setValuationMethod(method) {
         ? "Engine: Multiples · P/E & P/BV"
         : currentValuationMethod === "consensus"
           ? "Engine: Analyst consensus"
-          : "Engine: DCF · Method 1";
+          : currentValuationMethod === "dcf-draft"
+            ? "Engine: DCF · Draft"
+            : "Engine: DCF · Method 1";
   }
 
   if (currentDomain === "valuation") updateDomainUrl("valuation");
 
   if (currentValuationMethod === "dcf1" && valuationFlowChart) {
     requestAnimationFrame(() => syncValuationFlowFooter(valuationFlowChart));
+  }
+  if (currentValuationMethod === "dcf-draft" && typeof onValuationDraftPanelShown === "function") {
+    onValuationDraftPanelShown();
   }
   if (currentValuationMethod === "multiples") {
     ensurePeChartsVisible();
@@ -6080,11 +6099,7 @@ function patchAssetsStackedChart(sections, data) {
       ...section,
       charts: section.charts.map((chart) => {
         if (chart.id !== "e1-assets") return chart;
-        const ok =
-          chart.stacked &&
-          chart.series?.some((s) => s.name === "TOTAL EQUITY") &&
-          chart.series?.some((s) => s.name === "LIABILITIES");
-        return ok ? chart : assetsChart;
+        return assetsChart;
       }),
     };
   });

@@ -4,10 +4,10 @@
     "identity": {
       "name": "EVERGY, INC.",
       "ticker": "EVRG",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 82.81,
+      "price_direction": "\u2191",
+      "market_cap": 19087705000.0,
+      "market_cap_label": "$19.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": 0.09302397268887574,
+        "sublabel": "5Y",
+        "value": 0.03594811301765888,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
-        "value": 0.048138385446315324,
+        "sublabel": "5Y",
+        "value": 0.06404746433542119,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 1,
+        "stars": 0,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": true
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -89.64
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 74.77
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 89.0
         }
       ],
-      "blend_price": -89.64,
-      "method_count": 1
+      "blend_price": 24.71,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 82.81,
+    "ask": 82.82,
+    "prev": 82.04,
+    "pe": 22.3091,
+    "pb": 1.8674,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

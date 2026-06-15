@@ -4,10 +4,10 @@
     "identity": {
       "name": "CDW CORP",
       "ticker": "CDW",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 129.13,
+      "price_direction": "\u2191",
+      "market_cap": 16954769000.0,
+      "market_cap_label": "$17.0B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.05612405263088083,
+        "sublabel": "5Y",
+        "value": 0.03958829916272788,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.13118651694681116,
+        "sublabel": "5Y",
+        "value": 0.08012267387303029,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 159.56
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 180.01
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 144.5
         }
       ],
-      "blend_price": 159.56,
-      "method_count": 1
+      "blend_price": 161.36,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 129.13,
+    "ask": 129.14,
+    "prev": 125.45,
+    "pe": 15.8961,
+    "pb": 6.5058,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

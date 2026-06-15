@@ -4,10 +4,10 @@
     "identity": {
       "name": "DOLLAR TREE, INC.",
       "ticker": "DLTR",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 114.89,
+      "price_direction": "\u2193",
+      "market_cap": 23644362000.0,
+      "market_cap_label": "$23.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": -0.007307548474483894,
+        "sublabel": "5Y",
+        "value": -0.0533172843938553,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
-        "value": 0.05646727757936021,
+        "sublabel": "5Y",
+        "value": 0.01865692558804377,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 45.47
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 109.01
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 124.5
         }
       ],
-      "blend_price": 45.47,
-      "method_count": 1
+      "blend_price": 92.99,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 114.89,
+    "ask": 114.9,
+    "prev": 116.44,
+    "pe": 18.4361,
+    "pb": 6.2969,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

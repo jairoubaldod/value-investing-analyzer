@@ -4,10 +4,10 @@
     "identity": {
       "name": "BlackRock, Inc.",
       "ticker": "BLK",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 1016.58,
+      "price_direction": "\u2193",
+      "market_cap": 157553959009.02002,
+      "market_cap_label": "$157.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,14 +17,14 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
         "sublabel": "3Y",
         "value": 0.1065430569599104,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
         "sublabel": "3Y",
         "value": 0.014554457655718611,
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 1150.85
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 814.98
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 1250.0
         }
       ],
-      "blend_price": 1150.85,
-      "method_count": 1
+      "blend_price": 1071.94,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 1016.58,
+    "ask": 1016.59,
+    "prev": 1046.88,
+    "pe": 28.3728,
+    "pb": 2.8191,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

@@ -4,10 +4,10 @@
     "identity": {
       "name": "QUEST DIAGNOSTICS INC",
       "ticker": "DGX",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 203.83,
+      "price_direction": "\u2191",
+      "market_cap": 22625130000.0,
+      "market_cap_label": "$22.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.03946928376595915,
+        "sublabel": "5Y",
+        "value": 0.03178135709578789,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.060708017917226575,
+        "sublabel": "5Y",
+        "value": -0.03537209617929182,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 190.34
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 155.31
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 225.0
         }
       ],
-      "blend_price": 190.34,
-      "method_count": 1
+      "blend_price": 190.22,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 203.83,
+    "ask": 203.84,
+    "prev": 194.9,
+    "pe": 22.8076,
+    "pb": 3.1555,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

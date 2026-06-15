@@ -4,10 +4,10 @@
     "identity": {
       "name": "Aon plc",
       "ticker": "AON",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 335.17,
+      "price_direction": "\u2191",
+      "market_cap": 72363203000.00002,
+      "market_cap_label": "$72.4B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.06126541151846676,
+        "sublabel": "5Y",
+        "value": 0.09197213054793218,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.1325054718114287,
+        "sublabel": "5Y",
+        "value": 0.15045189517554003,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 211.88
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 545.4
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 389.0
         }
       ],
-      "blend_price": 211.88,
-      "method_count": 1
+      "blend_price": 382.09,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 335.17,
+    "ask": 335.18,
+    "prev": 316.06,
+    "pe": 19.5841,
+    "pb": 7.7377,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

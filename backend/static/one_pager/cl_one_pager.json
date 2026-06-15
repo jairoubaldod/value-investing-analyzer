@@ -4,10 +4,10 @@
     "identity": {
       "name": "COLGATE-PALMOLIVE COMPANY",
       "ticker": "CL",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 89.39,
+      "price_direction": "\u2193",
+      "market_cap": 72289693000.0,
+      "market_cap_label": "$72.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.024284242923243937,
+        "sublabel": "5Y",
+        "value": 0.043531026206107715,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.05606645922444575,
+        "sublabel": "5Y",
+        "value": -0.03470807181285962,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 5,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 61.57
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 74.15
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 99.0
         }
       ],
-      "blend_price": 61.57,
-      "method_count": 1
+      "blend_price": 78.24,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 89.39,
+    "ask": 89.4,
+    "prev": 90.13,
+    "pe": 33.907,
+    "pb": 1338.698,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

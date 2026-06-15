@@ -4,10 +4,10 @@
     "identity": {
       "name": "AMERICAN WATER WORKS COMPANY, INC.",
       "ticker": "AWK",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 124.45,
+      "price_direction": "\u2191",
+      "market_cap": 24267750000.0,
+      "market_cap_label": "$24.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.06020831693771922,
+        "sublabel": "5Y",
+        "value": 0.06469935199524413,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.10856617436397276,
+        "sublabel": "5Y",
+        "value": 0.07792141918822937,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 1,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -47.83
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 177.29
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 131.0
         }
       ],
-      "blend_price": -47.83,
-      "method_count": 1
+      "blend_price": 86.82,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 124.45,
+    "ask": 124.46,
+    "prev": 123.27,
+    "pe": 21.8432,
+    "pb": 2.2393,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

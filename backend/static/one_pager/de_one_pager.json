@@ -4,10 +4,10 @@
     "identity": {
       "name": "DEERE & CO",
       "ticker": "DE",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 568.64,
+      "price_direction": "\u2191",
+      "market_cap": 154044575999.99997,
+      "market_cap_label": "$154.0B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.055398493179384944,
+        "sublabel": "5Y",
+        "value": 0.0515001521854499,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.1440359669887794,
+        "sublabel": "5Y",
+        "value": 0.16163279410997533,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 307.34
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 352.85
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 640.0
         }
       ],
-      "blend_price": 307.34,
-      "method_count": 1
+      "blend_price": 433.4,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 568.64,
+    "ask": 568.65,
+    "prev": 542.18,
+    "pe": 30.6434,
+    "pb": 5.9362,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

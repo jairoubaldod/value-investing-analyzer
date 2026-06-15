@@ -4,10 +4,10 @@
     "identity": {
       "name": "Oracle Corporation",
       "ticker": "ORCL",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 184.1,
+      "price_direction": "\u2193",
+      "market_cap": 513454899999.99994,
+      "market_cap_label": "$513.5B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.04148866354454661,
+        "sublabel": "5Y",
+        "value": 0.07998227913928768,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.07034218378019963,
+        "sublabel": "5Y",
+        "value": 0.07134551343346907,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 123.64
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 124.97
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 245.0
         }
       ],
-      "blend_price": 123.64,
-      "method_count": 1
+      "blend_price": 164.54,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 184.1,
+    "ask": 184.11,
+    "prev": 225.78,
+    "pe": 41.2646,
+    "pb": 25.1066,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

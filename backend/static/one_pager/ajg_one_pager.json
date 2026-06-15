@@ -4,10 +4,10 @@
     "identity": {
       "name": "ARTHUR J. GALLAGHER & CO.",
       "ticker": "AJG",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 220.9,
+      "price_direction": "\u2191",
+      "market_cap": 56572490000.00001,
+      "market_cap_label": "$56.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.09964954239985446,
+        "sublabel": "5Y",
+        "value": 0.14762697783826462,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.10909774151973584,
+        "sublabel": "5Y",
+        "value": 0.063266797710132,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 5,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 193.12
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 192.97
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 261.0
         }
       ],
-      "blend_price": 193.12,
-      "method_count": 1
+      "blend_price": 215.7,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 220.9,
+    "ask": 220.91,
+    "prev": 201.11,
+    "pe": 37.8665,
+    "pb": 2.4258,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

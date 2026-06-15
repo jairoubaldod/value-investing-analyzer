@@ -4,10 +4,10 @@
     "identity": {
       "name": "CSX CORPORATION",
       "ticker": "CSX",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 47.37,
+      "price_direction": "\u2191",
+      "market_cap": 88581900000.0,
+      "market_cap_label": "$88.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.01781441297684183,
+        "sublabel": "5Y",
+        "value": 0.05894344821402786,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.025797875076291943,
+        "sublabel": "5Y",
+        "value": 0.05115774595007161,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 3,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 14.79
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 28.2
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 47.75
         }
       ],
-      "blend_price": 14.79,
-      "method_count": 1
+      "blend_price": 30.25,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 47.37,
+    "ask": 47.38,
+    "prev": 45.26,
+    "pe": 30.6618,
+    "pb": 6.7311,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

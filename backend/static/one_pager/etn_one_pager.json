@@ -4,10 +4,10 @@
     "identity": {
       "name": "EATON CORPORATION plc",
       "ticker": "ETN",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 393.64,
+      "price_direction": "\u2193",
+      "market_cap": 153480235999.99997,
+      "market_cap_label": "$153.5B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": null,
+        "sublabel": "5Y",
+        "value": 0.0897718296066381,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.09496967473985873,
+        "sublabel": "5Y",
+        "value": 0.24454565588932553,
         "format": "percent"
       },
       {
@@ -121,15 +121,15 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": false
+            "label": "Revenue CAGR 5Y > 0",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 131.21
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 271.72
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 471.0
         }
       ],
-      "blend_price": 131.21,
-      "method_count": 1
+      "blend_price": 291.31,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 393.64,
+    "ask": 393.65,
+    "prev": 400.6,
+    "pe": 37.5533,
+    "pb": 7.9012,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

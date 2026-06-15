@@ -4,10 +4,10 @@
     "identity": {
       "name": "Meta Platforms, Inc.",
       "ticker": "META",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 568.43,
+      "price_direction": "\u2193",
+      "market_cap": 1433012029999.9998,
+      "market_cap_label": "$1.43T",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.27338307879318413,
+        "sublabel": "5Y",
+        "value": 0.18511415178759827,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.3373891277858223,
+        "sublabel": "5Y",
+        "value": 0.18598625717324824,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 2897.06
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 636.69
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 825.0
         }
       ],
-      "blend_price": 2897.06,
-      "method_count": 1
+      "blend_price": 1452.92,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 568.43,
+    "ask": 568.44,
+    "prev": 632.51,
+    "pe": 23.7026,
+    "pb": 6.5964,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

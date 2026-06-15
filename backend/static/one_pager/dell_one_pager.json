@@ -4,10 +4,10 @@
     "identity": {
       "name": "Dell Technologies Inc.",
       "ticker": "DELL",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 391.45,
+      "price_direction": "\u2193",
+      "market_cap": 264228750000.0,
+      "market_cap_label": "$264.2B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.08351009311816204,
+        "sublabel": "5Y",
+        "value": 0.05549088853532669,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": null,
+        "sublabel": "5Y",
+        "value": 0.15000965790472653,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,12 +154,12 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": true
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 146.63
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 107.37
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 500.0
         }
       ],
-      "blend_price": 146.63,
-      "method_count": 1
+      "blend_price": 251.33,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 391.45,
+    "ask": 391.46,
+    "prev": 420.91,
+    "pe": 44.5129,
+    "pb": 117.4824,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

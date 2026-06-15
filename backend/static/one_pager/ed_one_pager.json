@@ -4,10 +4,10 @@
     "identity": {
       "name": "CONSOLIDATED EDISON INC",
       "ticker": "ED",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 106.84,
+      "price_direction": "\u2191",
+      "market_cap": 38184616000.0,
+      "market_cap_label": "$38.2B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.03107837555110815,
+        "sublabel": "5Y",
+        "value": 0.07229811428616828,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.033527893648852336,
+        "sublabel": "5Y",
+        "value": 0.1146130067158595,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -8.22
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 106.25
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 108.0
         }
       ],
-      "blend_price": -8.22,
-      "method_count": 1
+      "blend_price": 68.68,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 106.84,
+    "ask": 106.85,
+    "prev": 105.63,
+    "pe": 18.8752,
+    "pb": 1.5785,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

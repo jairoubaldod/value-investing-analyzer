@@ -4,10 +4,10 @@
     "identity": {
       "name": "ENTERGY CORP /DE/",
       "ticker": "ETR",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 109.89,
+      "price_direction": "\u2191",
+      "market_cap": 48574619667.09,
+      "market_cap_label": "$48.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.023112460360062537,
+        "sublabel": "5Y",
+        "value": 0.05063111672779641,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.017943511705284076,
+        "sublabel": "5Y",
+        "value": -0.1052437919421183,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -87.6
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 95.99
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 126.0
         }
       ],
-      "blend_price": -87.6,
-      "method_count": 1
+      "blend_price": 44.8,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 109.89,
+    "ask": 109.9,
+    "prev": 109.05,
+    "pe": 19.7319,
+    "pb": 3.1799,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

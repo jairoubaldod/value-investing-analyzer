@@ -4,10 +4,10 @@
     "identity": {
       "name": "LOWE\u2019S COMPANIES,\u00a0INC.",
       "ticker": "LOW",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 221.05,
+      "price_direction": "\u2191",
+      "market_cap": 123566950000.00002,
+      "market_cap_label": "$123.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.03861453432785833,
+        "sublabel": "5Y",
+        "value": -0.007502609287254769,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.15832067234870895,
+        "sublabel": "5Y",
+        "value": 0.08844362494916425,
         "format": "percent"
       },
       {
@@ -121,15 +121,15 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": true
+            "label": "Revenue CAGR 5Y > 0",
+            "met": false
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 1,
+        "stars": 0,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 180.0
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 251.38
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 275.0
         }
       ],
-      "blend_price": 180.0,
-      "method_count": 1
+      "blend_price": 235.46,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 221.05,
+    "ask": 221.06,
+    "prev": 214.36,
+    "pe": 18.5703,
+    "pb": 115.0629,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

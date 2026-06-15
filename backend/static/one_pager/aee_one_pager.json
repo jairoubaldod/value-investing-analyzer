@@ -4,10 +4,10 @@
     "identity": {
       "name": "AMEREN CORP",
       "ticker": "AEE",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 108.25,
+      "price_direction": "\u2191",
+      "market_cap": 29281625000.0,
+      "market_cap_label": "$29.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.03734827660283546,
+        "sublabel": "5Y",
+        "value": 0.08715374280767585,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.07542689342454989,
+        "sublabel": "5Y",
+        "value": 0.08793140616896533,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -81.77
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 79.04
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 121.0
         }
       ],
-      "blend_price": -81.77,
-      "method_count": 1
+      "blend_price": 39.42,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 108.25,
+    "ask": 108.26,
+    "prev": 107.97,
+    "pe": 50.2131,
+    "pb": 3.6555,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

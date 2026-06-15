@@ -4,10 +4,10 @@
     "identity": {
       "name": "CAPITAL ONE FINANCIAL CORP",
       "ticker": "COF",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 182.04,
+      "price_direction": "\u2193",
+      "market_cap": 98429028000.0,
+      "market_cap_label": "$98.4B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": -0.10112650861350869,
+        "sublabel": "5Y",
+        "value": 0.16622927552384348,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.05572193711996121,
+        "sublabel": "5Y",
+        "value": -0.04933492867213851,
         "format": "percent"
       },
       {
@@ -121,15 +121,15 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 2,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": false
+            "label": "Revenue CAGR 5Y > 0",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 154.74
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 45.84
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 255.0
         }
       ],
-      "blend_price": 154.74,
-      "method_count": 1
+      "blend_price": 151.86,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 182.04,
+    "ask": 182.05,
+    "prev": 187.93,
+    "pe": 40.126,
+    "pb": 0.8663,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

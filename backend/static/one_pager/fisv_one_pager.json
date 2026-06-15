@@ -4,10 +4,10 @@
     "identity": {
       "name": "FISERV, INC.",
       "ticker": "FISV",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 53.06,
+      "price_direction": "\u2193",
+      "market_cap": 29029126000.000004,
+      "market_cap_label": "$29.0B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.14966215933204952,
+        "sublabel": "5Y",
+        "value": 0.07369640630416341,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.07660986067695541,
+        "sublabel": "5Y",
+        "value": 0.34968914253679517,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,12 +154,12 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": true
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 159.3
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 186.06
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 65.5
         }
       ],
-      "blend_price": 159.3,
-      "method_count": 1
+      "blend_price": 136.95,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 53.06,
+    "ask": 53.07,
+    "prev": 56.56,
+    "pe": 8.3417,
+    "pb": 1.1255,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

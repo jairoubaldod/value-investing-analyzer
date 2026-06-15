@@ -4,10 +4,10 @@
     "identity": {
       "name": "CLOROX CO /DE/",
       "ticker": "CLX",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 98.3,
+      "price_direction": "\u2191",
+      "market_cap": 12142507500.0,
+      "market_cap_label": "$12.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.023073968277489643,
+        "sublabel": "5Y",
+        "value": 0.011145867999568182,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.03957154330700896,
+        "sublabel": "5Y",
+        "value": -0.025385199299367556,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 91.48
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 171.79
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 97.0
         }
       ],
-      "blend_price": 91.48,
-      "method_count": 1
+      "blend_price": 120.09,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 98.3,
+    "ask": 98.31,
+    "prev": 90.02,
+    "pe": 14.9908,
+    "pb": 37.8271,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

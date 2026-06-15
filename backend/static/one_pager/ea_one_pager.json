@@ -4,10 +4,10 @@
     "identity": {
       "name": "ELECTRONIC ARTS INC.",
       "ticker": "EA",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 203.05,
+      "price_direction": "\u2191",
+      "market_cap": 50762500000.0,
+      "market_cap_label": "$50.8B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.05530864628020371,
+        "sublabel": "5Y",
+        "value": 0.05994731676895082,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.004933851388613242,
+        "sublabel": "5Y",
+        "value": 0.041276509313012744,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -178,18 +178,24 @@
       }
     ],
     "valuation_snapshot": {
-      "methods": [],
-      "blend_price": null,
-      "method_count": 0
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 210.0
+        }
+      ],
+      "blend_price": 210.0,
+      "method_count": 1
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 203.05,
+    "ask": 203.06,
+    "prev": 201.72,
+    "pe": 57.2294,
+    "pb": 8.3306,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

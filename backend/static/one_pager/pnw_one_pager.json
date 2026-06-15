@@ -1,0 +1,201 @@
+{
+  "ticker": "PNW",
+  "one_pager": {
+    "identity": {
+      "name": "PINNACLE WEST CAPITAL CORP",
+      "ticker": "PNW",
+      "price": 102.4,
+      "price_direction": "\u2191",
+      "market_cap": 12255948800.0,
+      "market_cap_label": "$12.3B",
+      "sector": null,
+      "industry": null,
+      "country": null,
+      "currency": "USD",
+      "description": null,
+      "segments": []
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_5y",
+        "label": "Revenue CAGR",
+        "sublabel": "5Y",
+        "value": 0.08283284300867177,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_5y",
+        "label": "EPS CAGR",
+        "sublabel": "5Y",
+        "value": 0.010414742029082547,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": 0.053716205180919616,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": 0.19993299548927432,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.3380366330027365,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 2,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": false
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": false
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": false
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 0,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": false
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": false
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 5Y > 0",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": false
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": true
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": false
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 2,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
+          },
+          {
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": true
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": false
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": false
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 104.0
+        }
+      ],
+      "blend_price": 104.0,
+      "method_count": 1
+    }
+  },
+  "market_bar": {
+    "price": 102.4,
+    "ask": 102.41,
+    "prev": 99.74,
+    "pe": 31.1755,
+    "pb": 2.9628,
+    "direction": "\u2191",
+    "fx_label": "US $"
+  }
+}

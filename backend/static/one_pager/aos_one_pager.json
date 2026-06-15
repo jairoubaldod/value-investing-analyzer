@@ -4,10 +4,10 @@
     "identity": {
       "name": "A. O. Smith Corporation",
       "ticker": "AOS",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 58.66,
+      "price_direction": "\u2191",
+      "market_cap": 8272810707.699999,
+      "market_cap_label": "$8.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": 0.040221281855898905,
+        "sublabel": "5Y",
+        "value": 0.05756136403417389,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
-        "value": 0.08416802688078495,
+        "sublabel": "5Y",
+        "value": 0.1268504236748711,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 1,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -178,18 +178,24 @@
       }
     ],
     "valuation_snapshot": {
-      "methods": [],
-      "blend_price": null,
-      "method_count": 0
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 70.0
+        }
+      ],
+      "blend_price": 70.0,
+      "method_count": 1
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 58.66,
+    "ask": 58.67,
+    "prev": 56.72,
+    "pe": 15.1461,
+    "pb": 4.4525,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

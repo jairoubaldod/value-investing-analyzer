@@ -4,10 +4,10 @@
     "identity": {
       "name": "eBay Inc.",
       "ticker": "EBAY",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 109.61,
+      "price_direction": "\u2191",
+      "market_cap": 50310990000.0,
+      "market_cap_label": "$50.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.02594214580577714,
+        "sublabel": "5Y",
+        "value": 0.04531015795011939,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.11971312485826391,
+        "sublabel": "5Y",
+        "value": -0.11104420177038266,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 3,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 1,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 95.75
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 34.16
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 110.0
         }
       ],
-      "blend_price": 95.75,
-      "method_count": 1
+      "blend_price": 79.97,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 109.61,
+    "ask": 109.62,
+    "prev": 109.27,
+    "pe": 24.7715,
+    "pb": 10.9016,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

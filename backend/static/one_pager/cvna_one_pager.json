@@ -4,10 +4,10 @@
     "identity": {
       "name": "CARVANA CO.",
       "ticker": "CVNA",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 67.82,
+      "price_direction": "\u2193",
+      "market_cap": 9334337879.999998,
+      "market_cap_label": "$9.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,16 +17,16 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.656805585601808,
+        "sublabel": "5Y",
+        "value": 0.2946654403024904,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
+        "sublabel": "5Y",
         "value": null,
         "format": "percent"
       },
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -10642.18
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 93.4
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 93.0
         }
       ],
-      "blend_price": -10642.18,
-      "method_count": 1
+      "blend_price": -3485.26,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 67.82,
+    "ask": 67.83,
+    "prev": 73.0,
+    "pe": 6.6342,
+    "pb": 2.7127,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

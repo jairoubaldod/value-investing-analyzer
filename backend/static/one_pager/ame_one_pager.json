@@ -4,10 +4,10 @@
     "identity": {
       "name": "AMETEK, Inc.",
       "ticker": "AME",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 226.21,
+      "price_direction": "\u2191",
+      "market_cap": 52130546920.0,
+      "market_cap_label": "$52.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.09487326574037636,
+        "sublabel": "5Y",
+        "value": 0.14022676057552608,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.14905681943071336,
+        "sublabel": "5Y",
+        "value": 0.23886068082206724,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 146.75
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 189.49
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 262.0
         }
       ],
-      "blend_price": 146.75,
-      "method_count": 1
+      "blend_price": 199.41,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 226.21,
+    "ask": 226.22,
+    "prev": 225.85,
+    "pe": 35.22,
+    "pb": 4.9047,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

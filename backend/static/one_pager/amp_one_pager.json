@@ -4,10 +4,10 @@
     "identity": {
       "name": "AMERIPRISE FINANCIAL INC",
       "ticker": "AMP",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 450.38,
+      "price_direction": "\u2191",
+      "market_cap": 43551746000.0,
+      "market_cap_label": "$43.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.04480553914784746,
+        "sublabel": "5Y",
+        "value": 0.09600160240957245,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.15662853922069786,
+        "sublabel": "5Y",
+        "value": 0.2435785921032243,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -178,18 +178,24 @@
       }
     ],
     "valuation_snapshot": {
-      "methods": [],
-      "blend_price": null,
-      "method_count": 0
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 530.0
+        }
+      ],
+      "blend_price": 530.0,
+      "method_count": 1
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 450.38,
+    "ask": 450.39,
+    "prev": 445.71,
+    "pe": 12.2233,
+    "pb": 6.6501,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

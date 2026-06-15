@@ -4,10 +4,10 @@
     "identity": {
       "name": "Merck & Co., Inc.",
       "ticker": "MRK",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 120.76,
+      "price_direction": "\u2191",
+      "market_cap": 302141520000.0,
+      "market_cap_label": "$302.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.035226013955632185,
+        "sublabel": "5Y",
+        "value": 0.09383063963833482,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.3855317519723884,
+        "sublabel": "5Y",
+        "value": 0.2121147367648819,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 130.38
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 180.02
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 135.0
         }
       ],
-      "blend_price": 130.38,
-      "method_count": 1
+      "blend_price": 148.47,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 120.76,
+    "ask": 120.77,
+    "prev": 118.72,
+    "pe": 16.5521,
+    "pb": 5.7435,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

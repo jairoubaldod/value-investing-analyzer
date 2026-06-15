@@ -4,10 +4,10 @@
     "identity": {
       "name": "FASTENAL CO",
       "ticker": "FAST",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 46.39,
+      "price_direction": "\u2191",
+      "market_cap": 53236738093.41,
+      "market_cap_label": "$53.2B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.07800783017055757,
+        "sublabel": "5Y",
+        "value": 0.07745687030729775,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.04645335624839875,
+        "sublabel": "5Y",
+        "value": -0.060146235650011315,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 17.44
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 32.15
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 46.0
         }
       ],
-      "blend_price": 17.44,
-      "method_count": 1
+      "blend_price": 31.86,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 46.39,
+    "ask": 46.4,
+    "prev": 44.2,
+    "pe": 42.3051,
+    "pb": 13.4995,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

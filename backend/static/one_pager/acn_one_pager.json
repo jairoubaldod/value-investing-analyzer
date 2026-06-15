@@ -4,8 +4,8 @@
     "identity": {
       "name": "Accenture plc",
       "ticker": "ACN",
-      "price": null,
-      "price_direction": "",
+      "price": 167.52,
+      "price_direction": "\u2193",
       "market_cap": 103097694820.0,
       "market_cap_label": "$103.1B",
       "sector": "Technology",
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.0778735399214352,
+        "sublabel": "5Y",
+        "value": 0.09465969836955224,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.09698904909337025,
+        "sublabel": "5Y",
+        "value": 0.08884802450889429,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 339.16
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 322.12
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 235.0
         }
       ],
-      "blend_price": 339.16,
-      "method_count": 1
+      "blend_price": 298.76,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 167.52,
+    "ask": 167.53,
+    "prev": 187.07,
+    "pe": 13.6332,
+    "pb": 3.3557,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

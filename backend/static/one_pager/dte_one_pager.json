@@ -4,10 +4,10 @@
     "identity": {
       "name": "DTE ENERGY CO",
       "ticker": "DTE",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 145.79,
+      "price_direction": "\u2191",
+      "market_cap": 26096410000.0,
+      "market_cap_label": "$26.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "7Y",
-        "value": 0.0574842537173601,
+        "sublabel": "5Y",
+        "value": 0.07476791889915191,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "7Y",
-        "value": 0.07741666124657365,
+        "sublabel": "5Y",
+        "value": 0.12163981230321919,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -178,18 +178,24 @@
       }
     ],
     "valuation_snapshot": {
-      "methods": [],
-      "blend_price": null,
-      "method_count": 0
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 159.0
+        }
+      ],
+      "blend_price": 159.0,
+      "method_count": 1
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 145.79,
+    "ask": 145.8,
+    "prev": 142.87,
+    "pe": 23.0127,
+    "pb": 2.7435,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

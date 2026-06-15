@@ -4,10 +4,10 @@
     "identity": {
       "name": "Corpay, Inc",
       "ticker": "CPAY",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 350.85,
+      "price_direction": "\u2193",
+      "market_cap": 24607566450.000004,
+      "market_cap_label": "$24.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.10274852364071285,
+        "sublabel": "5Y",
+        "value": 0.13645189195144858,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.14477561040985343,
+        "sublabel": "5Y",
+        "value": 0.12691504478614513,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 943.6
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 359.54
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 400.0
         }
       ],
-      "blend_price": 943.6,
-      "method_count": 1
+      "blend_price": 567.71,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 350.85,
+    "ask": 350.86,
+    "prev": 361.8,
+    "pe": 23.0015,
+    "pb": 6.3358,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

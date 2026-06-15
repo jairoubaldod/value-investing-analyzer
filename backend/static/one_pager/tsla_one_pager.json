@@ -4,10 +4,10 @@
     "identity": {
       "name": "Tesla,\u00a0Inc.",
       "ticker": "TSLA",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 399.15,
+      "price_direction": "\u2193",
+      "market_cap": 1287258750000.0,
+      "market_cap_label": "$1.29T",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.3708512895765279,
+        "sublabel": "5Y",
+        "value": 0.24630713363610557,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": null,
+        "sublabel": "5Y",
+        "value": 0.3639184359183454,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -95.89
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 155.74
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 460.0
         }
       ],
-      "blend_price": -95.89,
-      "method_count": 1
+      "blend_price": 173.28,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 399.15,
+    "ask": 399.16,
+    "prev": 435.79,
+    "pe": 339.288,
+    "pb": 15.6721,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

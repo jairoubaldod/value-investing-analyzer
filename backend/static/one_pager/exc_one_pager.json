@@ -4,10 +4,10 @@
     "identity": {
       "name": "EXELON CORPORATION",
       "ticker": "EXC",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 45.51,
+      "price_direction": "\u2193",
+      "market_cap": 46010610000.0,
+      "market_cap_label": "$46.0B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,16 +17,16 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": -0.019197885338779863,
+        "sublabel": "5Y",
+        "value": 0.07800396810291854,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
+        "sublabel": "5Y",
         "value": null,
         "format": "percent"
       },
@@ -121,15 +121,15 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 1,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": false
+            "label": "Revenue CAGR 5Y > 0",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -2.14
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 34.63
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 49.0
         }
       ],
-      "blend_price": -2.14,
-      "method_count": 1
+      "blend_price": 27.16,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 45.51,
+    "ask": 45.52,
+    "prev": 45.64,
+    "pe": 31.7132,
+    "pb": 1.7328,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

@@ -4,10 +4,10 @@
     "identity": {
       "name": "First Solar, Inc.",
       "ticker": "FSLR",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 271.17,
+      "price_direction": "\u2193",
+      "market_cap": 29078914950.000004,
+      "market_cap_label": "$29.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.024117254585257042,
+        "sublabel": "5Y",
+        "value": 0.13995360646283728,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.09255611933470309,
+        "sublabel": "5Y",
+        "value": 0.3053452822297642,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 58.62
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 279.75
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 243.0
         }
       ],
-      "blend_price": 58.62,
-      "method_count": 1
+      "blend_price": 193.79,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 271.17,
+    "ask": 271.18,
+    "prev": 306.79,
+    "pe": 19.0279,
+    "pb": 3.0487,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

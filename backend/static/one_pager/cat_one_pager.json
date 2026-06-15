@@ -4,8 +4,8 @@
     "identity": {
       "name": "Caterpillar Inc.",
       "ticker": "CAT",
-      "price": null,
-      "price_direction": "",
+      "price": 897.63,
+      "price_direction": "\u2191",
       "market_cap": 413481590310.0,
       "market_cap_label": "$413.5B",
       "sector": "Industrials",
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.03697348824771152,
+        "sublabel": "5Y",
+        "value": 0.10115402157081044,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.16148109055343562,
+        "sublabel": "5Y",
+        "value": 0.27956408301107905,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 346.95
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 192.66
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 957.98
         }
       ],
-      "blend_price": 346.95,
-      "method_count": 1
+      "blend_price": 499.2,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 897.63,
+    "ask": 897.64,
+    "prev": 875.87,
+    "pe": 209.9457,
+    "pb": 52.1772,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

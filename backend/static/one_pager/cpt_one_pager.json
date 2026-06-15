@@ -4,10 +4,10 @@
     "identity": {
       "name": "CAMDEN PROPERTY TRUST",
       "ticker": "CPT",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 114.44,
+      "price_direction": "\u2191",
+      "market_cap": 12402549440.0,
+      "market_cap_label": "$12.4B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": -0.3738486563118193,
+        "sublabel": "5Y",
+        "value": 0.03724930157466333,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
-        "value": -0.09937006210099242,
+        "sublabel": "5Y",
+        "value": 0.2334351350470938,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 1,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": false
+            "label": "Revenue CAGR 5Y > 0",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -178,18 +178,24 @@
       }
     ],
     "valuation_snapshot": {
-      "methods": [],
-      "blend_price": null,
-      "method_count": 0
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 113.0
+        }
+      ],
+      "blend_price": 113.0,
+      "method_count": 1
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 114.44,
+    "ask": 114.45,
+    "prev": 106.56,
+    "pe": 32.2595,
+    "pb": 2.843,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

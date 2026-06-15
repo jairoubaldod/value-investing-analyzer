@@ -4,10 +4,10 @@
     "identity": {
       "name": "BAXTER INTERNATIONAL INC",
       "ticker": "BAX",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 20.49,
+      "price_direction": "\u2191",
+      "market_cap": 10511369999.999998,
+      "market_cap_label": "$10.5B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,16 +17,16 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.012118307928320027,
+        "sublabel": "5Y",
+        "value": -0.007460794983869423,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
+        "sublabel": "5Y",
         "value": null,
         "format": "percent"
       },
@@ -121,15 +121,15 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 2,
+        "stars": 1,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": true
+            "label": "Revenue CAGR 5Y > 0",
+            "met": false
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -178,18 +178,24 @@
       }
     ],
     "valuation_snapshot": {
-      "methods": [],
-      "blend_price": null,
-      "method_count": 0
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 19.5
+        }
+      ],
+      "blend_price": 19.5,
+      "method_count": 1
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 20.49,
+    "ask": 20.5,
+    "prev": 18.78,
+    "pe": 3.9036,
+    "pb": 1.234,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

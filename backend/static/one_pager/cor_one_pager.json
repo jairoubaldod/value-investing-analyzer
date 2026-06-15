@@ -4,10 +4,10 @@
     "identity": {
       "name": "CENCORA, INC.",
       "ticker": "COR",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 281.48,
+      "price_direction": "\u2191",
+      "market_cap": 54556453600.0,
+      "market_cap_label": "$54.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,16 +17,16 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.08981759906694409,
+        "sublabel": "5Y",
+        "value": 0.11093539055828328,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
+        "sublabel": "5Y",
         "value": null,
         "format": "percent"
       },
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 362.59
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 167.86
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 350.0
         }
       ],
-      "blend_price": 362.59,
-      "method_count": 1
+      "blend_price": 293.48,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 281.48,
+    "ask": 281.49,
+    "prev": 269.36,
+    "pe": 35.1033,
+    "pb": 36.1776,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

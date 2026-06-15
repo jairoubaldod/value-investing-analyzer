@@ -4,10 +4,10 @@
     "identity": {
       "name": "AppLovin Corp",
       "ticker": "APP",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 478.57,
+      "price_direction": "\u2193",
+      "market_cap": 162130423170.0,
+      "market_cap_label": "$162.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "6Y",
-        "value": 0.3291304042143277,
+        "sublabel": "5Y",
+        "value": 0.304454229088547,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "6Y",
-        "value": 0.7355965024639983,
+        "sublabel": "5Y",
+        "value": null,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 5,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 610.73
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 679.62
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 660.0
         }
       ],
-      "blend_price": 610.73,
-      "method_count": 1
+      "blend_price": 650.12,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 478.57,
+    "ask": 478.58,
+    "prev": 613.09,
+    "pe": 48.633,
+    "pb": 75.951,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

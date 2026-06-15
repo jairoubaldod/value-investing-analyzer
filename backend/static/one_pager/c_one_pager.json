@@ -4,10 +4,10 @@
     "identity": {
       "name": "Citigroup Inc",
       "ticker": "C",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 139.83,
+      "price_direction": "\u2191",
+      "market_cap": 256168560000.00003,
+      "market_cap_label": "$256.2B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.011052067541515775,
+        "sublabel": "5Y",
+        "value": 0.02452570980985236,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.0277020753875572,
+        "sublabel": "5Y",
+        "value": 0.08447177119769855,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -142.76
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 76.43
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 147.0
         }
       ],
-      "blend_price": -142.76,
-      "method_count": 1
+      "blend_price": 26.89,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
+    "price": 139.83,
+    "ask": 139.84,
+    "prev": 138.07,
     "pe": null,
     "pb": null,
-    "direction": "",
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

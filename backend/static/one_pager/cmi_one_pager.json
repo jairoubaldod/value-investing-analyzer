@@ -4,10 +4,10 @@
     "identity": {
       "name": "CUMMINS INC",
       "ticker": "CMI",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 655.69,
+      "price_direction": "\u2191",
+      "market_cap": 90419651000.00002,
+      "market_cap_label": "$90.4B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.05827428401881951,
+        "sublabel": "5Y",
+        "value": 0.11190413083747286,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.10125174982874285,
+        "sublabel": "5Y",
+        "value": 0.11305411137128529,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 258.39
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 215.84
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 755.0
         }
       ],
-      "blend_price": 258.39,
-      "method_count": 1
+      "blend_price": 409.74,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 655.69,
+    "ask": 655.7,
+    "prev": 646.63,
+    "pe": 124.0131,
+    "pb": 27.6175,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

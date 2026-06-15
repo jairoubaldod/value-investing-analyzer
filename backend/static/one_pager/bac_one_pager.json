@@ -4,8 +4,8 @@
     "identity": {
       "name": "Bank of America Corporation",
       "ticker": "BAC",
-      "price": null,
-      "price_direction": "",
+      "price": 56.02,
+      "price_direction": "\u2191",
       "market_cap": 391447940309.0,
       "market_cap_label": "$391.4B",
       "sector": "Financial Services",
@@ -38,17 +38,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.031467661967425675,
+        "sublabel": "5Y",
+        "value": 0.05747121316249015,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.10833442281562133,
+        "sublabel": "5Y",
+        "value": 0.15474446991364266,
         "format": "percent"
       },
       {
@@ -146,11 +146,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -175,11 +175,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -199,18 +199,24 @@
       }
     ],
     "valuation_snapshot": {
-      "methods": [],
-      "blend_price": null,
-      "method_count": 0
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 62.5
+        }
+      ],
+      "blend_price": 62.5,
+      "method_count": 1
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
+    "price": 56.02,
+    "ask": 56.03,
+    "prev": 55.16,
     "pe": null,
     "pb": null,
-    "direction": "",
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

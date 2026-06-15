@@ -4,10 +4,10 @@
     "identity": {
       "name": "Bristol-Myers Squibb Company",
       "ticker": "BMY",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 56.9,
+      "price_direction": "\u2193",
+      "market_cap": 115734599999.99998,
+      "market_cap_label": "$115.7B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.1127388830025784,
+        "sublabel": "5Y",
+        "value": 0.025378080148594995,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.13951530366078768,
+        "sublabel": "5Y",
+        "value": null,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 3,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 1,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": true
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 85.65
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 76.62
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 65.0
         }
       ],
-      "blend_price": 85.65,
-      "method_count": 1
+      "blend_price": 75.76,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 56.9,
+    "ask": 56.91,
+    "prev": 57.18,
+    "pe": 16.4069,
+    "pb": 6.2651,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

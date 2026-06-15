@@ -4,10 +4,10 @@
     "identity": {
       "name": "Fidelity National Information Services, Inc.",
       "ticker": "FIS",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 38.35,
+      "price_direction": "\u2193",
+      "market_cap": 20057050000.0,
+      "market_cap_label": "$20.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": 0.02131551324407277,
+        "sublabel": "5Y",
+        "value": -0.031839717237975185,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
-        "value": -0.08413176170899683,
+        "sublabel": "5Y",
+        "value": 0.22933402618474297,
         "format": "percent"
       },
       {
@@ -125,12 +125,12 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": true
+            "label": "Revenue CAGR 5Y > 0",
+            "met": false
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 1,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 8.05
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 55.16
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 57.0
         }
       ],
-      "blend_price": 8.05,
-      "method_count": 1
+      "blend_price": 40.07,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 38.35,
+    "ask": 38.36,
+    "prev": 42.99,
+    "pe": 52.5054,
+    "pb": 1.4431,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

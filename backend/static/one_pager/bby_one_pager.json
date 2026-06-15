@@ -4,10 +4,10 @@
     "identity": {
       "name": "BEST BUY CO., INC.",
       "ticker": "BBY",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 77.1,
+      "price_direction": "\u2193",
+      "market_cap": 16268099999.999998,
+      "market_cap_label": "$16.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.005341816558090295,
+        "sublabel": "5Y",
+        "value": -0.024772266419715416,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.0692643201697023,
+        "sublabel": "5Y",
+        "value": -0.06096137457361028,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": true
+            "label": "Revenue CAGR 5Y > 0",
+            "met": false
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 99.78
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 70.15
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 79.5
         }
       ],
-      "blend_price": 99.78,
-      "method_count": 1
+      "blend_price": 83.14,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 77.1,
+    "ask": 77.11,
+    "prev": 77.95,
+    "pe": 15.2181,
+    "pb": 5.4886,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

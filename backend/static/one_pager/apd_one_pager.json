@@ -4,10 +4,10 @@
     "identity": {
       "name": "AIR PRODUCTS AND CHEMICALS, INC.",
       "ticker": "APD",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 278.12,
+      "price_direction": "\u2193",
+      "market_cap": 61937324000.0,
+      "market_cap_label": "$61.9B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,16 +17,16 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.04401889574419826,
+        "sublabel": "5Y",
+        "value": 0.06329887156173086,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
+        "sublabel": "5Y",
         "value": null,
         "format": "percent"
       },
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 71.95
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 425.59
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 330.0
         }
       ],
-      "blend_price": 71.95,
-      "method_count": 1
+      "blend_price": 275.85,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 278.12,
+    "ask": 278.13,
+    "prev": 278.62,
+    "pe": 16.1647,
+    "pb": 3.6323,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

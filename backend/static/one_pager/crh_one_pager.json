@@ -4,10 +4,10 @@
     "identity": {
       "name": "CRH public limited company",
       "ticker": "CRH",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 104.83,
+      "price_direction": "\u2193",
+      "market_cap": 70571556000.0,
+      "market_cap_label": "$70.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,14 +17,14 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
         "sublabel": "4Y",
         "value": 0.06410929667394982,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
         "sublabel": "4Y",
         "value": 0.1340083161344361,
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 79.73
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 93.83
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 143.5
         }
       ],
-      "blend_price": 79.73,
-      "method_count": 1
+      "blend_price": 105.69,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 104.83,
+    "ask": 104.84,
+    "prev": 108.79,
+    "pe": 18.804,
+    "pb": 2.94,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

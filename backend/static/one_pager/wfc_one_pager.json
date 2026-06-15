@@ -4,10 +4,10 @@
     "identity": {
       "name": "WELLS        FARGO & COMPANY/MN",
       "ticker": "WFC",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 82.4,
+      "price_direction": "\u2191",
+      "market_cap": 361991440000.00006,
+      "market_cap_label": "$362.0B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,14 +17,14 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
         "sublabel": "3Y",
         "value": -0.012249079523734885,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
         "sublabel": "3Y",
         "value": 0.007389430553870646,
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -178,18 +178,24 @@
       }
     ],
     "valuation_snapshot": {
-      "methods": [],
-      "blend_price": null,
-      "method_count": 0
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 95.5
+        }
+      ],
+      "blend_price": 95.5,
+      "method_count": 1
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 82.4,
+    "ask": 82.41,
+    "prev": 77.54,
+    "pe": 18.3612,
+    "pb": 1.9343,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

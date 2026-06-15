@@ -4,10 +4,10 @@
     "identity": {
       "name": "Honeywell International Inc",
       "ticker": "HON",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 219.12,
+      "price_direction": "\u2193",
+      "market_cap": 140017680000.0,
+      "market_cap_label": "$140.0B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": -0.0029922002509037426,
+        "sublabel": "5Y",
+        "value": 0.0278500503505279,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.01933996296016227,
+        "sublabel": "5Y",
+        "value": 0.01735468430539422,
         "format": "percent"
       },
       {
@@ -121,15 +121,15 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": false
+            "label": "Revenue CAGR 5Y > 0",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 98.17
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 172.66
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 242.24
         }
       ],
-      "blend_price": 98.17,
-      "method_count": 1
+      "blend_price": 171.02,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 219.12,
+    "ask": 219.13,
+    "prev": 237.86,
+    "pe": 29.6083,
+    "pb": 10.0703,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

@@ -4,10 +4,10 @@
     "identity": {
       "name": "INTERNATIONAL BUSINESS MACHINES CORP",
       "ticker": "IBM",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 274.85,
+      "price_direction": "\u2193",
+      "market_cap": 256240985835.95004,
+      "market_cap_label": "$256.2B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": -0.018909894523447046,
+        "sublabel": "5Y",
+        "value": 0.041240412922473046,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.016965309695514463,
+        "sublabel": "5Y",
+        "value": 0.12585830952313648,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 3,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": false
+            "label": "Revenue CAGR 5Y > 0",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 135.2
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 236.86
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 290.0
         }
       ],
-      "blend_price": 135.2,
-      "method_count": 1
+      "blend_price": 220.69,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 274.85,
+    "ask": 274.86,
+    "prev": 297.8,
+    "pe": 24.1897,
+    "pb": 7.8486,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

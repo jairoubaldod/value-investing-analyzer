@@ -48,17 +48,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.11651376204735198,
+        "sublabel": "5Y",
+        "value": 0.145218753307105,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.24839905105804339,
+        "sublabel": "5Y",
+        "value": 0.18675075449892997,
         "format": "percent"
       },
       {
@@ -156,11 +156,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -185,11 +185,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -219,10 +219,15 @@
           "id": "pe",
           "label": "P/E median",
           "price": 492.95
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 555.0
         }
       ],
-      "blend_price": 418.01,
-      "method_count": 2
+      "blend_price": 463.67,
+      "method_count": 3
     }
   },
   "market_bar": {

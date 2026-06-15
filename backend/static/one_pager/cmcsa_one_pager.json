@@ -4,10 +4,10 @@
     "identity": {
       "name": "Comcast Corporation",
       "ticker": "CMCSA",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 23.97,
+      "price_direction": "\u2193",
+      "market_cap": 88665030000.0,
+      "market_cap_label": "$88.7B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.05200540504230733,
+        "sublabel": "5Y",
+        "value": 0.03618450068524881,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.12677017183777028,
+        "sublabel": "5Y",
+        "value": 0.18657142599824028,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 101.18
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 76.29
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 32.5
         }
       ],
-      "blend_price": 101.18,
-      "method_count": 1
+      "blend_price": 69.99,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 23.97,
+    "ask": 23.98,
+    "prev": 24.87,
+    "pe": 4.4337,
+    "pb": 0.915,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

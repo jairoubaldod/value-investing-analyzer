@@ -4,10 +4,10 @@
     "identity": {
       "name": "THE AES CORPORATION",
       "ticker": "AES",
-      "price": null,
+      "price": 14.67,
       "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "market_cap": 10445040000.0,
+      "market_cap_label": "$10.4B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.008322500584823311,
+        "sublabel": "5Y",
+        "value": 0.048361756639137,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.10844922260027201,
+        "sublabel": "5Y",
+        "value": 0.7826024579660034,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,18 +183,28 @@
           "id": "dcf",
           "label": "DCF",
           "price": 2.54
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 32.84
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 15.0
         }
       ],
-      "blend_price": 2.54,
-      "method_count": 1
+      "blend_price": 16.79,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
+    "price": 14.67,
+    "ask": 14.68,
+    "prev": 14.67,
+    "pe": 11.4781,
+    "pb": 2.5708,
     "direction": "",
     "fx_label": "US $"
   }

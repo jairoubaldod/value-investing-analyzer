@@ -4,10 +4,10 @@
     "identity": {
       "name": "Corteva, Inc.",
       "ticker": "CTVA",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 74.86,
+      "price_direction": "\u2193",
+      "market_cap": 50904800000.0,
+      "market_cap_label": "$50.9B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "7Y",
-        "value": 0.028568710822397314,
+        "sublabel": "5Y",
+        "value": 0.04124576663707025,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "7Y",
-        "value": null,
+        "sublabel": "5Y",
+        "value": 0.1194783991051851,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 3,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 1,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 0.45
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 69.09
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 90.0
         }
       ],
-      "blend_price": 0.45,
-      "method_count": 1
+      "blend_price": 53.18,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 74.86,
+    "ask": 74.87,
+    "prev": 78.28,
+    "pe": 46.5309,
+    "pb": 2.1084,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

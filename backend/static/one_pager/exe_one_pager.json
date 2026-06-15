@@ -4,10 +4,10 @@
     "identity": {
       "name": "EXPAND ENERGY CORPORATION",
       "ticker": "EXE",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 87.08,
+      "price_direction": "\u2193",
+      "market_cap": 20663213200.0,
+      "market_cap_label": "$20.7B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": -0.06253207252892756,
+        "sublabel": "5Y",
+        "value": 0.072800620863825,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.14795220211957272,
+        "sublabel": "5Y",
+        "value": null,
         "format": "percent"
       },
       {
@@ -125,12 +125,12 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": false
+            "label": "Revenue CAGR 5Y > 0",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -13.71
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 90.73
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 133.0
         }
       ],
-      "blend_price": -13.71,
-      "method_count": 1
+      "blend_price": 70.01,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 87.08,
+    "ask": 87.09,
+    "prev": 92.98,
+    "pe": 11.3597,
+    "pb": 1.1122,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

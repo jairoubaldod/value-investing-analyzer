@@ -4,8 +4,8 @@
     "identity": {
       "name": "NVIDIA Corporation",
       "ticker": "NVDA",
-      "price": null,
-      "price_direction": "",
+      "price": 204.82,
+      "price_direction": "\u2193",
       "market_cap": 4962156270000.0,
       "market_cap_label": "$4.96T",
       "sector": "Technology",
@@ -43,17 +43,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.45696505314008307,
+        "sublabel": "5Y",
+        "value": 0.6689858183148778,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.15871558289581755,
+        "sublabel": "5Y",
+        "value": 0.22875939176739224,
         "format": "percent"
       },
       {
@@ -151,11 +151,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -180,11 +180,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -214,19 +214,24 @@
           "id": "pe",
           "label": "P/E median",
           "price": 315.3
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 288.0
         }
       ],
-      "blend_price": 187.72,
-      "method_count": 2
+      "blend_price": 221.14,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 204.82,
+    "ask": 204.83,
+    "prev": 211.14,
+    "pe": 30.6846,
+    "pb": 31.7192,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

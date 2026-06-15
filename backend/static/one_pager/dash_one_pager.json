@@ -4,10 +4,10 @@
     "identity": {
       "name": "DOORDASH, INC.",
       "ticker": "DASH",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 154.59,
+      "price_direction": "\u2193",
+      "market_cap": 66016577370.0,
+      "market_cap_label": "$66.0B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,16 +17,16 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "7Y",
-        "value": 0.7340128323407016,
+        "sublabel": "5Y",
+        "value": 0.3658171522120788,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "7Y",
+        "sublabel": "5Y",
         "value": null,
         "format": "percent"
       },
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 84.6
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 346.87
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 250.0
         }
       ],
-      "blend_price": 84.6,
-      "method_count": 1
+      "blend_price": 227.16,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 154.59,
+    "ask": 154.6,
+    "prev": 159.29,
+    "pe": 70.606,
+    "pb": 6.5799,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

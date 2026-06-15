@@ -4,10 +4,10 @@
     "identity": {
       "name": "Johnson & Johnson",
       "ticker": "JNJ",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 238.33,
+      "price_direction": "\u2191",
+      "market_cap": 573755642000.0001,
+      "market_cap_label": "$573.8B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": 0.03047842885071317,
+        "sublabel": "5Y",
+        "value": 0.02665503872479502,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
-        "value": 0.07027494412634794,
+        "sublabel": "5Y",
+        "value": 0.14766905374214967,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 163.48
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 260.39
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 260.0
         }
       ],
-      "blend_price": 163.48,
-      "method_count": 1
+      "blend_price": 227.96,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 238.33,
+    "ask": 238.34,
+    "prev": 225.33,
+    "pe": 21.4056,
+    "pb": 7.0361,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

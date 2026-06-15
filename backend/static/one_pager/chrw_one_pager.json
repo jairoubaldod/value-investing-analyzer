@@ -4,10 +4,10 @@
     "identity": {
       "name": "C.H. ROBINSON WORLDWIDE, INC.",
       "ticker": "CHRW",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 191.11,
+      "price_direction": "\u2191",
+      "market_cap": 22979448620.000004,
+      "market_cap_label": "$23.0B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.01878577839221829,
+        "sublabel": "5Y",
+        "value": 0.00031641390725023477,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.03320789449021033,
+        "sublabel": "5Y",
+        "value": 0.054653125308647965,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 106.53
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 101.88
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 206.0
         }
       ],
-      "blend_price": 106.53,
-      "method_count": 1
+      "blend_price": 138.14,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 191.11,
+    "ask": 191.12,
+    "prev": 178.65,
+    "pe": 39.1419,
+    "pb": 12.4506,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

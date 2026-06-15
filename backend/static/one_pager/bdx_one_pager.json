@@ -4,10 +4,10 @@
     "identity": {
       "name": "BECTON DICKINSON & CO",
       "ticker": "BDX",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 147.35,
+      "price_direction": "\u2191",
+      "market_cap": 42384932800.0,
+      "market_cap_label": "$42.4B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.07824512543526163,
+        "sublabel": "5Y",
+        "value": 0.0632263568424074,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.054477806152827046,
+        "sublabel": "5Y",
+        "value": 0.1621633413941168,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 1,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 185.8
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 193.58
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 175.0
         }
       ],
-      "blend_price": 185.8,
-      "method_count": 1
+      "blend_price": 184.79,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 147.35,
+    "ask": 147.36,
+    "prev": 147.12,
+    "pe": 25.2592,
+    "pb": 1.6694,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

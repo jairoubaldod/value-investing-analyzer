@@ -4,10 +4,10 @@
     "identity": {
       "name": "United Parcel Service, Inc",
       "ticker": "UPS",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 108.65,
+      "price_direction": "\u2191",
+      "market_cap": 92243850000.0,
+      "market_cap_label": "$92.2B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.0427003078840571,
+        "sublabel": "5Y",
+        "value": 0.00935446750891411,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.020028147882068525,
+        "sublabel": "5Y",
+        "value": 0.3344872483029262,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 0,
+        "stars": 1,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 150.34
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 125.54
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 115.0
         }
       ],
-      "blend_price": 150.34,
-      "method_count": 1
+      "blend_price": 130.29,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 108.65,
+    "ask": 108.66,
+    "prev": 106.69,
+    "pe": 16.5549,
+    "pb": 5.6846,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

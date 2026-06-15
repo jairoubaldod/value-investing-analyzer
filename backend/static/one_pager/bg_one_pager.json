@@ -4,10 +4,10 @@
     "identity": {
       "name": "BUNGE GLOBAL SA",
       "ticker": "BG",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 125.28,
+      "price_direction": "\u2191",
+      "market_cap": 20676557849.76,
+      "market_cap_label": "$20.7B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,14 +17,14 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
         "sublabel": "4Y",
         "value": 0.0019720306018080613,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
         "sublabel": "4Y",
         "value": -0.2356200282371852,
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -8.45
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 43.61
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 145.0
         }
       ],
-      "blend_price": -8.45,
-      "method_count": 1
+      "blend_price": 60.05,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 125.28,
+    "ask": 125.29,
+    "prev": 123.3,
+    "pe": 25.3389,
+    "pb": 1.3001,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

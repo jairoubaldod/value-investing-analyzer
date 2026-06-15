@@ -4,8 +4,8 @@
     "identity": {
       "name": "Adobe Inc.",
       "ticker": "ADBE",
-      "price": null,
-      "price_direction": "",
+      "price": 204.02,
+      "price_direction": "\u2193",
       "market_cap": 88438960000.0,
       "market_cap_label": "$88.4B",
       "sector": "Technology",
@@ -33,17 +33,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.17359324714668167,
+        "sublabel": "5Y",
+        "value": 0.13057654594156753,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.2951275433867879,
+        "sublabel": "5Y",
+        "value": 0.08866866733389989,
         "format": "percent"
       },
       {
@@ -141,11 +141,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -166,16 +166,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 4,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -199,19 +199,24 @@
           "id": "dcf",
           "label": "DCF",
           "price": 607.86
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 319.75
         }
       ],
-      "blend_price": 607.86,
-      "method_count": 1
+      "blend_price": 463.81,
+      "method_count": 2
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
+    "price": 204.02,
+    "ask": 204.03,
+    "prev": 218.8,
     "pe": null,
     "pb": null,
-    "direction": "",
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

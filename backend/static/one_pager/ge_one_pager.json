@@ -4,10 +4,10 @@
     "identity": {
       "name": "GENERAL ELECTRIC COMPANY",
       "ticker": "GE",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 332.76,
+      "price_direction": "\u2191",
+      "market_cap": 353058360000.0,
+      "market_cap_label": "$353.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": -0.08971572722077281,
+        "sublabel": "5Y",
+        "value": -0.09571423970455095,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": null,
+        "sublabel": "5Y",
+        "value": 0.12110573002064817,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 1,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 28.21
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 288.24
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 353.0
         }
       ],
-      "blend_price": 28.21,
-      "method_count": 1
+      "blend_price": 223.15,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 332.76,
+    "ask": 332.77,
+    "prev": 323.76,
+    "pe": 40.5628,
+    "pb": 18.9034,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

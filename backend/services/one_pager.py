@@ -137,7 +137,7 @@ def _extract_fundamentals(data: DataSheet) -> dict[str, Any]:
     nopat = [(eb * (1 - tax_rate / 100)) if eb is not None else None for eb in ebit]
     roic = [_safe_div(nopat[i], invested_capital[i]) for i in range(n)]
 
-    years_span = _span_years(data, 10)
+    years_span = _span_years(data, 5)
     rev_start_idx = max(0, n - 1 - years_span)
     eps_start_idx = rev_start_idx
 
@@ -159,8 +159,8 @@ def _extract_fundamentals(data: DataSheet) -> dict[str, Any]:
         "net_debt_ebitda": net_debt_ebitda,
         "debt_ni": debt_ni,
         "interest_cov": interest_cov,
-        "rev_cagr_10y": rev_cagr,
-        "eps_cagr_10y": eps_cagr,
+        "rev_cagr_5y": rev_cagr,
+        "eps_cagr_5y": eps_cagr,
         "years_span": years_span,
     }
 
@@ -227,8 +227,8 @@ def _score_predictability(f: dict[str, Any], data: DataSheet) -> dict[str, Any]:
 
     margin_std = _stdev(net_margin[-5:])
     checks = [
-        ("Revenue CAGR 10Y > 0", (f["rev_cagr_10y"] or 0) > 0),
-        ("EPS CAGR 10Y > 0", (f["eps_cagr_10y"] or 0) > 0),
+        ("Revenue CAGR 5Y > 0", (f["rev_cagr_5y"] or 0) > 0),
+        ("EPS CAGR 5Y > 0", (f["eps_cagr_5y"] or 0) > 0),
         ("Margin volatility low (σ < 5pp)", margin_std is not None and margin_std < 0.05),
         ("Revenue up in 4 of last 5Y", positive_rev_years >= 4),
         ("CFO / NI avg 5Y ≥ 1.0", (_avg(f["cfo_ni"][-5:]) or 0) >= 1.0),
@@ -261,8 +261,8 @@ def _score_growth(f: dict[str, Any], data: DataSheet) -> dict[str, Any]:
         bv_growth = bv[-1] / bv[-2] - 1
 
     checks = [
-        ("Revenue CAGR 10Y ≥ 8%", (f["rev_cagr_10y"] or 0) >= 0.08),
-        ("EPS CAGR 10Y ≥ 10%", (f["eps_cagr_10y"] or 0) >= 0.10),
+        ("Revenue CAGR 5Y ≥ 8%", (f["rev_cagr_5y"] or 0) >= 0.08),
+        ("EPS CAGR 5Y ≥ 10%", (f["eps_cagr_5y"] or 0) >= 0.10),
         ("FCFF CAGR 5Y > 0", (fcff_cagr or 0) > 0),
         ("Latest revenue growth ≥ 5%", (rev_yoy_latest or 0) >= 0.05),
         ("Book value growth ≥ 5%", (bv_growth or 0) >= 0.05),
@@ -339,17 +339,17 @@ def compute_one_pager(
 
     snapshot_metrics = [
         {
-            "id": "rev_cagr_10y",
+            "id": "rev_cagr_5y",
             "label": "Revenue CAGR",
             "sublabel": f"{fund['years_span']}Y",
-            "value": fund["rev_cagr_10y"],
+            "value": fund["rev_cagr_5y"],
             "format": "percent",
         },
         {
-            "id": "eps_cagr_10y",
+            "id": "eps_cagr_5y",
             "label": "EPS CAGR",
             "sublabel": f"{fund['years_span']}Y",
-            "value": fund["eps_cagr_10y"],
+            "value": fund["eps_cagr_5y"],
             "format": "percent",
         },
         {

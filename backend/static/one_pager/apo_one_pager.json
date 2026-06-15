@@ -4,10 +4,10 @@
     "identity": {
       "name": "APOLLO GLOBAL MANAGEMENT, INC.",
       "ticker": "APO",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 133.91,
+      "price_direction": "\u2191",
+      "market_cap": 78933367072.98,
+      "market_cap_label": "$78.9B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,14 +17,14 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
         "sublabel": "5Y",
         "value": 0.6857827475731679,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
         "sublabel": "5Y",
         "value": 0.6620202254321095,
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -178,18 +178,24 @@
       }
     ],
     "valuation_snapshot": {
-      "methods": [],
-      "blend_price": null,
-      "method_count": 0
+      "methods": [
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 146.0
+        }
+      ],
+      "blend_price": 146.0,
+      "method_count": 1
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 133.91,
+    "ask": 133.92,
+    "prev": 128.71,
+    "pe": 22.6041,
+    "pb": 3.3817,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

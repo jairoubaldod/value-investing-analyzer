@@ -325,7 +325,10 @@ def compute_magic_numbers(data: DataSheet) -> dict[str, Any]:
         for i in range(n)
     ]
     equity_pct = pct_of_assets(total_equity)
-    liabilities_pct = pct_of_assets(total_liabilities)
+    # Liabilities = 100% − equity so stacked Assets bars always sum to total assets.
+    liabilities_pct = [
+        (1.0 - equity_pct[i]) if equity_pct[i] is not None else None for i in range(n)
+    ]
     current_assets_pct = pct_of_assets(current_assets)
     debt_assets_pct = pct_of_assets(total_debt)
 

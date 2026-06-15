@@ -4,10 +4,10 @@
     "identity": {
       "name": "EQT Corporation",
       "ticker": "EQT",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 51.2,
+      "price_direction": "\u2193",
+      "market_cap": 31312435200.000004,
+      "market_cap_label": "$31.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,16 +17,16 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": 0.22544110374152493,
+        "sublabel": "5Y",
+        "value": 0.26673595375868553,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
+        "sublabel": "5Y",
         "value": null,
         "format": "percent"
       },
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 37.0
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 15.86
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 70.0
         }
       ],
-      "blend_price": 37.0,
-      "method_count": 1
+      "blend_price": 40.95,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 51.2,
+    "ask": 51.21,
+    "prev": 54.93,
+    "pe": 15.3549,
+    "pb": 1.3183,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

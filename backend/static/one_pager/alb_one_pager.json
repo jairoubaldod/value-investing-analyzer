@@ -4,10 +4,10 @@
     "identity": {
       "name": "Albemarle Corporation",
       "ticker": "ALB",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 159.06,
+      "price_direction": "\u2193",
+      "market_cap": 18715635840.0,
+      "market_cap_label": "$18.7B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,16 +17,16 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.06168477558963592,
+        "sublabel": "5Y",
+        "value": 0.10448598383827279,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
+        "sublabel": "5Y",
         "value": null,
         "format": "percent"
       },
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 0,
+        "stars": 1,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 23.46
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 207.96
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 224.5
         }
       ],
-      "blend_price": 23.46,
-      "method_count": 1
+      "blend_price": 151.97,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 159.06,
+    "ask": 159.07,
+    "prev": 176.42,
+    "pe": 11.8594,
+    "pb": 1.9826,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

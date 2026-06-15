@@ -4,10 +4,10 @@
     "identity": {
       "name": "WALMART INC.",
       "ticker": "WMT",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 120.5,
+      "price_direction": "\u2191",
+      "market_cap": 961951500000.0,
+      "market_cap_label": "$962.0B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.03893757292582278,
+        "sublabel": "5Y",
+        "value": 0.049341097880894136,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.05007676961375995,
+        "sublabel": "5Y",
+        "value": -0.10495177269320755,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 41.0
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 83.25
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 140.0
         }
       ],
-      "blend_price": 41.0,
-      "method_count": 1
+      "blend_price": 88.08,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 120.5,
+    "ask": 120.51,
+    "prev": 115.75,
+    "pe": 43.9388,
+    "pb": 9.6565,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

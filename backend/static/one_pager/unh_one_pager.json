@@ -4,10 +4,10 @@
     "identity": {
       "name": "UnitedHealth Group Incorporated",
       "ticker": "UNH",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 405.55,
+      "price_direction": "\u2191",
+      "market_cap": 368239400000.0,
+      "market_cap_label": "$368.2B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.11036624852792287,
+        "sublabel": "5Y",
+        "value": 0.11721651214881779,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.08090325334839088,
+        "sublabel": "5Y",
+        "value": -0.03932627856036808,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 5,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 668.82
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 288.27
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 420.0
         }
       ],
-      "blend_price": 668.82,
-      "method_count": 1
+      "blend_price": 459.03,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 405.55,
+    "ask": 405.56,
+    "prev": 380.31,
+    "pe": 30.5441,
+    "pb": 3.6791,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

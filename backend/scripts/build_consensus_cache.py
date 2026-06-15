@@ -32,9 +32,12 @@ def main() -> None:
         if data.get("error"):
             print(f"  {sym}: ERROR — {data['error']}")
         else:
+            ratings = data.get("ratings") or {}
+            r_total = ratings.get("total")
+            r_note = f" · {r_total} ratings" if r_total else ""
             print(
                 f"  {sym}: low=${data['low']} med=${data['median']} "
-                f"mean=${data['mean']} high=${data['high']} ({data['source']})"
+                f"mean=${data['mean']} high=${data['high']} ({data['source']}){r_note}"
             )
 
 

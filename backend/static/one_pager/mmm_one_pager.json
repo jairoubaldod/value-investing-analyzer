@@ -1,0 +1,211 @@
+{
+  "ticker": "MMM",
+  "one_pager": {
+    "identity": {
+      "name": "3M COMPANY",
+      "ticker": "MMM",
+      "price": 157.91,
+      "price_direction": "\u2191",
+      "market_cap": 84860833999.99998,
+      "market_cap_label": "$84.9B",
+      "sector": null,
+      "industry": null,
+      "country": null,
+      "currency": "USD",
+      "description": null,
+      "segments": []
+    },
+    "snapshot_metrics": [
+      {
+        "id": "rev_cagr_5y",
+        "label": "Revenue CAGR",
+        "sublabel": "5Y",
+        "value": -0.04965970683619114,
+        "format": "percent"
+      },
+      {
+        "id": "eps_cagr_5y",
+        "label": "EPS CAGR",
+        "sublabel": "5Y",
+        "value": -0.08494175950727667,
+        "format": "percent"
+      },
+      {
+        "id": "roic",
+        "label": "ROIC",
+        "sublabel": "LTM",
+        "value": 0.2255956111648549,
+        "format": "percent"
+      },
+      {
+        "id": "operating_margin",
+        "label": "Operating margin",
+        "sublabel": "LTM",
+        "value": 0.18554593554593554,
+        "format": "percent"
+      },
+      {
+        "id": "net_debt_ebitda",
+        "label": "Net debt / EBITDA",
+        "sublabel": "LTM",
+        "value": null,
+        "format": "ratio"
+      },
+      {
+        "id": "fcf_margin",
+        "label": "FCF margin",
+        "sublabel": "LTM",
+        "value": 0.06963858668898625,
+        "format": "percent"
+      }
+    ],
+    "scorecards": [
+      {
+        "id": "business_quality",
+        "label": "Business quality",
+        "stars": 3,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "ROIC \u2265 12%",
+            "met": true
+          },
+          {
+            "label": "Operating margin \u2265 15%",
+            "met": true
+          },
+          {
+            "label": "Gross margin \u2265 5Y avg",
+            "met": false
+          },
+          {
+            "label": "FCF margin \u2265 15%",
+            "met": false
+          },
+          {
+            "label": "ROE \u2265 15%",
+            "met": true
+          }
+        ],
+        "methodology": "ROIC, operating margin, gross-margin trend vs 5Y, FCF margin, ROE \u2014 one star each when threshold met."
+      },
+      {
+        "id": "financial_strength",
+        "label": "Financial strength",
+        "stars": 1,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Leverage (ND/EBITDA \u2264 2\u00d7 or net cash)",
+            "met": false
+          },
+          {
+            "label": "Net cash position",
+            "met": false
+          },
+          {
+            "label": "Current ratio \u2265 1.2",
+            "met": false
+          },
+          {
+            "label": "Interest coverage \u2265 8\u00d7",
+            "met": true
+          },
+          {
+            "label": "Equity / assets \u2265 40%",
+            "met": false
+          }
+        ],
+        "methodology": "Balance-sheet resilience: leverage, coverage, equity buffer."
+      },
+      {
+        "id": "predictability",
+        "label": "Predictability",
+        "stars": 0,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 5Y > 0",
+            "met": false
+          },
+          {
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
+          },
+          {
+            "label": "Margin volatility low (\u03c3 < 5pp)",
+            "met": false
+          },
+          {
+            "label": "Revenue up in 4 of last 5Y",
+            "met": false
+          },
+          {
+            "label": "CFO / NI avg 5Y \u2265 1.0",
+            "met": false
+          }
+        ],
+        "methodology": "Growth consistency, earnings stability, cash conversion reliability."
+      },
+      {
+        "id": "growth",
+        "label": "Growth",
+        "stars": 1,
+        "max_stars": 5,
+        "criteria": [
+          {
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": false
+          },
+          {
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
+          },
+          {
+            "label": "FCFF CAGR 5Y > 0",
+            "met": false
+          },
+          {
+            "label": "Latest revenue growth \u2265 5%",
+            "met": false
+          },
+          {
+            "label": "Book value growth \u2265 5%",
+            "met": true
+          }
+        ],
+        "methodology": "Top-line, per-share, and FCF compounding vs recent momentum."
+      }
+    ],
+    "valuation_snapshot": {
+      "methods": [
+        {
+          "id": "dcf",
+          "label": "DCF",
+          "price": 94.44
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 102.31
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 170.5
+        }
+      ],
+      "blend_price": 122.42,
+      "method_count": 3
+    }
+  },
+  "market_bar": {
+    "price": 157.91,
+    "ask": 157.92,
+    "prev": 153.13,
+    "pe": 26.111,
+    "pb": 18.0478,
+    "direction": "\u2191",
+    "fx_label": "US $"
+  }
+}

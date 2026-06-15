@@ -4,10 +4,10 @@
     "identity": {
       "name": "Arista Networks,\u00a0Inc.",
       "ticker": "ANET",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 156.4,
+      "price_direction": "\u2193",
+      "market_cap": 196751200000.0,
+      "market_cap_label": "$196.8B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.26808553132539337,
+        "sublabel": "5Y",
+        "value": 0.31189506024306746,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.04422133642052928,
+        "sublabel": "5Y",
+        "value": 0.05947712272316985,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 209.95
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 105.74
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 187.0
         }
       ],
-      "blend_price": 209.95,
-      "method_count": 1
+      "blend_price": 167.56,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 156.4,
+    "ask": 156.41,
+    "prev": 159.47,
+    "pe": 56.0321,
+    "pb": 15.9049,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

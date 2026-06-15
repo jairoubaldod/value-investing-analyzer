@@ -4,10 +4,10 @@
     "identity": {
       "name": "Coinbase Global, Inc.",
       "ticker": "COIN",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 159.78,
+      "price_direction": "\u2193",
+      "market_cap": 41556860640.00001,
+      "market_cap_label": "$41.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "6Y",
-        "value": 0.542220540647949,
+        "sublabel": "5Y",
+        "value": 0.4124400593047477,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "6Y",
-        "value": null,
+        "sublabel": "5Y",
+        "value": 0.2514598771682315,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 2,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 2229.25
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 189.03
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 222.0
         }
       ],
-      "blend_price": 2229.25,
-      "method_count": 1
+      "blend_price": 880.09,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
+    "price": 159.78,
+    "ask": 159.79,
+    "prev": 160.43,
     "pe": null,
     "pb": null,
-    "direction": "",
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

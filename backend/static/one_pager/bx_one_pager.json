@@ -4,10 +4,10 @@
     "identity": {
       "name": "Blackstone Inc.",
       "ticker": "BX",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 120.88,
+      "price_direction": "\u2191",
+      "market_cap": 94288665049.43999,
+      "market_cap_label": "$94.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.12014566113098901,
+        "sublabel": "5Y",
+        "value": 0.1881786947813986,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.13200747393295753,
+        "sublabel": "5Y",
+        "value": 0.20871508213597356,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 111.32
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 84.84
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 138.0
         }
       ],
-      "blend_price": 111.32,
-      "method_count": 1
+      "blend_price": 111.39,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 120.88,
+    "ask": 120.89,
+    "prev": 116.97,
+    "pe": 31.2295,
+    "pb": 10.8809,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

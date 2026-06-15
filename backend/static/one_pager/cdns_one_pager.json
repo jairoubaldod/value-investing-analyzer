@@ -4,10 +4,10 @@
     "identity": {
       "name": "CADENCE DESIGN SYSTEMS, INC.",
       "ticker": "CDNS",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 383.74,
+      "price_direction": "\u2191",
+      "market_cap": 104121325420.00002,
+      "market_cap_label": "$104.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.1202185081990248,
+        "sublabel": "5Y",
+        "value": 0.1457277629468552,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.16606850011407515,
+        "sublabel": "5Y",
+        "value": 0.13619771457103647,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 130.77
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 238.36
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 387.5
         }
       ],
-      "blend_price": 130.77,
-      "method_count": 1
+      "blend_price": 252.21,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 383.74,
+    "ask": 383.75,
+    "prev": 374.93,
+    "pe": 93.8971,
+    "pb": 19.0204,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

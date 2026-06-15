@@ -4,10 +4,10 @@
     "identity": {
       "name": "TEXAS INSTRUMENTS INCORPORATED",
       "ticker": "TXN",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 297.1,
+      "price_direction": "\u2193",
+      "market_cap": 270063900000.00003,
+      "market_cap_label": "$270.1B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.03123775179836108,
+        "sublabel": "5Y",
+        "value": 0.041038070937830184,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.06699437355375104,
+        "sublabel": "5Y",
+        "value": -0.019954158256024757,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 3,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 67.44
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 126.8
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 300.0
         }
       ],
-      "blend_price": 67.44,
-      "method_count": 1
+      "blend_price": 164.75,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 297.1,
+    "ask": 297.11,
+    "prev": 305.68,
+    "pe": 54.002,
+    "pb": 16.5958,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

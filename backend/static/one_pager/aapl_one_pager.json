@@ -4,8 +4,8 @@
     "identity": {
       "name": "Apple Inc.",
       "ticker": "AAPL",
-      "price": null,
-      "price_direction": "",
+      "price": 291.13,
+      "price_direction": "\u2193",
       "market_cap": 4342023054280.0,
       "market_cap_label": "$4.34T",
       "sector": "Technology",
@@ -43,17 +43,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.059393927430567706,
+        "sublabel": "5Y",
+        "value": 0.08677354924090741,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.02120129936913373,
+        "sublabel": "5Y",
+        "value": 0.1774182545699563,
         "format": "percent"
       },
       {
@@ -147,16 +147,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -176,16 +176,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -209,19 +209,24 @@
           "id": "dcf",
           "label": "DCF",
           "price": 171.34
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 310.0
         }
       ],
-      "blend_price": 171.34,
-      "method_count": 1
+      "blend_price": 240.67,
+      "method_count": 2
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
+    "price": 291.13,
+    "ask": 291.14,
+    "prev": 295.63,
     "pe": null,
     "pb": null,
-    "direction": "",
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

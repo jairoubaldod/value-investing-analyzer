@@ -4,10 +4,10 @@
     "identity": {
       "name": "APTIV PLC",
       "ticker": "APTV",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 67.96,
+      "price_direction": "\u2191",
+      "market_cap": 14951199999.999998,
+      "market_cap_label": "$15.0B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": 0.058062382922268174,
+        "sublabel": "5Y",
+        "value": 0.09317322677777895,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
-        "value": -0.18251807472974957,
+        "sublabel": "5Y",
+        "value": -0.35503165789415525,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 1,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 83.29
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 14.59
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 80.0
         }
       ],
-      "blend_price": 83.29,
-      "method_count": 1
+      "blend_price": 59.29,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 67.96,
+    "ask": 67.97,
+    "prev": 67.94,
+    "pe": 90.6133,
+    "pb": 1.6239,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

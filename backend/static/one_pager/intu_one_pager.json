@@ -4,10 +4,10 @@
     "identity": {
       "name": "INTUIT INC.",
       "ticker": "INTU",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 276.91,
+      "price_direction": "\u2193",
+      "market_cap": 77534800000.0,
+      "market_cap_label": "$77.5B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.1621045750244654,
+        "sublabel": "5Y",
+        "value": 0.1965028658180299,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.266649538058245,
+        "sublabel": "5Y",
+        "value": 0.1460568821202759,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 620.0
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 666.75
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 460.0
         }
       ],
-      "blend_price": 620.0,
-      "method_count": 1
+      "blend_price": 582.25,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 276.91,
+    "ask": 276.92,
+    "prev": 331.53,
+    "pe": 20.04,
+    "pb": 3.9338,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

@@ -4,10 +4,10 @@
     "identity": {
       "name": "COMFORT SYSTEMS USA,\u00a0INC.",
       "ticker": "FIX",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 1843.42,
+      "price_direction": "\u2191",
+      "market_cap": 65163053580.0,
+      "market_cap_label": "$65.2B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.1913297798451692,
+        "sublabel": "5Y",
+        "value": 0.2608175923604037,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.36168749841303605,
+        "sublabel": "5Y",
+        "value": 0.4774109800531947,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 400.89
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 596.46
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 2027.0
         }
       ],
-      "blend_price": 400.89,
-      "method_count": 1
+      "blend_price": 1008.12,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 1843.42,
+    "ask": 1843.43,
+    "prev": 1828.21,
+    "pe": 63.7255,
+    "pb": 26.6105,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

@@ -4,10 +4,10 @@
     "identity": {
       "name": "DEVON ENERGY CORP/DE",
       "ticker": "DVN",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 44.61,
+      "price_direction": "\u2191",
+      "market_cap": 28193520000.0,
+      "market_cap_label": "$28.2B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,16 +17,16 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.02475173628209304,
+        "sublabel": "5Y",
+        "value": 0.29142826541130273,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
+        "sublabel": "5Y",
         "value": null,
         "format": "percent"
       },
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 10.85
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 32.62
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 62.0
         }
       ],
-      "blend_price": 10.85,
-      "method_count": 1
+      "blend_price": 35.16,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 44.61,
+    "ask": 44.62,
+    "prev": 44.49,
+    "pe": 10.6713,
+    "pb": 1.8157,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

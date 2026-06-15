@@ -4,10 +4,10 @@
     "identity": {
       "name": "FRANKLIN RESOURCES, INC.",
       "ticker": "BEN",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 31.81,
+      "price_direction": "\u2191",
+      "market_cap": 16436227000.000002,
+      "market_cap_label": "$16.4B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.009889402869150521,
+        "sublabel": "5Y",
+        "value": 0.0951923677117521,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.12060387127685923,
+        "sublabel": "5Y",
+        "value": -0.10560604841265264,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 0,
+        "stars": 1,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 44.87
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 14.22
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 31.0
         }
       ],
-      "blend_price": 44.87,
-      "method_count": 1
+      "blend_price": 30.03,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 31.81,
+    "ask": 31.82,
+    "prev": 31.02,
+    "pe": 31.3131,
+    "pb": 1.3609,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

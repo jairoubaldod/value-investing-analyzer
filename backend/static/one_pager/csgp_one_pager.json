@@ -4,10 +4,10 @@
     "identity": {
       "name": "COSTAR GROUP, INC.",
       "ticker": "CSGP",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 32.65,
+      "price_direction": "\u2191",
+      "market_cap": 13608520000.0,
+      "market_cap_label": "$13.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.16389720974540833,
+        "sublabel": "5Y",
+        "value": 0.14373703938612636,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": null,
+        "sublabel": "5Y",
+        "value": -0.4935043158878818,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 46.21
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 1.52
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 49.0
         }
       ],
-      "blend_price": 46.21,
-      "method_count": 1
+      "blend_price": 32.24,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 32.65,
+    "ask": 32.66,
+    "prev": 32.2,
+    "pe": 1944.0744,
+    "pb": 1.6329,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

@@ -4,10 +4,10 @@
     "identity": {
       "name": "ARCHER-DANIELS-MIDLAND CO",
       "ticker": "ADM",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 78.9,
+      "price_direction": "\u2193",
+      "market_cap": 38187600000.00001,
+      "market_cap_label": "$38.2B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": -0.09498172736857169,
+        "sublabel": "5Y",
+        "value": -0.17259424658437517,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.028901311771897586,
+        "sublabel": "5Y",
+        "value": -0.06733955979571826,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 8.68
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 33.57
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 75.5
         }
       ],
-      "blend_price": 8.68,
-      "method_count": 1
+      "blend_price": 39.25,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 78.9,
+    "ask": 78.91,
+    "prev": 79.78,
+    "pe": 35.4245,
+    "pb": 1.6793,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

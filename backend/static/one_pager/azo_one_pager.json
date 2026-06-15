@@ -4,10 +4,10 @@
     "identity": {
       "name": "AUTOZONE INC",
       "ticker": "AZO",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 3081.6201,
+      "price_direction": "\u2191",
+      "market_cap": 51737319858.90001,
+      "market_cap_label": "$51.7B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.06396900220691903,
+        "sublabel": "5Y",
+        "value": 0.08436605609642212,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.1500659430239628,
+        "sublabel": "5Y",
+        "value": 0.15112218415626666,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,15 +150,15 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 1,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 2326.05
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 2664.36
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 3989.5
         }
       ],
-      "blend_price": 2326.05,
-      "method_count": 1
+      "blend_price": 2993.3,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 3081.6201,
+    "ask": 3081.63,
+    "prev": 2935.1899,
+    "pe": 20.7094,
+    "pb": 849.2041,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

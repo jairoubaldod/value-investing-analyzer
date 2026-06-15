@@ -4,10 +4,10 @@
     "identity": {
       "name": "DOVER Corp",
       "ticker": "DOV",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 218.53,
+      "price_direction": "\u2191",
+      "market_cap": 29924405550.0,
+      "market_cap_label": "$29.9B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.01524475110985124,
+        "sublabel": "5Y",
+        "value": 0.03899422656407947,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.03767360573035905,
+        "sublabel": "5Y",
+        "value": 0.11007849030886874,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 1,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 109.02
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 152.59
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 253.5
         }
       ],
-      "blend_price": 109.02,
-      "method_count": 1
+      "blend_price": 171.7,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 218.53,
+    "ask": 218.54,
+    "prev": 211.36,
+    "pe": 27.3543,
+    "pb": 4.041,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

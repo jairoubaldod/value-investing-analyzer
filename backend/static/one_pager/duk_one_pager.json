@@ -4,10 +4,10 @@
     "identity": {
       "name": "DUKE ENERGY CORPORATION",
       "ticker": "DUK",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 124.19,
+      "price_direction": "\u2191",
+      "market_cap": 85815290000.0,
+      "market_cap_label": "$85.8B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": 0.06669453756022037,
+        "sublabel": "5Y",
+        "value": 0.09376092884936549,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
-        "value": 0.11264609364079026,
+        "sublabel": "5Y",
+        "value": -0.04079303630880893,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,12 +154,12 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": -79.18
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 93.1
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 138.0
         }
       ],
-      "blend_price": -79.18,
-      "method_count": 1
+      "blend_price": 50.64,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 124.19,
+    "ask": 124.2,
+    "prev": 122.73,
+    "pe": 39.877,
+    "pb": 2.0914,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

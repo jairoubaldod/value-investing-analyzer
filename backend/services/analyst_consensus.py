@@ -122,6 +122,70 @@ def _from_fmp(ticker: str) -> dict[str, Any] | None:
     return _normalize(payload, source="fmp")
 
 
+def _ratings_from_yahoo(ticker: str) -> dict[str, Any] | None:
+    """Sell-side rating counts from Yahoo recommendationTrend (0m period)."""
+    try:
+        import yfinance as yf
+    except ImportError:
+        return None
+
+    sym = ticker.upper().replace(".", "-")
+    try:
+        t = yf.Ticker(sym)
+        frame = t.get_recommendations()
+        if frame is not None and not frame.empty:
+            row = frame.iloc[0]
+            if "period" in frame.columns:
+                current = frame[frame["period"].astype(str).str.lower() == "0m"]
+                if not current.empty:
+                    row = current.iloc[0]
+            return _normalize_ratings(
+                {
+                    "strongBuy": row.get("strongBuy"),
+                    "buy": row.get("buy"),
+                    "hold": row.get("hold"),
+                    "sell": row.get("sell"),
+                    "strongSell": row.get("strongSell"),
+                }
+            )
+    except Exception:
+        pass
+    return None
+
+
+def _ratings_from_fmp(ticker: str) -> dict[str, Any] | None:
+    try:
+        from services.fmp_provider import FMPError, fetch_grades_consensus
+
+        return _normalize_ratings(fetch_grades_consensus(ticker))
+    except FMPError:
+        return None
+
+
+def fetch_ratings_breakdown(ticker: str) -> dict[str, Any] | None:
+    """Strong buy / buy / hold / sell counts — FMP first, Yahoo fallback."""
+    sym = ticker.upper()
+    for builder in (_ratings_from_fmp, _ratings_from_yahoo):
+        try:
+            ratings = builder(sym)
+            if ratings:
+                return ratings
+        except Exception:
+            continue
+    return None
+
+
+def _attach_ratings(payload: dict[str, Any], ticker: str) -> dict[str, Any]:
+    if payload.get("ratings"):
+        return payload
+    ratings = fetch_ratings_breakdown(ticker)
+    if not ratings:
+        return payload
+    out = dict(payload)
+    out["ratings"] = ratings
+    return out
+
+
 def _from_yahoo(ticker: str) -> dict[str, Any] | None:
     try:
         import yfinance as yf
@@ -152,17 +216,18 @@ def _from_yahoo(ticker: str) -> dict[str, Any] | None:
     if any(v is None for v in (low, high, median, mean)):
         return None
 
-    return _normalize(
-        {
-            "low": low,
-            "high": high,
-            "median": median,
-            "mean": mean,
-            "analyst_count": info.get("numberOfAnalystOpinions"),
-            "as_of": date.today().isoformat(),
-        },
-        source="yahoo",
-    )
+    raw: dict[str, Any] = {
+        "low": low,
+        "high": high,
+        "median": median,
+        "mean": mean,
+        "analyst_count": info.get("numberOfAnalystOpinions"),
+        "as_of": date.today().isoformat(),
+    }
+    ratings = _ratings_from_yahoo(sym)
+    if ratings:
+        raw["ratings"] = ratings
+    return _normalize(raw, source="yahoo")
 
 
 def fetch_analyst_consensus(ticker: str) -> dict[str, Any]:
@@ -172,7 +237,7 @@ def fetch_analyst_consensus(ticker: str) -> dict[str, Any]:
         try:
             data = builder(sym)
             if data:
-                return data
+                return _attach_ratings(data, sym)
         except (ValueError, TypeError):
             continue
     return {

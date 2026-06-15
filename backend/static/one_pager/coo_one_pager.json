@@ -4,10 +4,10 @@
     "identity": {
       "name": "The Cooper Companies, Inc.",
       "ticker": "COO",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 67.51,
+      "price_direction": "\u2191",
+      "market_cap": 13441241000.0,
+      "market_cap_label": "$13.4B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.08577686353959968,
+        "sublabel": "5Y",
+        "value": 0.10979355015450176,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.07723554756659667,
+        "sublabel": "5Y",
+        "value": -0.17266152372811072,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 54.4
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 74.74
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 85.0
         }
       ],
-      "blend_price": 54.4,
-      "method_count": 1
+      "blend_price": 71.38,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 67.51,
+    "ask": 67.52,
+    "prev": 61.21,
+    "pe": 35.8529,
+    "pb": 1.6314,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

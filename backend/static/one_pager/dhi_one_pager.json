@@ -4,10 +4,10 @@
     "identity": {
       "name": "D.R. Horton, Inc.",
       "ticker": "DHI",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 154.43,
+      "price_direction": "\u2191",
+      "market_cap": 47641655000.0,
+      "market_cap_label": "$47.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.12209024402439717,
+        "sublabel": "5Y",
+        "value": 0.11016221220279032,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.18944735992136574,
+        "sublabel": "5Y",
+        "value": 0.12354969518738557,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 231.05
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 124.41
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 172.0
         }
       ],
-      "blend_price": 231.05,
-      "method_count": 1
+      "blend_price": 175.82,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 154.43,
+    "ask": 154.44,
+    "prev": 147.09,
+    "pe": 13.2884,
+    "pb": 1.9694,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

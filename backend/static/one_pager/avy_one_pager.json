@@ -4,10 +4,10 @@
     "identity": {
       "name": "AVERY DENNISON CORPORATION",
       "ticker": "AVY",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 158.75,
+      "price_direction": "\u2193",
+      "market_cap": 12398375000.0,
+      "market_cap_label": "$12.4B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.040270858942844656,
+        "sublabel": "5Y",
+        "value": 0.049004548094291556,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.11337365654556852,
+        "sublabel": "5Y",
+        "value": 0.0572313065406902,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 2,
+        "stars": 1,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 121.23
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 213.1
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 201.0
         }
       ],
-      "blend_price": 121.23,
-      "method_count": 1
+      "blend_price": 178.44,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 158.75,
+    "ask": 158.76,
+    "prev": 159.07,
+    "pe": 18.0209,
+    "pb": 5.5298,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

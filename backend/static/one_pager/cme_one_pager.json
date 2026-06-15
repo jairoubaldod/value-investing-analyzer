@@ -4,10 +4,10 @@
     "identity": {
       "name": "CME GROUP INC.",
       "ticker": "CME",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 262.18,
+      "price_direction": "\u2193",
+      "market_cap": 94292512640.00002,
+      "market_cap_label": "$94.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.06961155678838749,
+        "sublabel": "5Y",
+        "value": 0.059520819337337105,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.11662356633358328,
+        "sublabel": "5Y",
+        "value": 0.1371372741971264,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": true
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 210.71
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 288.44
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 310.0
         }
       ],
-      "blend_price": 210.71,
-      "method_count": 1
+      "blend_price": 269.72,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 262.18,
+    "ask": 262.19,
+    "prev": 273.54,
+    "pe": 23.1552,
+    "pb": 3.2822,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

@@ -4,10 +4,10 @@
     "identity": {
       "name": "DECKERS OUTDOOR CORP",
       "ticker": "DECK",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 114.37,
+      "price_direction": "\u2191",
+      "market_cap": 16640606260.0,
+      "market_cap_label": "$16.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": 0.13219204310938681,
+        "sublabel": "5Y",
+        "value": 0.1653985803329907,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
-        "value": 0.5028728517996002,
+        "sublabel": "5Y",
+        "value": -0.12390408011019971,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 5,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 4,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 206.98
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 156.36
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 125.0
         }
       ],
-      "blend_price": 206.98,
-      "method_count": 1
+      "blend_price": 162.78,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 114.37,
+    "ask": 114.38,
+    "prev": 113.85,
+    "pe": 16.2495,
+    "pb": 6.9173,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

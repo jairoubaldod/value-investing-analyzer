@@ -4,10 +4,10 @@
     "identity": {
       "name": "Domino\u2019s Pizza, Inc.",
       "ticker": "DPZ",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 312.26,
+      "price_direction": "\u2191",
+      "market_cap": 10619047990.460001,
+      "market_cap_label": "$10.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.08344113385549035,
+        "sublabel": "5Y",
+        "value": 0.037099536577790415,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.17323356884679675,
+        "sublabel": "5Y",
+        "value": 0.0700462497862433,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 1,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": true
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 340.96
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 534.13
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 400.0
         }
       ],
-      "blend_price": 340.96,
-      "method_count": 1
+      "blend_price": 425.03,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
+    "price": 312.26,
+    "ask": 312.27,
+    "prev": 310.58,
+    "pe": 17.6483,
     "pb": null,
-    "direction": "",
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

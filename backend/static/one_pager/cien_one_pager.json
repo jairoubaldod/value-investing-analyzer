@@ -4,10 +4,10 @@
     "identity": {
       "name": "Ciena Corp",
       "ticker": "CIEN",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 445.22,
+      "price_direction": "\u2193",
+      "market_cap": 63319633620.00001,
+      "market_cap_label": "$63.3B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.05464278898170849,
+        "sublabel": "5Y",
+        "value": 0.061907524784472256,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": -0.20738598152453003,
+        "sublabel": "5Y",
+        "value": -0.1795338292467129,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": false
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 6.18
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 22.33
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 600.0
         }
       ],
-      "blend_price": 6.18,
-      "method_count": 1
+      "blend_price": 209.5,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 445.22,
+    "ask": 445.23,
+    "prev": 580.23,
+    "pe": 513.383,
+    "pb": 23.1998,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

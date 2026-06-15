@@ -4,10 +4,10 @@
     "identity": {
       "name": "AMERICAN TOWER CORP /MA/",
       "ticker": "AMT",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 189.31,
+      "price_direction": "\u2191",
+      "market_cap": 88582313820.00002,
+      "market_cap_label": "$88.6B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": -0.15031626227011985,
+        "sublabel": "5Y",
+        "value": 0.13553913348333957,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.1431175490915555,
+        "sublabel": "5Y",
+        "value": 0.07264115985965036,
         "format": "percent"
       },
       {
@@ -121,15 +121,15 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 2,
+        "stars": 3,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
-            "met": false
+            "label": "Revenue CAGR 5Y > 0",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": true
           },
           {
@@ -154,12 +154,12 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
-            "met": false
+            "label": "Revenue CAGR 5Y \u2265 8%",
+            "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 19.79
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 207.89
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 210.0
         }
       ],
-      "blend_price": 19.79,
-      "method_count": 1
+      "blend_price": 145.89,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 189.31,
+    "ask": 189.32,
+    "prev": 186.96,
+    "pe": 49.6779,
+    "pb": 20.5168,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

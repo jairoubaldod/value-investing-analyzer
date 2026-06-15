@@ -4,8 +4,8 @@
     "identity": {
       "name": "Alphabet Inc.",
       "ticker": "GOOGL",
-      "price": null,
-      "price_direction": "",
+      "price": 358.0,
+      "price_direction": "\u2193",
       "market_cap": 4327181744727.0005,
       "market_cap_label": "$4.33T",
       "sector": "Communication Services",
@@ -48,17 +48,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.1830771631182213,
+        "sublabel": "5Y",
+        "value": 0.1715483907713573,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": null,
+        "sublabel": "5Y",
+        "value": 0.2980953909548385,
         "format": "percent"
       },
       {
@@ -152,16 +152,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -181,16 +181,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 4,
+        "stars": 5,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": false
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": true
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -219,19 +219,24 @@
           "id": "pe",
           "label": "P/E median",
           "price": 312.49
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 430.0
         }
       ],
-      "blend_price": 299.9,
-      "method_count": 2
+      "blend_price": 343.27,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 358.0,
+    "ask": 358.01,
+    "prev": 380.34,
+    "pe": 27.3074,
+    "pb": 10.4452,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }

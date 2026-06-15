@@ -4,10 +4,10 @@
     "identity": {
       "name": "Builders FirstSource, Inc.",
       "ticker": "BLDR",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 78.57,
+      "price_direction": "\u2191",
+      "market_cap": 8754347969.999998,
+      "market_cap_label": "$8.8B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.15600218068108718,
+        "sublabel": "5Y",
+        "value": 0.12158418355646372,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": null,
+        "sublabel": "5Y",
+        "value": 0.07766777235487088,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 3,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": false
+            "label": "EPS CAGR 5Y > 0",
+            "met": true
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 95.47
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 48.79
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 95.0
         }
       ],
-      "blend_price": 95.47,
-      "method_count": 1
+      "blend_price": 79.75,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 78.57,
+    "ask": 78.58,
+    "prev": 76.26,
+    "pe": 20.1157,
+    "pb": 2.0115,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

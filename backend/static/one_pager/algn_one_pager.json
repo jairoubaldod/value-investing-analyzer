@@ -4,10 +4,10 @@
     "identity": {
       "name": "ALIGN TECHNOLOGY,\u00a0INC.",
       "ticker": "ALGN",
-      "price": null,
-      "price_direction": "",
-      "market_cap": null,
-      "market_cap_label": null,
+      "price": 176.51,
+      "price_direction": "\u2191",
+      "market_cap": 12804388420.0,
+      "market_cap_label": "$12.8B",
       "sector": null,
       "industry": null,
       "country": null,
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "10Y",
-        "value": 0.16915831949131555,
+        "sublabel": "5Y",
+        "value": 0.10296139708637742,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "10Y",
-        "value": 0.12138409644473125,
+        "sublabel": "5Y",
+        "value": -0.24153773788975508,
         "format": "percent"
       },
       {
@@ -121,16 +121,16 @@
       {
         "id": "predictability",
         "label": "Predictability",
-        "stars": 5,
+        "stars": 4,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
-            "met": true
+            "label": "EPS CAGR 5Y > 0",
+            "met": false
           },
           {
             "label": "Margin volatility low (\u03c3 < 5pp)",
@@ -150,16 +150,16 @@
       {
         "id": "growth",
         "label": "Growth",
-        "stars": 3,
+        "stars": 2,
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
-            "met": true
+            "label": "EPS CAGR 5Y \u2265 10%",
+            "met": false
           },
           {
             "label": "FCFF CAGR 5Y > 0",
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 458.74
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 240.04
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 214.0
         }
       ],
-      "blend_price": 458.74,
-      "method_count": 1
+      "blend_price": 304.26,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 176.51,
+    "ask": 176.52,
+    "prev": 174.95,
+    "pe": 31.2035,
+    "pb": 3.1622,
+    "direction": "\u2191",
     "fx_label": "US $"
   }
 }

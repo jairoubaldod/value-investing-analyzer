@@ -4,8 +4,8 @@
     "identity": {
       "name": "Broadcom Inc.",
       "ticker": "AVGO",
-      "price": null,
-      "price_direction": "",
+      "price": 385.57,
+      "price_direction": "\u2193",
       "market_cap": 1834380120600.0,
       "market_cap_label": "$1.83T",
       "sector": "Technology",
@@ -17,17 +17,17 @@
     },
     "snapshot_metrics": [
       {
-        "id": "rev_cagr_10y",
+        "id": "rev_cagr_5y",
         "label": "Revenue CAGR",
-        "sublabel": "9Y",
-        "value": 0.19109710141606495,
+        "sublabel": "5Y",
+        "value": 0.21743712435641926,
         "format": "percent"
       },
       {
-        "id": "eps_cagr_10y",
+        "id": "eps_cagr_5y",
         "label": "EPS CAGR",
-        "sublabel": "9Y",
-        "value": null,
+        "sublabel": "5Y",
+        "value": -0.05801345281574399,
         "format": "percent"
       },
       {
@@ -125,11 +125,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y > 0",
+            "label": "Revenue CAGR 5Y > 0",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y > 0",
+            "label": "EPS CAGR 5Y > 0",
             "met": false
           },
           {
@@ -154,11 +154,11 @@
         "max_stars": 5,
         "criteria": [
           {
-            "label": "Revenue CAGR 10Y \u2265 8%",
+            "label": "Revenue CAGR 5Y \u2265 8%",
             "met": true
           },
           {
-            "label": "EPS CAGR 10Y \u2265 10%",
+            "label": "EPS CAGR 5Y \u2265 10%",
             "met": false
           },
           {
@@ -183,19 +183,29 @@
           "id": "dcf",
           "label": "DCF",
           "price": 287.3
+        },
+        {
+          "id": "pe",
+          "label": "P/E median",
+          "price": 25.62
+        },
+        {
+          "id": "consensus",
+          "label": "Analyst consensus",
+          "price": 525.0
         }
       ],
-      "blend_price": 287.3,
-      "method_count": 1
+      "blend_price": 279.31,
+      "method_count": 3
     }
   },
   "market_bar": {
-    "price": null,
-    "ask": null,
-    "prev": null,
-    "pe": null,
-    "pb": null,
-    "direction": "",
+    "price": 385.57,
+    "ask": 385.58,
+    "prev": 446.77,
+    "pe": 302.4386,
+    "pb": 26.3435,
+    "direction": "\u2193",
     "fx_label": "US $"
   }
 }
