@@ -3,73 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>THESIS · Temp Analytics</title>
+    <title>THESIS · Launch Analytics</title>
     <link rel="stylesheet" href="/static/thesis.css?v=69" />
     <style>
       body { margin: 0; background: #000; color: #fff; font-family: Consolas, "Courier New", monospace; }
-      .ta-wrap { max-width: 1200px; margin: 0 auto; padding: 1rem; }
+      .ta-wrap { max-width: 1280px; margin: 0 auto; padding: 1rem; }
       .ta-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
       .ta-title { font-size: 14px; font-weight: 700; color: #ff9900; letter-spacing: 0.06em; text-transform: uppercase; }
       .ta-badge { padding: 0.15rem 0.45rem; font-size: 11px; font-weight: 700; border: 1px solid #333; color: #33cc33; }
-      .ta-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 0.75rem; }
+      .ta-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+      .ta-btn {
+        padding: 0.3rem 0.65rem; font-size: 10px; font-weight: 700; letter-spacing: 0.04em;
+        text-transform: uppercase; border: 1px solid #444; background: #111; color: #00ffff; cursor: pointer;
+      }
+      .ta-btn:hover { border-color: #ff9900; color: #ff9900; }
+      .ta-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.75rem; margin-bottom: 0.75rem; }
       .ta-card { border: 1px solid #333; background: #0a0a0a; padding: 0.75rem; }
       .ta-k { font-size: 10px; color: #888; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
       .ta-v { font-size: 22px; font-weight: 700; color: #00ffff; }
       .ta-sub { font-size: 11px; color: #aaa; margin-top: 0.25rem; }
-      .ta-table-wrap { border: 1px solid #333; max-height: 62vh; overflow: auto; margin-bottom: 0.75rem; }
+      .ta-panels { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; margin-bottom: 0.75rem; }
+      .ta-panel { border: 1px solid #333; background: #0a0a0a; padding: 0.65rem; font-size: 10px; }
+      .ta-panel h3 { margin: 0 0 0.45rem; font-size: 10px; color: #ff9900; text-transform: uppercase; letter-spacing: 0.05em; }
+      .ta-panel li { margin: 0.15rem 0; color: #ccc; list-style: none; display: flex; justify-content: space-between; gap: 0.5rem; }
+      .ta-panel ul { margin: 0; padding: 0; }
+      .ta-table-wrap { border: 1px solid #333; max-height: 58vh; overflow: auto; margin-bottom: 0.75rem; }
       table.ta-table { width: 100%; border-collapse: collapse; font-size: 10px; }
       .ta-table th, .ta-table td { padding: 0.35rem 0.45rem; border-bottom: 1px solid #222; text-align: left; vertical-align: top; }
       .ta-table th { position: sticky; top: 0; background: #111; color: #ff9900; z-index: 1; }
       .ta-foot { font-size: 10px; color: #666; }
-      @media (max-width: 900px) { .ta-grid { grid-template-columns: 1fr 1fr; } }
+      @media (max-width: 1100px) { .ta-grid { grid-template-columns: repeat(3, 1fr); } .ta-panels { grid-template-columns: 1fr; } }
+      @media (max-width: 700px) { .ta-grid { grid-template-columns: 1fr 1fr; } }
+      @media print {
+        body { background: #fff; color: #000; }
+        .ta-btn, .ta-actions a, .ta-foot { display: none !important; }
+        .ta-card, .ta-panel, .ta-table-wrap { border-color: #ccc; background: #fff; }
+        .ta-v, .ta-title, .ta-table th { color: #000 !important; }
+        .ta-table-wrap { max-height: none; overflow: visible; }
+      }
     </style>
   </head>
   <body>
     <div class="ta-wrap">
       <div class="ta-head">
-        <span class="ta-title">Temp Analytics · Today</span>
-        <span class="ta-badge">DISPOSABLE</span>
+        <span class="ta-title">Launch Analytics</span>
+        <span class="ta-badge" id="ta-retention">RETENTION</span>
         <span id="ta-updated" class="ta-sub"></span>
         <span style="flex: 1"></span>
-        <a href="/" style="color: #00ffff; font-size: 11px">← App</a>
+        <div class="ta-actions">
+          <button type="button" class="ta-btn" id="ta-csv">Export CSV</button>
+          <button type="button" class="ta-btn" id="ta-pdf">Export PDF</button>
+          <a href="/" class="ta-btn" style="text-decoration:none">← App</a>
+        </div>
       </div>
 
       <div class="ta-grid">
+        <div class="ta-card"><div class="ta-k">Unique visitors</div><div id="ta-visitors" class="ta-v">—</div></div>
         <div class="ta-card"><div class="ta-k">Sessions</div><div id="ta-sessions" class="ta-v">—</div></div>
         <div class="ta-card"><div class="ta-k">Active now</div><div id="ta-active" class="ta-v">—</div></div>
         <div class="ta-card"><div class="ta-k">Avg duration</div><div id="ta-avg" class="ta-v">—</div></div>
-        <div class="ta-card"><div class="ta-k">Events logged</div><div id="ta-events" class="ta-v">—</div></div>
+        <div class="ta-card"><div class="ta-k">Mobile</div><div id="ta-mobile" class="ta-v">—</div></div>
+        <div class="ta-card"><div class="ta-k">Desktop</div><div id="ta-desktop" class="ta-v">—</div></div>
       </div>
 
-      <div class="ta-k">Sessions (IP · location · device · duration)</div>
+      <div class="ta-panels">
+        <div class="ta-panel"><h3>Top sections</h3><ul id="ta-top-sections"></ul></div>
+        <div class="ta-panel"><h3>Top tickers</h3><ul id="ta-top-tickers"></ul></div>
+        <div class="ta-panel"><h3>Traffic sources</h3><ul id="ta-top-sources"></ul></div>
+      </div>
+
+      <div class="ta-k">All sessions</div>
       <div class="ta-table-wrap">
         <table class="ta-table">
           <thead>
             <tr>
               <th>When</th>
               <th>Duration</th>
-              <th>IP</th>
+              <th>Source</th>
               <th>Location</th>
               <th>Device</th>
               <th>OS / Browser</th>
               <th>Ticker(s)</th>
-              <th>Sections</th>
+              <th>Sections visited</th>
             </tr>
           </thead>
           <tbody id="ta-rows"></tbody>
         </table>
       </div>
-      <p class="ta-foot">Auto-refresh 15s · Delete folder <code>backend/temp_analytics/</code> + <code>temp-analytics.js</code> to remove.</p>
+      <p class="ta-foot" id="ta-foot"></p>
     </div>
     <script>
       function esc(s) {
         return String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+      }
+      function renderTopList(el, items) {
+        el.innerHTML = (items || [])
+          .map(function (i) {
+            return "<li><span>" + esc(i.label) + "</span><span>" + esc(i.count) + "</span></li>";
+          })
+          .join("") || "<li><span>—</span><span>0</span></li>";
       }
       const params = new URLSearchParams(window.location.search);
       const key = params.get("key") || "";
       if (!key) {
         document.body.innerHTML = "<p style='padding:1rem;color:#ff9900;font-family:monospace'>Add ?key=YOUR_KEY to the URL.</p>";
       } else {
+        document.getElementById("ta-csv").addEventListener("click", function () {
+          window.location.href = "/api/temp-analytics/export.csv?key=" + encodeURIComponent(key);
+        });
+        document.getElementById("ta-pdf").addEventListener("click", function () {
+          window.print();
+        });
+
         async function refresh() {
           const res = await fetch("/api/temp-analytics/summary?key=" + encodeURIComponent(key));
           if (!res.ok) {
@@ -78,25 +123,37 @@
           }
           const data = await res.json();
           const t = data.totals || {};
+          const d = data.devices || {};
+          document.getElementById("ta-visitors").textContent = t.visitors ?? 0;
           document.getElementById("ta-sessions").textContent = t.sessions ?? 0;
           document.getElementById("ta-active").textContent = t.active_now ?? 0;
           document.getElementById("ta-avg").textContent = t.avg_duration_label || "0s";
-          document.getElementById("ta-events").textContent = t.events ?? 0;
+          document.getElementById("ta-mobile").textContent = d.mobile ?? 0;
+          document.getElementById("ta-desktop").textContent = d.desktop ?? 0;
+          document.getElementById("ta-retention").textContent = (t.retention_days || 30) + "d retention";
           document.getElementById("ta-updated").textContent = "Updated " + new Date().toLocaleTimeString();
+          document.getElementById("ta-foot").textContent =
+            "Auto-refresh 15s · Data kept " + (t.retention_days || 30) + " days · " +
+            (t.oldest_at ? "From " + t.oldest_at.replace("T", " ").replace("Z", " UTC") : "No data yet");
+          renderTopList(document.getElementById("ta-top-sections"), data.top_sections);
+          renderTopList(document.getElementById("ta-top-tickers"), data.top_tickers);
+          renderTopList(document.getElementById("ta-top-sources"), data.top_sources);
           document.getElementById("ta-rows").innerHTML = (data.sessions || [])
             .map(function (s) {
               const loc = [s.city, s.region, s.country].filter(Boolean).join(", ") || "—";
-              const dev = [s.device, s.screen].filter(Boolean).join(" · ");
+              const dev = [s.device, s.device_model, s.screen].filter(Boolean).join(" · ");
               const osb = [s.os, s.browser].filter(Boolean).join(" / ");
+              const src = s.source || s.utm_source || "Direct";
               return (
                 "<tr><td>" + esc((s.started_at || "").replace("T", " ").replace("Z", " UTC")) +
                 "</td><td>" + esc(s.duration_label) +
-                "</td><td>" + esc(s.ip) +
+                "</td><td>" + esc(src) +
+                (s.utm_campaign ? "<br><span style='color:#666'>" + esc(s.utm_campaign) + "</span>" : "") +
                 "</td><td>" + esc(loc) + (s.isp ? "<br><span style='color:#666'>" + esc(s.isp) + "</span>" : "") +
                 "</td><td>" + esc(dev) +
                 "</td><td>" + esc(osb) + (s.lang ? "<br><span style='color:#666'>" + esc(s.lang) + "</span>" : "") +
                 "</td><td>" + esc((s.tickers || []).join(", ") || "—") +
-                "</td><td>" + esc((s.sections || []).join(" ") || "—") +
+                "</td><td>" + esc((s.sections || []).join(" · ") || "—") +
                 "</td></tr>"
               );
             })

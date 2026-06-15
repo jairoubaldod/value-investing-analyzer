@@ -1,1 +1,1 @@
-"""Disposable same-day analytics — delete this package to remove."""
+"""Accumulative session analytics — delete this package to remove."""

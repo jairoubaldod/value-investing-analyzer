@@ -14,3 +14,5 @@ services:
         value: "false"
       - key: SEC_USER_AGENT
         sync: false
+      - key: TEMP_ANALYTICS_KEY
+        sync: false
